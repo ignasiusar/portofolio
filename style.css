@@ -1,0 +1,260 @@
+:root {
+    --primary-color: #2e3b4e; /* Warna dasar teks/latar gelap */
+    --secondary-color: #f7f7f7; /* Warna latar terang */
+    --accent-color: #e5545c; /* Warna aksen merah/pink */
+    --cta-background: #9d5a49; /* Warna latar CTA section */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+}
+
+section {
+    padding: 40px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 40px auto;
+    width: 80%;
+}
+
+/* --- NAVIGASI (Header) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+
+.navbar .status {
+    color: green;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 10%;
+}
+
+.intro-text h1 {
+    font-size: 3em;
+    color: var(--accent-color);
+    margin: 10px 0;
+}
+
+.intro-text .tagline {
+    font-size: 1.1em;
+    max-width: 400px;
+}
+
+.profile-image-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: var(--cta-background); /* Warna latar belakang lingkaran */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Posisikan gambar di bawah */
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.profile-image {
+    width: 150%; /* Agar gambar memenuhi container dan terlihat 'cropping' */
+    height: auto;
+    object-fit: cover;
+}
+
+/* --- SKILLS SECTION --- */
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.skill-column {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.skill-column h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.skill-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* --- EXPERIENCES SECTION --- */
+.experiences-container {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.professional-dive, .academic-projects {
+    flex: 1;
+}
+
+.experience-item {
+    margin-bottom: 30px;
+    padding-left: 15px;
+    border-left: 3px solid var(--accent-color); /* Garis pemisah */
+}
+
+.experience-item h4 {
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.experience-item span {
+    font-size: 0.9em;
+    color: #888;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.experience-item ul {
+    list-style: disc;
+    padding-left: 20px;
+    font-size: 0.9em;
+}
+
+/* --- E-CERTIFICATE SECTION --- */
+.e-certificate-section {
+    text-align: center;
+}
+
+.certificates-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.certificate-card {
+    width: 30%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    padding: 15px;
+    text-align: center;
+}
+
+.image-placeholder {
+    height: 150px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+    padding-right: 10%;
+}
+
+.arrow {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--cta-background);
+}
+
+/* --- CTA SECTION --- */
+.cta-section {
+    background-color: var(--cta-background);
+    color: white;
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.5em;
+}
+
+.cta-section p {
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: 10px auto 0;
+}
+
+/* --- Responsiveness (Tambahan) --- */
+@media (max-width: 768px) {
+    .hero-section, .skills-container, .experiences-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .intro-text, .profile-image-container {
+        margin-bottom: 30px;
+    }
+
+    .profile-image-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .certificate-card {
+        width: 100%;
+    }
+}
