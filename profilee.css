@@ -296,3 +296,28 @@ footer { padding: 30px 10%; text-align: center; font-size: 0.9rem; color: var(--
     width: 100%;
     height: 70vh;
 }
+
+/* ==========================================
+   MAINTENANCE ILLUSTRATION & ANIMATION
+   ========================================== */
+.maintenance-illustration {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.maintenance-illustration img {
+    width: 150px;
+    height: auto;
+    /* Memberikan efek bayangan lembut agar gambar 3D lebih menyatu */
+    filter: drop-shadow(0 15px 25px rgba(37, 99, 235, 0.2)); 
+    /* Mengaktifkan animasi melayang */
+    animation: floatImage 3s ease-in-out infinite;
+}
+
+/* Keyframes untuk efek melayang (floating) */
+@keyframes floatImage {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}

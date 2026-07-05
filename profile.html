@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ignatius Arya - Portfolio</title>
+    <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="profilee.css">
 </head>
 <body lang="en" class="light-mode">
@@ -20,8 +23,8 @@
             <ul>
                 <li><a href="#profile"><span lang="en">Profile</span><span lang="id">Profil</span></a></li>
                 <li><a href="#projects"><span lang="en">Experiences</span><span lang="id">Pengalaman</span></a></li>
+                <li><a href="#education"><span lang="en">Education</span><span lang="id">Pendidikan</span></a></li>
                 <li><a href="#certificates"><span lang="en">Certificates</span><span lang="id">Sertifikat</span></a></li>
-                <li><a href="#contact"><span lang="en">Contact</span><span lang="id">Kontak</span></a></li>
             </ul>
         </nav>
         <div class="header-actions">
@@ -53,7 +56,7 @@
                 </select>
             </div>
             <div class="settings-footer">
-                <span>Versi 03.10.CMS</span>
+                <span>Versi 04.01.CMS</span>
             </div>
         </div>
     </div>
@@ -68,10 +71,8 @@
             <h1><span lang="en">Hello, it's me</span><span lang="id">Halo, ini saya</span></h1>
             <h2 class="hero-name">&lt; Ignatius Arya /&gt;</h2>
             <p>
-                <p>
-    <span lang="en">Software Engineer & AI/ML Enthusiast. I build scalable software solutions and integrate Machine Learning models, bridging the gap between development and robust deployment operations.</span>
-    <span lang="id">Software Engineer & Penggiat AI/ML. Saya membangun solusi perangkat lunak yang skalabel dan mengintegrasikan model Machine Learning, memastikan sistem berjalan andal dari tahap pengembangan hingga operasional.</span>
-</p>
+                <span lang="en">Software Engineer & AI/ML Enthusiast. I build scalable software solutions and integrate Machine Learning models, bridging the gap between development and robust operations.</span>
+                <span lang="id">Software Engineer & Penggiat AI/ML. Saya membangun solusi perangkat lunak yang skalabel dan mengintegrasikan model Machine Learning, memastikan sistem berjalan andal dari tahap pengembangan hingga operasional.</span>
             </p>
             <div class="hero-cta">
                 <a href="#projects" class="btn btn-primary">
@@ -100,41 +101,37 @@
         <div class="experiences-grid" id="experiencesContainer"></div>
     </section>
 
+    <!-- Education Section -->
+    <section id="education" class="container">
+        <h2 class="section-title" data-aos="fade-up"><span lang="en">Education</span><span lang="id">Pendidikan</span></h2>
+        <div class="experiences-grid" id="educationContainer"></div>
+    </section>
+
     <!-- E-Certificate Section -->
     <section id="certificates" class="container">
         <h2 class="section-title" data-aos="fade-up"><span lang="en">E-Certificates</span><span lang="id">Sertifikat Elektronik</span></h2>
         <div class="certificates-grid" id="certificatesContainer"></div>
     </section>
 
-    <!-- Contact & CTA Section -->
+    <!-- Contact Section -->
     <section id="contact" class="cta-section" data-aos="fade-up">
         <h2><span lang="en">Ready to Scale Up?</span><span lang="id">Siap Melangkah Lebih Jauh?</span></h2>
         <p style="margin-bottom: 30px;">
             <span lang="en">Whether it's a quick chat or the next big software project, let's connect and define your goals.</span>
             <span lang="id">Baik untuk diskusi santai atau proyek besar berikutnya, mari terhubung dan wujudkan tujuan Anda.</span>
         </p>
-        
         <div class="contact-links">
-            <a href="mailto:ignatiusaryajulio@email.com" class="contact-card">
+            <a href="mailto:ignatius.arya@email.com" class="contact-card">
                 <div class="contact-icon">📧</div>
-                <div>
-                    <div class="contact-label">Email</div>
-                    <div class="contact-value">ignatiusaryajulio@email.com</div>
-                </div>
+                <div><div class="contact-label">Email</div><div class="contact-value">ignatius.arya@email.com</div></div>
             </a>
-            <a href="https://github.com/ignasiusar/" target="_blank" class="contact-card">
+            <a href="https://github.com" target="_blank" class="contact-card">
                 <div class="contact-icon">💻</div>
-                <div>
-                    <div class="contact-label">GitHub</div>
-                    <div class="contact-value">github.com/ignasiusar</div>
-                </div>
+                <div><div class="contact-label">GitHub</div><div class="contact-value">github.com/ignatiusarya</div></div>
             </a>
-            <a href="https://www.linkedin.com/in/ignatiusaryajulioprananta/" target="_blank" class="contact-card">
+            <a href="https://linkedin.com" target="_blank" class="contact-card">
                 <div class="contact-icon">🔗</div>
-                <div>
-                    <div class="contact-label">LinkedIn</div>
-                    <div class="contact-value">Ignatius Arya</div>
-                </div>
+                <div><div class="contact-label">LinkedIn</div><div class="contact-value">Ignatius Arya</div></div>
             </a>
         </div>
     </section>
@@ -144,13 +141,11 @@
         <p><span lang="en">&copy; 2026 Ignatius Arya. All rights reserved.</span><span lang="id">&copy; 2026 Ignatius Arya. Hak cipta dilindungi undang-undang.</span></p>
     </footer>
 
-    <!-- Smart Certificate Modal (Handles Image & PDF) -->
+    <!-- Smart Media Modal -->
     <div class="modal" id="certificateModal">
         <div class="modal-content" style="max-width: 800px;">
             <button class="modal-close">&times;</button>
-            <div id="modalMediaContainer" class="modal-media-container">
-                <!-- Media will be injected here via JS (IMG or IFRAME) -->
-            </div>
+            <div id="modalMediaContainer" class="modal-media-container"></div>
             <div class="modal-title" id="modalTitle" style="margin-top: 16px;"></div>
             <div class="modal-desc" id="modalDesc"></div>
         </div>
@@ -168,6 +163,7 @@
                 <select id="adminDataType" class="theme-select" style="width: auto; padding: 8px 16px;">
                     <option value="skills">Kategori Keahlian (Skills)</option>
                     <option value="experiences">Daftar Pengalaman</option>
+                    <option value="educations">Riwayat Pendidikan</option>
                     <option value="certificates">Daftar Sertifikat</option>
                 </select>
                 <button class="btn btn-primary" id="btnAddNew" style="padding: 8px 16px; font-size: 0.85rem;">+ Tambah Baru</button>
@@ -190,37 +186,53 @@
         </div>
     </div>
 
+    <!-- MAINTENANCE OVERLAY -->
+   <!-- MAINTENANCE OVERLAY -->
+    <div id="maintenanceOverlay" class="maintenance-overlay" style="display: none;">
+        <div class="maintenance-content">
+            <!-- Tambahan Gambar/Icon 3D Disini -->
+            <div class="maintenance-illustration">
+                <img src="https://cdn3d.iconscout.com/3d/premium/thumb/setting-4993635-4160410.png" alt="Maintenance Icon" onerror="this.src='https://cdn-icons-png.flaticon.com/512/4333/4333097.png'">
+            </div>
+            
+            <h2>Under Maintenance</h2>
+            <p>The website is temporarily unavailable. We're polishing things up!</p>
+            <p>We'll be back <strong>as soon as possible</strong>.</p>
+            <div class="maintenance-footer" style="margin-top: 30px; font-size: 0.8rem; color: var(--text-muted);">
+                <span>Ignatius Arya • Software Engineer Portfolio</span>
+            </div>
+        </div>
+    </div>
+
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
 
-        // === 1. CORE DATA MATRIX (RESTORED FULL DATA) ===
+        // === 0. MAINTENANCE MODE CONTROLLER ===
+        // Ubah jadi `true` saat di-deploy ke Vercel jika ingin digembok
+        const maintenanceMode = true; 
+        const maintenanceOverlay = document.getElementById('maintenanceOverlay');
+        
+        if (maintenanceMode && maintenanceOverlay) {
+            maintenanceOverlay.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Kunci scroll layar
+        }
+
+        // === 1. CORE DATA MATRIX ===
         const defaultSkills = [
             {
                 category: { en: "The Comfort Zone", id: "Zona Nyaman" },
                 items: [
                     { name: "Visual Studio Code", icon: "https://cdn.icon-icons.com/icons2/3053/PNG/512/microsoft_visual_studio_code_alt_macos_bigsur_icon_189954.png" },
                     { name: "Java", icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-java-5728473-4781237.png" },
-                    { name: "Figma", icon: "https://static.vecteezy.com/system/resources/previews/042/165/847/non_2x/figma-3d-logo-black-background-free-png.png" },
                     { name: "Python", icon: "https://tse2.mm.bing.net/th/id/OIP.ab-LadRHEfMbeAuDD-U3owHaHa?rs=1&pid=ImgDetMain" }
-                ]
-            },
-            {
-                category: { en: "Breaking Barriers", id: "Mendobrak Batasan" },
-                items: [
-                    { name: "Innovation Driver", icon: "img/Creative Idea.png" },
-                    { name: "Global Connector", icon: "img/image 6.png" },
-                    { name: "Collaboration Accelerator", icon: "img/Business Team.png" },
-                    { name: "Outcome Strategic", icon: "img/image 7.png" }
                 ]
             },
             {
                 category: { en: "The Next Skill Cap", id: "Target Keahlian Berikutnya" },
                 items: [
                     { name: "Machine Learning", icon: "img/Ai Chip.png" },
-                    { name: "Investment", icon: "img/Businessman growing investment.png" },
-                    { name: "Business Intelligence", icon: "img/Microsoft Power BI.png" },
                     { name: "Data Science", icon: "img/SQL.png" }
                 ]
             }
@@ -229,62 +241,38 @@
         const defaultExperiences = [
             {
                 type: { en: "Core Professional Dive", id: "Fokus Profesional" },
-                title: { en: "Yoga Solusi Intiprima - Internship", id: "Yoga Solusi Intiprima - Magang" },
+                title: { en: "Yoga Solusi Intiprima", id: "Yoga Solusi Intiprima" },
                 role: { en: "IT Support and Development Team", id: "Tim IT Support dan Pengembangan" },
                 duration: { en: "3 Months", id: "3 Bulan" },
-                desc: { 
-                    en: "Serving as a flexible technician and developer in the IT Support and Development team. Ensuring the smooth operation of technology across the Foundation's various work units.", 
-                    id: "Bertugas sebagai teknisi dan pengembang fleksibel. Memastikan kelancaran operasi teknologi di berbagai unit kerja Yayasan." 
-                },
+                year: "2025", 
+                desc: { en: "Serving as a flexible technician and developer...", id: "Bertugas sebagai teknisi dan pengembang fleksibel..." },
                 impacts: [
-                    { en: "Improving IT reliability by providing mobile support to various school units.", id: "Meningkatkan keandalan IT dengan memberikan dukungan mobile ke unit sekolah." },
-                    { en: "Designing comprehensive ERDs for database structures.", id: "Merancang ERD komprehensif untuk struktur basis data." },
-                    { en: "Supporting digitization projects through front-end/back-end development.", id: "Mendukung digitalisasi melalui pengembangan front-end/back-end." },
-                    { en: "Managing repair priorities and field logistics independently.", id: "Mengelola prioritas perbaikan dan logistik lapangan secara mandiri." }
-                ]
-            },
-            {
-                type: { en: "Academic Project", id: "Proyek Akademik" },
-                title: { en: "Pekan Olahraga dan Kesenian IF", id: "Pekan Olahraga dan Kesenian IF" },
-                role: { en: "Leader, Creative Docu", id: "Ketua Tim Dokumentasi Kreatif" },
-                duration: { en: "4 Months", id: "4 Bulan" },
-                desc: { 
-                    en: "Spearheaded the Design, Documentation, and Publication (PDD) team for the annual student art and sport festival.", 
-                    id: "Memimpin tim Desain, Dokumentasi, dan Publikasi (PDD) untuk festival seni dan olahraga tahunan mahasiswa." 
-                },
-                impacts: [
-                    { en: "Led and managed a multi-talented team ensuring timely delivery.", id: "Memimpin dan mengelola tim multi-talenta agar proyek tepat waktu." },
-                    { en: "Bridged communication gaps between the committee and Creative Docu team.", id: "Menjembatani komunikasi antara panitia dan tim kreatif." },
-                    { en: "Increased event outreach through cohesive visual strategies.", id: "Meningkatkan jangkauan acara melalui strategi visual yang kohesif." }
-                ]
-            },
-            {
-                type: { en: "Organization", id: "Organisasi" },
-                title: { en: "Himpunan Mahasiswa Informatika", id: "Himpunan Mahasiswa Informatika" },
-                role: { en: "Member, PDD Division", id: "Anggota Divisi PDD" },
-                duration: { en: "1 Year", id: "1 Tahun" },
-                desc: { 
-                    en: "Contributed actively to the visual identity and communication needs of the student association.", 
-                    id: "Berkontribusi aktif pada identitas visual dan kebutuhan komunikasi himpunan mahasiswa." 
-                },
-                impacts: [
-                    { en: "Produced high-quality visual content (posters, infographics).", id: "Memproduksi konten visual berkualitas tinggi (poster, infografis)." },
-                    { en: "Strengthened teamwork and collaboration skills.", id: "Memperkuat keterampilan kerja sama dan kolaborasi tim." }
+                    { en: "Improving IT reliability by providing mobile support.", id: "Meningkatkan keandalan IT dengan memberikan dukungan mobile." },
+                    { en: "Designing comprehensive ERDs for database structures.", id: "Merancang ERD komprehensif untuk struktur basis data." }
                 ]
             },
             {
                 type: { en: "Creative Storytelling", id: "Bercerita Kreatif" },
                 title: { en: "SMK Telekomunikasi Tunas Harapan", id: "SMK Telekomunikasi Tunas Harapan" },
                 role: { en: "Scriptwriter, Final Year Film", id: "Penulis Naskah, Film Akhir Tahun" },
-                duration: { en: "2024", id: "2024" },
-                desc: { 
-                    en: "A foundational experience in creative storytelling and visual narrative development.", 
-                    id: "Pengalaman mendasar dalam penceritaan kreatif dan pengembangan narasi visual." 
-                },
+                duration: { en: "1 Year", id: "1 Tahun" },
+                year: "2024",
+                desc: { en: "A foundational experience in creative storytelling.", id: "Pengalaman mendasar dalam penceritaan kreatif." },
                 impacts: [
-                    { en: "Developed a compelling narrative and scenario for the video.", id: "Mengembangkan narasi dan skenario yang menarik untuk video." },
-                    { en: "Gained an initial understanding of visual flow and pacing.", id: "Memperoleh pemahaman awal tentang alur dan tempo visual." }
+                    { en: "Developed a compelling narrative for the video.", id: "Mengembangkan narasi yang menarik untuk video." }
                 ]
+            }
+        ];
+
+        const defaultEducations = [
+            {
+                degree: { en: "Bachelor of Informatics", id: "S1 Informatika" },
+                school: { en: "Sanata Dharma University", id: "Universitas Sanata Dharma" },
+                year: "2024 - Present",
+                desc: { 
+                    en: "Currently pursuing a degree with a strong interest in Software Engineering, Data Pipelines, and Artificial Intelligence.", 
+                    id: "Saat ini sedang menempuh pendidikan dengan minat kuat pada Rekayasa Perangkat Lunak, Data Pipeline, dan Kecerdasan Buatan." 
+                }
             }
         ];
 
@@ -293,21 +281,12 @@
                 title: { en: "Dicoding Certificate", id: "Sertifikat Dicoding" }, 
                 desc: { en: "Belajar Dasar AI", id: "Belajar Dasar AI" }, 
                 img: "img/Screenshot 2025-10-29 201858.png" 
-            },
-            { 
-                title: { en: "PORSI Certificate", id: "Sertifikat PORSI" }, 
-                desc: { en: "Creative Docu Leader in PORSI", id: "Pemimpin Dokumentasi Kreatif PORSI" }, 
-                img: "img/Screenshot 2025-10-29 201942.png" 
-            },
-            { 
-                title: { en: "Dicoding Certificate", id: "Sertifikat Dicoding" }, 
-                desc: { en: "Belajar Dasar Python", id: "Belajar Dasar Python" }, 
-                img: "img/Screenshot 2025-10-29 202044.png" 
             }
         ];
 
         let portfolioSkills = JSON.parse(localStorage.getItem('port_skills')) || defaultSkills;
         let portfolioExperiences = JSON.parse(localStorage.getItem('port_exps')) || defaultExperiences;
+        let portfolioEducations = JSON.parse(localStorage.getItem('port_edus')) || defaultEducations;
         let portfolioCertificates = JSON.parse(localStorage.getItem('port_certs')) || defaultCertificates;
 
         // === 2. RENDER PORTFOLIO ===
@@ -318,19 +297,21 @@
                 <div class="skill-card" data-aos="fade-up">
                     <h3><span lang="en">${card.category.en}</span><span lang="id">${card.category.id}</span></h3>
                     <div class="skill-items-list">
-                        ${card.items.map(item => `
-                            <div class="skill-item">
-                                <div class="skill-icon"><img src="${item.icon}" alt="${item.name}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/5968/5968292.png'"></div>
-                                <span class="skill-name">${item.name}</span>
-                            </div>
-                        `).join('')}
+                        ${card.items.map(item => `<div class="skill-item"><div class="skill-icon"><img src="${item.icon}" alt="${item.name}"></div><span class="skill-name">${item.name}</span></div>`).join('')}
                     </div>
                 </div>
             `).join('');
 
+            // Sort Experiences by Year Descending
+            const sortedExperiences = [...portfolioExperiences].sort((a, b) => {
+                const yearA = parseInt((a.year || "0").substring(0, 4)) || 0;
+                const yearB = parseInt((b.year || "0").substring(0, 4)) || 0;
+                return yearB - yearA;
+            });
+
             // Render Experiences
             const expCont = document.getElementById('experiencesContainer');
-            if(expCont) expCont.innerHTML = portfolioExperiences.map((exp, idx) => `
+            if(expCont) expCont.innerHTML = sortedExperiences.map((exp, idx) => `
                 <div class="experience-card-v2" data-aos="${idx % 2 === 0 ? 'fade-right' : 'fade-left'}">
                     <div class="exp-badge"><span lang="en">${exp.type.en}</span><span lang="id">${exp.type.id}</span></div>
                     <div class="experience-header">
@@ -338,56 +319,50 @@
                             <h3 class="experience-title"><span lang="en">${exp.title.en}</span><span lang="id">${exp.title.id}</span></h3>
                             <div class="experience-role"><span lang="en">${exp.role.en}</span><span lang="id">${exp.role.id}</span></div>
                         </div>
-                        <div class="experience-duration"><span lang="en">${exp.duration.en}</span><span lang="id">${exp.duration.id}</span></div>
+                        <div class="experience-duration" style="display: flex; gap: 8px; flex-direction: column; align-items: flex-end;">
+                            <span style="font-weight: bold; color: var(--primary);">${exp.year || ''}</span>
+                            <span><span lang="en">${exp.duration.en}</span><span lang="id">${exp.duration.id}</span></span>
+                        </div>
                     </div>
                     <p class="experience-desc"><span lang="en">${exp.desc.en}</span><span lang="id">${exp.desc.id}</span></p>
                     <div class="impact-track">
                         <h4><span lang="en">My Impact Track</span><span lang="id">Jejak Dampak Saya</span></h4>
-                        <ul>
-                            ${exp.impacts.map(imp => `<li><span lang="en">${imp.en}</span><span lang="id">${imp.id}</span></li>`).join('')}
-                        </ul>
+                        <ul>${exp.impacts.map(imp => `<li><span lang="en">${imp.en}</span><span lang="id">${imp.id}</span></li>`).join('')}</ul>
                     </div>
+                </div>
+            `).join('');
+
+            // Render Education
+            const eduCont = document.getElementById('educationContainer');
+            if(eduCont) eduCont.innerHTML = portfolioEducations.map((edu, idx) => `
+                <div class="experience-card-v2" data-aos="fade-up" style="padding: 24px;">
+                    <div class="experience-header" style="border-bottom: none; padding-bottom: 0; margin-bottom: 12px;">
+                        <div>
+                            <h3 class="experience-title" style="font-size: 1.25rem;"><span lang="en">${edu.degree.en}</span><span lang="id">${edu.degree.id}</span></h3>
+                            <div class="experience-role"><span lang="en">${edu.school.en}</span><span lang="id">${edu.school.id}</span></div>
+                        </div>
+                        <div class="experience-duration" style="font-weight: 700;">${edu.year}</div>
+                    </div>
+                    <p class="experience-desc" style="margin-bottom: 0;"><span lang="en">${edu.desc.en}</span><span lang="id">${edu.desc.id}</span></p>
                 </div>
             `).join('');
 
             // Render Certificates
             const certCont = document.getElementById('certificatesContainer');
             if(certCont) certCont.innerHTML = portfolioCertificates.map((cert, index) => {
-                // Check if it's a PDF for the preview thumbnail (PDFs don't load in <img> natively as thumbnails)
                 const isPdf = cert.img.toLowerCase().endsWith('.pdf');
                 const thumbSrc = isPdf ? 'https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg' : cert.img;
-                
-                return `
-                <div class="certificate-card" data-aos="fade-up" data-certificate="${index}">
-                    <div class="certificate-image">
-                        <img src="${thumbSrc}" style="${isPdf ? 'object-fit: contain; padding: 20px;' : ''}" onerror="this.src='https://images.unsplash.com/photo-1589330694653-ded6df03f754?q=80&w=400'">
-                    </div>
-                    <div class="certificate-meta">
-                        <div class="certificate-title"><span lang="en">${cert.title.en}</span><span lang="id">${cert.title.id}</span></div>
-                        <div class="certificate-desc"><span lang="en">${cert.desc.en}</span><span lang="id">${cert.desc.id}</span></div>
-                    </div>
-                </div>
-            `}).join('');
+                return `<div class="certificate-card" data-aos="fade-up" data-certificate="${index}"><div class="certificate-image"><img src="${thumbSrc}" style="${isPdf ? 'object-fit: contain; padding: 20px;' : ''}" onerror="this.src='https://images.unsplash.com/photo-1589330694653-ded6df03f754?q=80&w=400'"></div><div class="certificate-meta"><div class="certificate-title"><span lang="en">${cert.title.en}</span><span lang="id">${cert.title.id}</span></div><div class="certificate-desc"><span lang="en">${cert.desc.en}</span><span lang="id">${cert.desc.id}</span></div></div></div>`;
+            }).join('');
 
-            // Bind Modals with Smart Media Rendering
+            // Bind Modals
             const modal = document.getElementById('certificateModal');
             const mediaContainer = document.getElementById('modalMediaContainer');
-            
             document.querySelectorAll('.certificate-card').forEach(card => {
                 card.onclick = function() {
                     const data = portfolioCertificates[this.getAttribute('data-certificate')];
-                    const url = data.img;
-                    const isPdf = url.toLowerCase().endsWith('.pdf');
-                    
-                    // Clear previous media
-                    mediaContainer.innerHTML = '';
-                    
-                    if (isPdf) {
-                        mediaContainer.innerHTML = `<iframe src="${url}" class="modal-pdf" frameborder="0"></iframe>`;
-                    } else {
-                        mediaContainer.innerHTML = `<img src="${url}" class="modal-image" alt="Certificate">`;
-                    }
-                    
+                    const url = data.img, isPdf = url.toLowerCase().endsWith('.pdf');
+                    mediaContainer.innerHTML = isPdf ? `<iframe src="${url}" class="modal-pdf" frameborder="0"></iframe>` : `<img src="${url}" class="modal-image" alt="Certificate">`;
                     const curLang = document.body.getAttribute('lang') || 'en';
                     document.getElementById('modalTitle').textContent = data.title[curLang];
                     document.getElementById('modalDesc').textContent = data.desc[curLang];
@@ -399,55 +374,42 @@
         }
 
         // === 3. SETTINGS & LANGUAGE ===
-        const langSel = document.getElementById('langSelector');
-        const themeSel = document.getElementById('themeSelector');
+        const langSel = document.getElementById('langSelector'), themeSel = document.getElementById('themeSelector');
         function updateLang(lang) { document.body.setAttribute('lang', lang); if(langSel) langSel.value = lang; localStorage.setItem('language', lang); }
         function applyTheme(theme) {
             document.body.classList.remove('dark-mode', 'light-mode');
-            if (theme === 'dark') document.body.classList.add('dark-mode');
-            else if (theme === 'light') document.body.classList.add('light-mode');
+            if (theme === 'dark') document.body.classList.add('dark-mode'); else if (theme === 'light') document.body.classList.add('light-mode');
             else { document.body.classList.add(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark-mode' : 'light-mode'); }
             if(themeSel) themeSel.value = theme; localStorage.setItem('theme', theme);
         }
-        langSel.addEventListener('change', (e) => updateLang(e.target.value));
-        themeSel.addEventListener('change', (e) => applyTheme(e.target.value));
-        updateLang(localStorage.getItem('language') || 'en');
-        applyTheme(localStorage.getItem('theme') || 'system');
-        
+        langSel.addEventListener('change', (e) => updateLang(e.target.value)); themeSel.addEventListener('change', (e) => applyTheme(e.target.value));
+        updateLang(localStorage.getItem('language') || 'en'); applyTheme(localStorage.getItem('theme') || 'system');
         const setBtn = document.getElementById('settingsBtn'), setDrop = document.getElementById('settingsDropdown');
         setBtn.onclick = (e) => { e.stopPropagation(); setDrop.classList.toggle('show'); };
         document.getElementById('closeSettings').onclick = () => setDrop.classList.remove('show');
         document.onclick = (e) => { if (!e.target.closest('#settingsDropdown') && !e.target.closest('#settingsBtn')) setDrop.classList.remove('show'); };
 
         // === 4. CRUD ADMIN SYSTEM ===
-        const adminModal = document.getElementById('adminModal');
-        const adminDataType = document.getElementById('adminDataType');
-        const listView = document.getElementById('adminListView');
-        const formView = document.getElementById('adminFormView');
-        const dynamicFields = document.getElementById('formDynamicFields');
-        let currentEditIndex = -1; 
+        const adminModal = document.getElementById('adminModal'), adminDataType = document.getElementById('adminDataType'), listView = document.getElementById('adminListView'), formView = document.getElementById('adminFormView'), dynamicFields = document.getElementById('formDynamicFields');
+        let currentEditIndex = -1;
 
         function openAdmin() { adminModal.style.display = 'flex'; renderCrudList(); }
         window.addEventListener('keydown', (e) => { if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'a') { e.preventDefault(); openAdmin(); }});
-        document.getElementById('secretAdminBtn').onclick = openAdmin;
-        document.getElementById('closeAdmin').onclick = () => adminModal.style.display = 'none';
-        
+        document.getElementById('secretAdminBtn').onclick = openAdmin; document.getElementById('closeAdmin').onclick = () => adminModal.style.display = 'none';
         adminDataType.addEventListener('change', renderCrudList);
 
         function renderCrudList() {
             formView.style.display = 'none'; listView.style.display = 'flex';
             const type = adminDataType.value;
-            let dataArr = type === 'skills' ? portfolioSkills : type === 'experiences' ? portfolioExperiences : portfolioCertificates;
+            let dataArr = type === 'skills' ? portfolioSkills : type === 'educations' ? portfolioEducations : type === 'experiences' ? portfolioExperiences : portfolioCertificates;
+            
             listView.innerHTML = dataArr.map((item, idx) => {
-                let titleStr = type === 'skills' ? item.category.en : item.title.en;
-                return `
-                    <div class="crud-item">
-                        <strong>${titleStr}</strong>
-                        <div class="crud-actions">
-                            <button class="btn-edit" data-idx="${idx}">Edit</button>
-                            <button class="btn-delete" data-idx="${idx}">Hapus</button>
-                        </div>
-                    </div>`;
+                let titleStr = '';
+                if(type === 'skills') titleStr = item.category.en;
+                if(type === 'experiences') titleStr = `(${item.year || 'N/A'}) ${item.title.en}`;
+                if(type === 'educations') titleStr = item.degree.en;
+                if(type === 'certificates') titleStr = item.title.en;
+                return `<div class="crud-item"><strong>${titleStr}</strong><div class="crud-actions"><button class="btn-edit" data-idx="${idx}">Edit</button><button class="btn-delete" data-idx="${idx}">Hapus</button></div></div>`;
             }).join('') || '<p style="color:var(--text-muted); font-size:0.9rem;">Belum ada data.</p>';
         }
 
@@ -457,6 +419,7 @@
                 if(confirm('Yakin ingin menghapus item ini?')) {
                     const type = adminDataType.value, idx = parseInt(e.target.getAttribute('data-idx'));
                     if(type === 'skills') portfolioSkills.splice(idx, 1);
+                    if(type === 'educations') portfolioEducations.splice(idx, 1);
                     if(type === 'experiences') portfolioExperiences.splice(idx, 1);
                     if(type === 'certificates') portfolioCertificates.splice(idx, 1);
                     saveToLocalAndRender(); renderCrudList();
@@ -474,7 +437,7 @@
 
             let item = null;
             if(index !== -1) {
-                let arr = type === 'skills' ? portfolioSkills : type === 'experiences' ? portfolioExperiences : portfolioCertificates;
+                let arr = type === 'skills' ? portfolioSkills : type === 'educations' ? portfolioEducations : type === 'experiences' ? portfolioExperiences : portfolioCertificates;
                 item = arr[index];
             }
 
@@ -485,8 +448,20 @@
                         <div class="crud-form-group"><label>Nama Kategori (EN)</label><input type="text" id="skCatEN" value="${item ? item.category.en : ''}"></div>
                         <div class="crud-form-group"><label>Nama Kategori (ID)</label><input type="text" id="skCatID" value="${item ? item.category.id : ''}"></div>
                     </div>
-                    <div class="crud-form-group"><label>Daftar Skill (Format: Nama | Link Gambar) - Pisahkan per baris</label><textarea id="skItems" rows="5">${itemsText}</textarea></div>`;
+                    <div class="crud-form-group"><label>Daftar Skill (Format: Nama | Link Gambar)</label><textarea id="skItems" rows="5">${itemsText}</textarea></div>`;
             } 
+            else if (type === 'educations') {
+                dynamicFields.innerHTML = `
+                    <div class="crud-grid">
+                        <div class="crud-form-group"><label>Gelar/Jurusan (EN)</label><input type="text" id="edDegEN" value="${item ? item.degree.en : ''}"></div>
+                        <div class="crud-form-group"><label>Gelar/Jurusan (ID)</label><input type="text" id="edDegID" value="${item ? item.degree.id : ''}"></div>
+                        <div class="crud-form-group"><label>Nama Kampus/Sekolah (EN)</label><input type="text" id="edSchEN" value="${item ? item.school.en : ''}"></div>
+                        <div class="crud-form-group"><label>Nama Kampus/Sekolah (ID)</label><input type="text" id="edSchID" value="${item ? item.school.id : ''}"></div>
+                    </div>
+                    <div class="crud-form-group"><label>Tahun (Misal: 2024 - Present)</label><input type="text" id="edYear" value="${item ? item.year : ''}"></div>
+                    <div class="crud-form-group"><label>Keterangan (EN)</label><textarea id="edDescEN" rows="2">${item ? item.desc.en : ''}</textarea></div>
+                    <div class="crud-form-group"><label>Keterangan (ID)</label><textarea id="edDescID" rows="2">${item ? item.desc.id : ''}</textarea></div>`;
+            }
             else if (type === 'certificates') {
                 dynamicFields.innerHTML = `
                     <div class="crud-grid">
@@ -495,10 +470,7 @@
                         <div class="crud-form-group"><label>Deskripsi (EN)</label><input type="text" id="ceDescEN" value="${item ? item.desc.en : ''}"></div>
                         <div class="crud-form-group"><label>Deskripsi (ID)</label><input type="text" id="ceDescID" value="${item ? item.desc.id : ''}"></div>
                     </div>
-                    <div class="crud-form-group">
-                        <label>Path/URL Dokumen (Bisa masukkan path lokal 'img/file.png' atau link 'https://...file.pdf')</label>
-                        <input type="text" id="ceImg" value="${item ? item.img : ''}" placeholder="img/sertifikat1.pdf">
-                    </div>`;
+                    <div class="crud-form-group"><label>Path/URL Dokumen</label><input type="text" id="ceImg" value="${item ? item.img : ''}"></div>`;
             }
             else if (type === 'experiences') {
                 const impactsText = item ? item.impacts.map(i => `${i.en} | ${i.id}`).join('\n') : '';
@@ -506,16 +478,19 @@
                     <div class="crud-grid">
                         <div class="crud-form-group"><label>Tipe Label (EN)</label><input type="text" id="exTypeEN" value="${item ? item.type.en : ''}"></div>
                         <div class="crud-form-group"><label>Tipe Label (ID)</label><input type="text" id="exTypeID" value="${item ? item.type.id : ''}"></div>
-                        <div class="crud-form-group"><label>Judul Acara/Kerja (EN)</label><input type="text" id="exTitleEN" value="${item ? item.title.en : ''}"></div>
-                        <div class="crud-form-group"><label>Judul Acara/Kerja (ID)</label><input type="text" id="exTitleID" value="${item ? item.title.id : ''}"></div>
-                        <div class="crud-form-group"><label>Posisi/Role (EN)</label><input type="text" id="exRoleEN" value="${item ? item.role.en : ''}"></div>
-                        <div class="crud-form-group"><label>Posisi/Role (ID)</label><input type="text" id="exRoleID" value="${item ? item.role.id : ''}"></div>
+                        <div class="crud-form-group"><label>Tahun (Penting utk Sorting!)</label><input type="text" id="exYear" value="${item ? (item.year || '') : ''}" placeholder="2025"></div>
                         <div class="crud-form-group"><label>Durasi (EN)</label><input type="text" id="exDurEN" value="${item ? item.duration.en : ''}"></div>
                         <div class="crud-form-group"><label>Durasi (ID)</label><input type="text" id="exDurID" value="${item ? item.duration.id : ''}"></div>
                     </div>
+                    <div class="crud-grid">
+                        <div class="crud-form-group"><label>Judul Tempat/Proyek (EN)</label><input type="text" id="exTitleEN" value="${item ? item.title.en : ''}"></div>
+                        <div class="crud-form-group"><label>Judul Tempat/Proyek (ID)</label><input type="text" id="exTitleID" value="${item ? item.title.id : ''}"></div>
+                        <div class="crud-form-group"><label>Posisi/Role (EN)</label><input type="text" id="exRoleEN" value="${item ? item.role.en : ''}"></div>
+                        <div class="crud-form-group"><label>Posisi/Role (ID)</label><input type="text" id="exRoleID" value="${item ? item.role.id : ''}"></div>
+                    </div>
                     <div class="crud-form-group"><label>Deskripsi Umum (EN)</label><textarea id="exDescEN" rows="2">${item ? item.desc.en : ''}</textarea></div>
                     <div class="crud-form-group"><label>Deskripsi Umum (ID)</label><textarea id="exDescID" rows="2">${item ? item.desc.id : ''}</textarea></div>
-                    <div class="crud-form-group"><label>Daftar Dampak/Pencapaian (Format: Teks EN | Teks ID) - Pisahkan per baris</label><textarea id="exImpacts" rows="4">${impactsText}</textarea></div>`;
+                    <div class="crud-form-group"><label>Daftar Pencapaian (EN | ID)</label><textarea id="exImpacts" rows="4">${impactsText}</textarea></div>`;
             }
         }
 
@@ -528,6 +503,14 @@
                     items: lines.map(line => { const parts = line.split('|'); return { name: parts[0]?.trim() || '', icon: parts[1]?.trim() || '' }; })
                 };
             } 
+            else if (type === 'educations') {
+                newItem = {
+                    degree: { en: document.getElementById('edDegEN').value, id: document.getElementById('edDegID').value },
+                    school: { en: document.getElementById('edSchEN').value, id: document.getElementById('edSchID').value },
+                    year: document.getElementById('edYear').value,
+                    desc: { en: document.getElementById('edDescEN').value, id: document.getElementById('edDescID').value }
+                };
+            }
             else if (type === 'certificates') {
                 newItem = {
                     title: { en: document.getElementById('ceTitleEN').value, id: document.getElementById('ceTitleID').value },
@@ -539,6 +522,7 @@
                 const lines = document.getElementById('exImpacts').value.split('\n').filter(l => l.trim() !== '');
                 newItem = {
                     type: { en: document.getElementById('exTypeEN').value, id: document.getElementById('exTypeID').value },
+                    year: document.getElementById('exYear').value,
                     title: { en: document.getElementById('exTitleEN').value, id: document.getElementById('exTitleID').value },
                     role: { en: document.getElementById('exRoleEN').value, id: document.getElementById('exRoleID').value },
                     duration: { en: document.getElementById('exDurEN').value, id: document.getElementById('exDurID').value },
@@ -546,7 +530,7 @@
                     impacts: lines.map(line => { const parts = line.split('|'); return { en: parts[0]?.trim() || '', id: parts[1]?.trim() || '' }; })
                 };
             }
-            let arr = type === 'skills' ? portfolioSkills : type === 'experiences' ? portfolioExperiences : portfolioCertificates;
+            let arr = type === 'skills' ? portfolioSkills : type === 'educations' ? portfolioEducations : type === 'experiences' ? portfolioExperiences : portfolioCertificates;
             if(currentEditIndex === -1) arr.push(newItem); else arr[currentEditIndex] = newItem;
             saveToLocalAndRender(); renderCrudList();
         };
@@ -554,6 +538,7 @@
         function saveToLocalAndRender() {
             localStorage.setItem('port_skills', JSON.stringify(portfolioSkills));
             localStorage.setItem('port_exps', JSON.stringify(portfolioExperiences));
+            localStorage.setItem('port_edus', JSON.stringify(portfolioEducations));
             localStorage.setItem('port_certs', JSON.stringify(portfolioCertificates));
             renderAll();
         }
