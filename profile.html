@@ -3,51 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ignatius Arya - Professional Architect</title>
-    <!-- AOS CSS -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ignatius Arya - Portfolio</title>
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="profilee.css">
 </head>
-<body class="light-mode">
-    <!-- Header -->
+<body lang="en" class="light-mode">
+
+    <!-- Header / Navbar -->
     <header>
-        <div class="logo">Ignatius Arya</div>
+        <div class="logo">&lt; Ignatius Arya /&gt;</div>
         <nav>
             <ul>
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#hire">Hire Me</a></li>
+                <li><a href="#profile"><span lang="en">Profile</span><span lang="id">Profil</span></a></li>
+                <li><a href="#projects"><span lang="en">Experiences</span><span lang="id">Pengalaman</span></a></li>
+                <li><a href="#certificates"><span lang="en">Certificates</span><span lang="id">Sertifikat</span></a></li>
+                <li><a href="#contact"><span lang="en">Contact</span><span lang="id">Kontak</span></a></li>
             </ul>
         </nav>
-        <div class="settings-btn" id="settingsBtn">⋯</div>
+        <div class="header-actions">
+            <button class="settings-btn" id="settingsBtn" aria-label="Open settings">⋯</button>
+            <button class="secret-admin-btn" id="secretAdminBtn" title="Developer Mode" style="opacity: 0; background: transparent; border: none; cursor: default; width: 20px; height: 20px;">•</button>
+        </div>
     </header>
 
     <!-- Settings Dropdown -->
     <div class="settings-dropdown" id="settingsDropdown">
         <div class="settings-header">
-            <span>Pengaturan</span>
+            <span><span lang="en">Settings</span><span lang="id">Pengaturan</span></span>
             <button class="close-btn" id="closeSettings">&times;</button>
         </div>
         <div class="settings-content">
             <div class="setting-group">
-                <label>Tema</label>
+                <label><span lang="en">Theme</span><span lang="id">Tema</span></label>
                 <select id="themeSelector" class="theme-select">
-                    <option value="light">Terang</option>
-                    <option value="dark">Gelap</option>
-                    <option value="system">Sistem</option>
+                    <option value="light">Terang / Light</option>
+                    <option value="dark">Gelap / Dark</option>
+                    <option value="system">Sistem / Auto</option>
                 </select>
             </div>
             <div class="setting-group">
-                <label>Bahasa</label>
+                <label><span lang="en">Language</span><span lang="id">Bahasa</span></label>
                 <select id="langSelector" class="lang-select">
                     <option value="en">English</option>
                     <option value="id">Bahasa Indonesia</option>
                 </select>
             </div>
-            <div class="setting-footer">
-                <span>Versi</span>
-                <span>01.10.25</span>
+            <div class="settings-footer">
+                <span>Versi 03.10.CMS</span>
             </div>
         </div>
     </div>
@@ -55,429 +61,511 @@
     <!-- Hero Section -->
     <section class="hero" data-aos="fade-up">
         <div class="hero-content">
-            <h1>Hello, it's me</h1>
-            <h2>< Ignatius Arya /></h2>
-            <p>Your Professional Architect. I craft designs that don't just look good, they perform.</p>
-            <div class="status">Available for work</div>
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                <span lang="en">Available for work</span><span lang="id">Tersedia untuk proyek</span>
+            </div>
+            <h1><span lang="en">Hello, it's me</span><span lang="id">Halo, ini saya</span></h1>
+            <h2 class="hero-name">&lt; Ignatius Arya /&gt;</h2>
+            <p>
+                <p>
+    <span lang="en">Software Engineer & AI/ML Enthusiast. I build scalable software solutions and integrate Machine Learning models, bridging the gap between development and robust deployment operations.</span>
+    <span lang="id">Software Engineer & Penggiat AI/ML. Saya membangun solusi perangkat lunak yang skalabel dan mengintegrasikan model Machine Learning, memastikan sistem berjalan andal dari tahap pengembangan hingga operasional.</span>
+</p>
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <span lang="en">Explore Work</span><span lang="id">Lihat Portofolio</span>
+                </a>
+                <a href="#contact" class="btn btn-secondary" style="margin-left: 10px;">
+                    <span lang="en">Contact Me</span><span lang="id">Hubungi Saya</span>
+                </a>
+            </div>
         </div>
         <div class="hero-image">
-            <img src="img/WhatsApp_Image_2025-10-29_at_8.02.19_PM-removebg-preview.png" alt="Ignatius Arya">
+            <div class="image-overlay-glow"></div>
+            <img src="img/WhatsApp_Image_2025-10-29_at_8.02.19_PM-removebg-preview.png" alt="Ignatius Arya" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=500&auto=format&fit=crop'">
         </div>
     </section>
 
     <!-- Skills Section -->
     <section id="profile" class="container">
-        <h2 class="section-title" data-aos="fade-up">Skills</h2>
-        <div class="skills-container">
-            <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
-                <h3>The Comfort Zone</h3>
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <img src="https://cdn.icon-icons.com/icons2/3053/PNG/512/microsoft_visual_studio_code_alt_macos_bigsur_icon_189954.png" alt="Visual Studio Code">
-                    </div>
-                    <span class="skill-name">Visual Studio Code</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-java-5728473-4781237.png" alt="Java">
-                    </div>
-                    <span class="skill-name">Java</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <img src="https://static.vecteezy.com/system/resources/previews/042/165/847/non_2x/figma-3d-logo-black-background-free-png.png" alt="Figma">
-                    </div>
-                    <span class="skill-name">Figma</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <img src="https://tse2.mm.bing.net/th/id/OIP.ab-LadRHEfMbeAuDD-U3owHaHa?rs=1&pid=ImgDetMain" alt="Python">
-                    </div>
-                    <span class="skill-name">Python</span>
-                </div>
-            </div>
-            
-            <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
-                <h3>Breaking Barriers</h3>
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <img src="img/Creative Idea.png" alt="Innovation Driver">
-                    </div>
-                    <span class="skill-name">Innovation Driver</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <img src="img/image 6.png" alt="Global Connector">
-                    </div>
-                    <span class="skill-name">Global Connector</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <img src="img/Business Team.png" alt="Collaboration Accelerator">
-                    </div>
-                    <span class="skill-name">Collaboration Accelerator</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <img src="img/image 7.png" alt="Outcome Strategic">
-                    </div>
-                    <span class="skill-name">Outcome Strategic</span>
-                </div>
-            </div>
-            
-            <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
-                <h3>The Next Skill Cap</h3>
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <img src="img/Ai Chip.png" alt="Machine Learning">
-                    </div>
-                    <span class="skill-name">Machine Learning</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <img src="img/Businessman growing investment.png" alt="Investment">
-                    </div>
-                    <span class="skill-name">Investment</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <img src="img/Microsoft Power BI.png" alt="Business Intelligence">
-                    </div>
-                    <span class="skill-name">Business Intelligence</span>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <img src="img/SQL.png" alt="Data Science">
-                    </div>
-                    <span class="skill-name">Data Science</span>
-                </div>
-            </div>
-        </div>
+        <h2 class="section-title" data-aos="fade-up"><span lang="en">Skills & Tools</span><span lang="id">Keahlian & Alat</span></h2>
+        <div class="skills-grid" id="skillsContainer"></div>
     </section>
 
     <!-- Experiences Section -->
     <section id="projects" class="container">
-        <h2 class="section-title" data-aos="fade-up">Experiences</h2>
-        <div class="experiences-container">
-            <div class="experience-column" data-aos="fade-right">
-                <h3>Core Professional Dive</h3>
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <div class="experience-title">Yoga Solusi Intiprima - Internship</div>
-                            <div class="experience-role">IT Support and Development Team</div>
-                        </div>
-                        <div class="experience-duration">3 Months</div>
-                    </div>
-                    <div class="experience-desc">
-                        Serving as a flexible technician and developer in the IT Support and Development team. Ensuring the smooth operation of technology across the Foundation's various work units, while contributing to internal system development projects.
-                    </div>
-                    <div class="impact-track">
-                        <h4>My Impact Track</h4>
-                        <ul>
-                            <li>Improving IT reliability by providing mobile support to various school units, ensuring smooth hardware (PC Lab) and network operations.</li>
-                            <li>Designing comprehensive Entity-Relationship Diagrams (ERDs) for database structures, ensuring data integrity and scalability for web projects.</li>
-                            <li>Supporting digitization projects through front-end/back-end development (WFH), translating functional requirements into efficient code and wireframes.</li>
-                            <li>Managing repair priorities and field logistics independently (mobile), demonstrating high adaptability and time management.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="experience-column" data-aos="fade-left">
-                <h3>Academic & Self-Driven Projects</h3>
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <div class="experience-title">Pekan Olahraga dan Kesenian IF - Leader, Creative Docu</div>
-                            <div class="experience-role">Design, Documentation, and Publication (PDD) Team</div>
-                        </div>
-                        <div class="experience-duration">4 Months</div>
-                    </div>
-                    <div class="experience-desc">
-                        Spearheaded the Design, Documentation, and Publication (PDD) team for the annual student art and sport festival. Ensured consistent event branding and visual messaging across all media platforms.
-                    </div>
-                    <div class="impact-track">
-                        <h4>My Impact Track</h4>
-                        <ul>
-                            <li>Leading and managing a multi-talented team, ensuring timely delivery of all promotional materials within budget constraints.</li>
-                            <li>Bridging communication gaps between the committee and Creative Docu team, resulting in clear and actionable creative mandates.</li>
-                            <li>Increasing event outreach through a cohesive strategy of visual content production and social media publication.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <div class="experience-title">Himpunan Mahasiswa Informatika - Member, PDD Division</div>
-                            <div class="experience-role">Student Association</div>
-                        </div>
-                        <div class="experience-duration">1 Year</div>
-                    </div>
-                    <div class="experience-desc">
-                        Contributed actively to the visual identity and communication needs of the student association. Focused on maintaining engagement and information integrity throughout the tenure.
-                    </div>
-                    <div class="impact-track">
-                        <h4>My Impact Track</h4>
-                        <ul>
-                            <li>Consistently producing high-quality visual content (posters, infographics, internal reports) for both internal and public dissemination.</li>
-                            <li>Strengthening teamwork and collaboration skills through long-term commitment to organizational goals.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <div class="experience-title">SMK Telekomunikasi Tunas Harapan - Scriptwriter, Final Year Film</div>
-                            <div class="experience-role">Creative Storytelling</div>
-                        </div>
-                        <div class="experience-duration">2024</div>
-                    </div>
-                    <div class="experience-desc">
-                        A foundational experience in creative storytelling and visual narrative development. Responsible for crafting the core script for the final year video project.
-                    </div>
-                    <div class="impact-track">
-                        <h4>My Impact Track</h4>
-                        <ul>
-                            <li>Developing a compelling narrative and scenario for the video, ensuring the content was engaging and memorable for the audience.</li>
-                            <li>Gaining an initial understanding of visual flow and pacing, crucial for translating written ideas into effective media.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h2 class="section-title" data-aos="fade-up"><span lang="en">Experiences</span><span lang="id">Pengalaman</span></h2>
+        <div class="experiences-grid" id="experiencesContainer"></div>
     </section>
 
     <!-- E-Certificate Section -->
-    <section id="hire" class="container">
-        <h2 class="section-title" data-aos="fade-up">E-Certificate</h2>
-        <div class="certificates-container">
-            <div class="certificate-card" data-aos="fade-up" data-aos-delay="100" data-certificate="1">
-                <div class="certificate-image">
-                    <img src="img/Screenshot 2025-10-29 201858.png" alt="Certificate 1">
-                </div>
-                <div class="certificate-title">Dicoding Certificate</div>
-                <div class="certificate-desc">Belajar Dasar AI</div>
-            </div>
-            
-            <div class="certificate-card" data-aos="fade-up" data-aos-delay="200" data-certificate="2">
-                <div class="certificate-image">
-                    <img src="img/Screenshot 2025-10-29 201942.png" alt="Certificate 2">
-                </div>
-                <div class="certificate-title">PORSI Certificate</div>
-                <div class="certificate-desc">Creative Docu Leader in PORSI</div>
-            </div>
-            
-            <div class="certificate-card" data-aos="fade-up" data-aos-delay="300" data-certificate="3">
-                <div class="certificate-image">
-                    <img src="img/Screenshot 2025-10-29 202044.png" alt="Certificate 3">
-                </div>
-                <div class="certificate-title">Dicoding Certificate</div>
-                <div class="certificate-desc">Belajar Dasar Python</div>
-            </div>
-        </div>
+    <section id="certificates" class="container">
+        <h2 class="section-title" data-aos="fade-up"><span lang="en">E-Certificates</span><span lang="id">Sertifikat Elektronik</span></h2>
+        <div class="certificates-grid" id="certificatesContainer"></div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section" data-aos="fade-up">
-        <h2>Ready to Scale Up?</h2>
-        <p>Whether it's a quick chat or the next big project, let's connect and define your goals.</p>
+    <!-- Contact & CTA Section -->
+    <section id="contact" class="cta-section" data-aos="fade-up">
+        <h2><span lang="en">Ready to Scale Up?</span><span lang="id">Siap Melangkah Lebih Jauh?</span></h2>
+        <p style="margin-bottom: 30px;">
+            <span lang="en">Whether it's a quick chat or the next big software project, let's connect and define your goals.</span>
+            <span lang="id">Baik untuk diskusi santai atau proyek besar berikutnya, mari terhubung dan wujudkan tujuan Anda.</span>
+        </p>
+        
+        <div class="contact-links">
+            <a href="mailto:ignatiusaryajulio@email.com" class="contact-card">
+                <div class="contact-icon">📧</div>
+                <div>
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value">ignatiusaryajulio@email.com</div>
+                </div>
+            </a>
+            <a href="https://github.com/ignasiusar/" target="_blank" class="contact-card">
+                <div class="contact-icon">💻</div>
+                <div>
+                    <div class="contact-label">GitHub</div>
+                    <div class="contact-value">github.com/ignasiusar</div>
+                </div>
+            </a>
+            <a href="https://www.linkedin.com/in/ignatiusaryajulioprananta/" target="_blank" class="contact-card">
+                <div class="contact-icon">🔗</div>
+                <div>
+                    <div class="contact-label">LinkedIn</div>
+                    <div class="contact-value">Ignatius Arya</div>
+                </div>
+            </a>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer data-aos="fade-up">
-        <p>&copy; 2025 Ignatius Arya. All rights reserved.</p>
+        <p><span lang="en">&copy; 2026 Ignatius Arya. All rights reserved.</span><span lang="id">&copy; 2026 Ignatius Arya. Hak cipta dilindungi undang-undang.</span></p>
     </footer>
 
-    <!-- Modal for Certificate View -->
+    <!-- Smart Certificate Modal (Handles Image & PDF) -->
     <div class="modal" id="certificateModal">
-        <div class="modal-content">
+        <div class="modal-content" style="max-width: 800px;">
             <button class="modal-close">&times;</button>
-            <img id="modalImage" class="modal-image" alt="Certificate preview">
-            <div class="modal-title" id="modalTitle"></div>
+            <div id="modalMediaContainer" class="modal-media-container">
+                <!-- Media will be injected here via JS (IMG or IFRAME) -->
+            </div>
+            <div class="modal-title" id="modalTitle" style="margin-top: 16px;"></div>
             <div class="modal-desc" id="modalDesc"></div>
         </div>
     </div>
-<!-- Maintenance Mode Overlay -->
-<div id="maintenanceOverlay" class="maintenance-overlay" style="display: none;">
-    <div class="maintenance-content">
-        <h2>We're Sorry</h2>
-        <p>The website is temporarily unavailable.</p>
-        <p>We're working hard to bring it back <strong>as soon as possible</strong>.</p>
-        <div class="maintenance-footer">
-            <span>Ignatius Arya • Portfolio</span>
+
+    <!-- SECRET CRUD ADMIN MODAL -->
+    <div class="admin-modal" id="adminModal">
+        <div class="admin-modal-content" style="max-width: 700px; max-height: 90vh; overflow-y: auto;">
+            <div class="admin-header">
+                <h3>🛠️ Portfolio Content Manager</h3>
+                <button class="admin-close" id="closeAdmin">&times;</button>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <select id="adminDataType" class="theme-select" style="width: auto; padding: 8px 16px;">
+                    <option value="skills">Kategori Keahlian (Skills)</option>
+                    <option value="experiences">Daftar Pengalaman</option>
+                    <option value="certificates">Daftar Sertifikat</option>
+                </select>
+                <button class="btn btn-primary" id="btnAddNew" style="padding: 8px 16px; font-size: 0.85rem;">+ Tambah Baru</button>
+            </div>
+
+            <div id="adminListView" class="crud-list"></div>
+
+            <div id="adminFormView" style="display: none; background: rgba(0,0,0,0.02); padding: 20px; border-radius: 8px; border: 1px solid var(--border-color);">
+                <h4 id="formTitle" style="margin-bottom: 16px;">Edit Item</h4>
+                <div id="formDynamicFields"></div>
+                <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px;">
+                    <button class="btn btn-secondary" id="btnCancelForm" style="padding: 8px 16px;">Batal</button>
+                    <button class="btn btn-primary" id="btnSaveForm" style="padding: 8px 16px;">Simpan Data</button>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 15px; text-align: right;">
+                <button class="btn" id="btnResetAdmin" style="color: #ef4444; background: transparent; border: 1px solid #ef4444; font-size: 0.8rem; padding: 6px 12px;">Reset Data Pabrik</button>
+            </div>
         </div>
     </div>
-</div>
-    <!-- Talkback Indicator -->
-    <div class="talkback-indicator" id="talkbackIndicator">Talkback Mode</div>
 
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
-// === Maintenance Mode ===
-const maintenanceMode =true; // 🔧 Ganti ke `true` saat ingin aktifkan maintenance
-const maintenanceOverlay = document.getElementById('maintenanceOverlay');
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
 
-if (maintenanceMode) {
-    maintenanceOverlay.style.display = 'flex';
-    document.body.style.overflow = 'hidden'; // Cegah scroll
-}
-    // === Pengaturan Tema & Bahasa ===
-    const settingsBtn = document.getElementById('settingsBtn');
-    const settingsDropdown = document.getElementById('settingsDropdown');
-    const closeSettingsBtn = document.getElementById('closeSettings');
-    const themeSelector = document.getElementById('themeSelector');
-    const langSelector = document.getElementById('langSelector');
+        // === 1. CORE DATA MATRIX (RESTORED FULL DATA) ===
+        const defaultSkills = [
+            {
+                category: { en: "The Comfort Zone", id: "Zona Nyaman" },
+                items: [
+                    { name: "Visual Studio Code", icon: "https://cdn.icon-icons.com/icons2/3053/PNG/512/microsoft_visual_studio_code_alt_macos_bigsur_icon_189954.png" },
+                    { name: "Java", icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-java-5728473-4781237.png" },
+                    { name: "Figma", icon: "https://static.vecteezy.com/system/resources/previews/042/165/847/non_2x/figma-3d-logo-black-background-free-png.png" },
+                    { name: "Python", icon: "https://tse2.mm.bing.net/th/id/OIP.ab-LadRHEfMbeAuDD-U3owHaHa?rs=1&pid=ImgDetMain" }
+                ]
+            },
+            {
+                category: { en: "Breaking Barriers", id: "Mendobrak Batasan" },
+                items: [
+                    { name: "Innovation Driver", icon: "img/Creative Idea.png" },
+                    { name: "Global Connector", icon: "img/image 6.png" },
+                    { name: "Collaboration Accelerator", icon: "img/Business Team.png" },
+                    { name: "Outcome Strategic", icon: "img/image 7.png" }
+                ]
+            },
+            {
+                category: { en: "The Next Skill Cap", id: "Target Keahlian Berikutnya" },
+                items: [
+                    { name: "Machine Learning", icon: "img/Ai Chip.png" },
+                    { name: "Investment", icon: "img/Businessman growing investment.png" },
+                    { name: "Business Intelligence", icon: "img/Microsoft Power BI.png" },
+                    { name: "Data Science", icon: "img/SQL.png" }
+                ]
+            }
+        ];
 
-    let currentTheme = localStorage.getItem('theme') || 'system';
-    let currentLang = localStorage.getItem('language') || 'en';
+        const defaultExperiences = [
+            {
+                type: { en: "Core Professional Dive", id: "Fokus Profesional" },
+                title: { en: "Yoga Solusi Intiprima - Internship", id: "Yoga Solusi Intiprima - Magang" },
+                role: { en: "IT Support and Development Team", id: "Tim IT Support dan Pengembangan" },
+                duration: { en: "3 Months", id: "3 Bulan" },
+                desc: { 
+                    en: "Serving as a flexible technician and developer in the IT Support and Development team. Ensuring the smooth operation of technology across the Foundation's various work units.", 
+                    id: "Bertugas sebagai teknisi dan pengembang fleksibel. Memastikan kelancaran operasi teknologi di berbagai unit kerja Yayasan." 
+                },
+                impacts: [
+                    { en: "Improving IT reliability by providing mobile support to various school units.", id: "Meningkatkan keandalan IT dengan memberikan dukungan mobile ke unit sekolah." },
+                    { en: "Designing comprehensive ERDs for database structures.", id: "Merancang ERD komprehensif untuk struktur basis data." },
+                    { en: "Supporting digitization projects through front-end/back-end development.", id: "Mendukung digitalisasi melalui pengembangan front-end/back-end." },
+                    { en: "Managing repair priorities and field logistics independently.", id: "Mengelola prioritas perbaikan dan logistik lapangan secara mandiri." }
+                ]
+            },
+            {
+                type: { en: "Academic Project", id: "Proyek Akademik" },
+                title: { en: "Pekan Olahraga dan Kesenian IF", id: "Pekan Olahraga dan Kesenian IF" },
+                role: { en: "Leader, Creative Docu", id: "Ketua Tim Dokumentasi Kreatif" },
+                duration: { en: "4 Months", id: "4 Bulan" },
+                desc: { 
+                    en: "Spearheaded the Design, Documentation, and Publication (PDD) team for the annual student art and sport festival.", 
+                    id: "Memimpin tim Desain, Dokumentasi, dan Publikasi (PDD) untuk festival seni dan olahraga tahunan mahasiswa." 
+                },
+                impacts: [
+                    { en: "Led and managed a multi-talented team ensuring timely delivery.", id: "Memimpin dan mengelola tim multi-talenta agar proyek tepat waktu." },
+                    { en: "Bridged communication gaps between the committee and Creative Docu team.", id: "Menjembatani komunikasi antara panitia dan tim kreatif." },
+                    { en: "Increased event outreach through cohesive visual strategies.", id: "Meningkatkan jangkauan acara melalui strategi visual yang kohesif." }
+                ]
+            },
+            {
+                type: { en: "Organization", id: "Organisasi" },
+                title: { en: "Himpunan Mahasiswa Informatika", id: "Himpunan Mahasiswa Informatika" },
+                role: { en: "Member, PDD Division", id: "Anggota Divisi PDD" },
+                duration: { en: "1 Year", id: "1 Tahun" },
+                desc: { 
+                    en: "Contributed actively to the visual identity and communication needs of the student association.", 
+                    id: "Berkontribusi aktif pada identitas visual dan kebutuhan komunikasi himpunan mahasiswa." 
+                },
+                impacts: [
+                    { en: "Produced high-quality visual content (posters, infographics).", id: "Memproduksi konten visual berkualitas tinggi (poster, infografis)." },
+                    { en: "Strengthened teamwork and collaboration skills.", id: "Memperkuat keterampilan kerja sama dan kolaborasi tim." }
+                ]
+            },
+            {
+                type: { en: "Creative Storytelling", id: "Bercerita Kreatif" },
+                title: { en: "SMK Telekomunikasi Tunas Harapan", id: "SMK Telekomunikasi Tunas Harapan" },
+                role: { en: "Scriptwriter, Final Year Film", id: "Penulis Naskah, Film Akhir Tahun" },
+                duration: { en: "2024", id: "2024" },
+                desc: { 
+                    en: "A foundational experience in creative storytelling and visual narrative development.", 
+                    id: "Pengalaman mendasar dalam penceritaan kreatif dan pengembangan narasi visual." 
+                },
+                impacts: [
+                    { en: "Developed a compelling narrative and scenario for the video.", id: "Mengembangkan narasi dan skenario yang menarik untuk video." },
+                    { en: "Gained an initial understanding of visual flow and pacing.", id: "Memperoleh pemahaman awal tentang alur dan tempo visual." }
+                ]
+            }
+        ];
 
-    applyTheme(currentTheme);
-    updateLanguage(currentLang);
+        const defaultCertificates = [
+            { 
+                title: { en: "Dicoding Certificate", id: "Sertifikat Dicoding" }, 
+                desc: { en: "Belajar Dasar AI", id: "Belajar Dasar AI" }, 
+                img: "img/Screenshot 2025-10-29 201858.png" 
+            },
+            { 
+                title: { en: "PORSI Certificate", id: "Sertifikat PORSI" }, 
+                desc: { en: "Creative Docu Leader in PORSI", id: "Pemimpin Dokumentasi Kreatif PORSI" }, 
+                img: "img/Screenshot 2025-10-29 201942.png" 
+            },
+            { 
+                title: { en: "Dicoding Certificate", id: "Sertifikat Dicoding" }, 
+                desc: { en: "Belajar Dasar Python", id: "Belajar Dasar Python" }, 
+                img: "img/Screenshot 2025-10-29 202044.png" 
+            }
+        ];
 
-    // Toggle settings dropdown
-    if (settingsBtn && settingsDropdown) {
-        settingsBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            settingsDropdown.classList.toggle('show');
-        });
-    }
+        let portfolioSkills = JSON.parse(localStorage.getItem('port_skills')) || defaultSkills;
+        let portfolioExperiences = JSON.parse(localStorage.getItem('port_exps')) || defaultExperiences;
+        let portfolioCertificates = JSON.parse(localStorage.getItem('port_certs')) || defaultCertificates;
 
-    // Tutup saat klik luar
-    document.addEventListener('click', function(e) {
-        if (settingsDropdown && !e.target.closest('#settingsDropdown') && !e.target.closest('#settingsBtn')) {
-            settingsDropdown.classList.remove('show');
+        // === 2. RENDER PORTFOLIO ===
+        function renderAll() {
+            // Render Skills
+            const skillCont = document.getElementById('skillsContainer');
+            if(skillCont) skillCont.innerHTML = portfolioSkills.map(card => `
+                <div class="skill-card" data-aos="fade-up">
+                    <h3><span lang="en">${card.category.en}</span><span lang="id">${card.category.id}</span></h3>
+                    <div class="skill-items-list">
+                        ${card.items.map(item => `
+                            <div class="skill-item">
+                                <div class="skill-icon"><img src="${item.icon}" alt="${item.name}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/5968/5968292.png'"></div>
+                                <span class="skill-name">${item.name}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
+
+            // Render Experiences
+            const expCont = document.getElementById('experiencesContainer');
+            if(expCont) expCont.innerHTML = portfolioExperiences.map((exp, idx) => `
+                <div class="experience-card-v2" data-aos="${idx % 2 === 0 ? 'fade-right' : 'fade-left'}">
+                    <div class="exp-badge"><span lang="en">${exp.type.en}</span><span lang="id">${exp.type.id}</span></div>
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title"><span lang="en">${exp.title.en}</span><span lang="id">${exp.title.id}</span></h3>
+                            <div class="experience-role"><span lang="en">${exp.role.en}</span><span lang="id">${exp.role.id}</span></div>
+                        </div>
+                        <div class="experience-duration"><span lang="en">${exp.duration.en}</span><span lang="id">${exp.duration.id}</span></div>
+                    </div>
+                    <p class="experience-desc"><span lang="en">${exp.desc.en}</span><span lang="id">${exp.desc.id}</span></p>
+                    <div class="impact-track">
+                        <h4><span lang="en">My Impact Track</span><span lang="id">Jejak Dampak Saya</span></h4>
+                        <ul>
+                            ${exp.impacts.map(imp => `<li><span lang="en">${imp.en}</span><span lang="id">${imp.id}</span></li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `).join('');
+
+            // Render Certificates
+            const certCont = document.getElementById('certificatesContainer');
+            if(certCont) certCont.innerHTML = portfolioCertificates.map((cert, index) => {
+                // Check if it's a PDF for the preview thumbnail (PDFs don't load in <img> natively as thumbnails)
+                const isPdf = cert.img.toLowerCase().endsWith('.pdf');
+                const thumbSrc = isPdf ? 'https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg' : cert.img;
+                
+                return `
+                <div class="certificate-card" data-aos="fade-up" data-certificate="${index}">
+                    <div class="certificate-image">
+                        <img src="${thumbSrc}" style="${isPdf ? 'object-fit: contain; padding: 20px;' : ''}" onerror="this.src='https://images.unsplash.com/photo-1589330694653-ded6df03f754?q=80&w=400'">
+                    </div>
+                    <div class="certificate-meta">
+                        <div class="certificate-title"><span lang="en">${cert.title.en}</span><span lang="id">${cert.title.id}</span></div>
+                        <div class="certificate-desc"><span lang="en">${cert.desc.en}</span><span lang="id">${cert.desc.id}</span></div>
+                    </div>
+                </div>
+            `}).join('');
+
+            // Bind Modals with Smart Media Rendering
+            const modal = document.getElementById('certificateModal');
+            const mediaContainer = document.getElementById('modalMediaContainer');
+            
+            document.querySelectorAll('.certificate-card').forEach(card => {
+                card.onclick = function() {
+                    const data = portfolioCertificates[this.getAttribute('data-certificate')];
+                    const url = data.img;
+                    const isPdf = url.toLowerCase().endsWith('.pdf');
+                    
+                    // Clear previous media
+                    mediaContainer.innerHTML = '';
+                    
+                    if (isPdf) {
+                        mediaContainer.innerHTML = `<iframe src="${url}" class="modal-pdf" frameborder="0"></iframe>`;
+                    } else {
+                        mediaContainer.innerHTML = `<img src="${url}" class="modal-image" alt="Certificate">`;
+                    }
+                    
+                    const curLang = document.body.getAttribute('lang') || 'en';
+                    document.getElementById('modalTitle').textContent = data.title[curLang];
+                    document.getElementById('modalDesc').textContent = data.desc[curLang];
+                    modal.style.display = 'flex';
+                };
+            });
+            document.querySelector('.modal-close').onclick = () => modal.style.display = 'none';
+            modal.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
         }
+
+        // === 3. SETTINGS & LANGUAGE ===
+        const langSel = document.getElementById('langSelector');
+        const themeSel = document.getElementById('themeSelector');
+        function updateLang(lang) { document.body.setAttribute('lang', lang); if(langSel) langSel.value = lang; localStorage.setItem('language', lang); }
+        function applyTheme(theme) {
+            document.body.classList.remove('dark-mode', 'light-mode');
+            if (theme === 'dark') document.body.classList.add('dark-mode');
+            else if (theme === 'light') document.body.classList.add('light-mode');
+            else { document.body.classList.add(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark-mode' : 'light-mode'); }
+            if(themeSel) themeSel.value = theme; localStorage.setItem('theme', theme);
+        }
+        langSel.addEventListener('change', (e) => updateLang(e.target.value));
+        themeSel.addEventListener('change', (e) => applyTheme(e.target.value));
+        updateLang(localStorage.getItem('language') || 'en');
+        applyTheme(localStorage.getItem('theme') || 'system');
+        
+        const setBtn = document.getElementById('settingsBtn'), setDrop = document.getElementById('settingsDropdown');
+        setBtn.onclick = (e) => { e.stopPropagation(); setDrop.classList.toggle('show'); };
+        document.getElementById('closeSettings').onclick = () => setDrop.classList.remove('show');
+        document.onclick = (e) => { if (!e.target.closest('#settingsDropdown') && !e.target.closest('#settingsBtn')) setDrop.classList.remove('show'); };
+
+        // === 4. CRUD ADMIN SYSTEM ===
+        const adminModal = document.getElementById('adminModal');
+        const adminDataType = document.getElementById('adminDataType');
+        const listView = document.getElementById('adminListView');
+        const formView = document.getElementById('adminFormView');
+        const dynamicFields = document.getElementById('formDynamicFields');
+        let currentEditIndex = -1; 
+
+        function openAdmin() { adminModal.style.display = 'flex'; renderCrudList(); }
+        window.addEventListener('keydown', (e) => { if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'a') { e.preventDefault(); openAdmin(); }});
+        document.getElementById('secretAdminBtn').onclick = openAdmin;
+        document.getElementById('closeAdmin').onclick = () => adminModal.style.display = 'none';
+        
+        adminDataType.addEventListener('change', renderCrudList);
+
+        function renderCrudList() {
+            formView.style.display = 'none'; listView.style.display = 'flex';
+            const type = adminDataType.value;
+            let dataArr = type === 'skills' ? portfolioSkills : type === 'experiences' ? portfolioExperiences : portfolioCertificates;
+            listView.innerHTML = dataArr.map((item, idx) => {
+                let titleStr = type === 'skills' ? item.category.en : item.title.en;
+                return `
+                    <div class="crud-item">
+                        <strong>${titleStr}</strong>
+                        <div class="crud-actions">
+                            <button class="btn-edit" data-idx="${idx}">Edit</button>
+                            <button class="btn-delete" data-idx="${idx}">Hapus</button>
+                        </div>
+                    </div>`;
+            }).join('') || '<p style="color:var(--text-muted); font-size:0.9rem;">Belum ada data.</p>';
+        }
+
+        listView.addEventListener('click', (e) => {
+            if(e.target.classList.contains('btn-edit')) openCrudForm(parseInt(e.target.getAttribute('data-idx')));
+            if(e.target.classList.contains('btn-delete')) {
+                if(confirm('Yakin ingin menghapus item ini?')) {
+                    const type = adminDataType.value, idx = parseInt(e.target.getAttribute('data-idx'));
+                    if(type === 'skills') portfolioSkills.splice(idx, 1);
+                    if(type === 'experiences') portfolioExperiences.splice(idx, 1);
+                    if(type === 'certificates') portfolioCertificates.splice(idx, 1);
+                    saveToLocalAndRender(); renderCrudList();
+                }
+            }
+        });
+
+        document.getElementById('btnAddNew').onclick = () => openCrudForm(-1);
+        document.getElementById('btnCancelForm').onclick = renderCrudList;
+
+        function openCrudForm(index) {
+            currentEditIndex = index; const type = adminDataType.value;
+            listView.style.display = 'none'; formView.style.display = 'block';
+            document.getElementById('formTitle').textContent = index === -1 ? 'Tambah Data Baru' : 'Edit Data';
+
+            let item = null;
+            if(index !== -1) {
+                let arr = type === 'skills' ? portfolioSkills : type === 'experiences' ? portfolioExperiences : portfolioCertificates;
+                item = arr[index];
+            }
+
+            if(type === 'skills') {
+                const itemsText = item ? item.items.map(i => `${i.name} | ${i.icon}`).join('\n') : '';
+                dynamicFields.innerHTML = `
+                    <div class="crud-grid">
+                        <div class="crud-form-group"><label>Nama Kategori (EN)</label><input type="text" id="skCatEN" value="${item ? item.category.en : ''}"></div>
+                        <div class="crud-form-group"><label>Nama Kategori (ID)</label><input type="text" id="skCatID" value="${item ? item.category.id : ''}"></div>
+                    </div>
+                    <div class="crud-form-group"><label>Daftar Skill (Format: Nama | Link Gambar) - Pisahkan per baris</label><textarea id="skItems" rows="5">${itemsText}</textarea></div>`;
+            } 
+            else if (type === 'certificates') {
+                dynamicFields.innerHTML = `
+                    <div class="crud-grid">
+                        <div class="crud-form-group"><label>Judul Sertifikat (EN)</label><input type="text" id="ceTitleEN" value="${item ? item.title.en : ''}"></div>
+                        <div class="crud-form-group"><label>Judul Sertifikat (ID)</label><input type="text" id="ceTitleID" value="${item ? item.title.id : ''}"></div>
+                        <div class="crud-form-group"><label>Deskripsi (EN)</label><input type="text" id="ceDescEN" value="${item ? item.desc.en : ''}"></div>
+                        <div class="crud-form-group"><label>Deskripsi (ID)</label><input type="text" id="ceDescID" value="${item ? item.desc.id : ''}"></div>
+                    </div>
+                    <div class="crud-form-group">
+                        <label>Path/URL Dokumen (Bisa masukkan path lokal 'img/file.png' atau link 'https://...file.pdf')</label>
+                        <input type="text" id="ceImg" value="${item ? item.img : ''}" placeholder="img/sertifikat1.pdf">
+                    </div>`;
+            }
+            else if (type === 'experiences') {
+                const impactsText = item ? item.impacts.map(i => `${i.en} | ${i.id}`).join('\n') : '';
+                dynamicFields.innerHTML = `
+                    <div class="crud-grid">
+                        <div class="crud-form-group"><label>Tipe Label (EN)</label><input type="text" id="exTypeEN" value="${item ? item.type.en : ''}"></div>
+                        <div class="crud-form-group"><label>Tipe Label (ID)</label><input type="text" id="exTypeID" value="${item ? item.type.id : ''}"></div>
+                        <div class="crud-form-group"><label>Judul Acara/Kerja (EN)</label><input type="text" id="exTitleEN" value="${item ? item.title.en : ''}"></div>
+                        <div class="crud-form-group"><label>Judul Acara/Kerja (ID)</label><input type="text" id="exTitleID" value="${item ? item.title.id : ''}"></div>
+                        <div class="crud-form-group"><label>Posisi/Role (EN)</label><input type="text" id="exRoleEN" value="${item ? item.role.en : ''}"></div>
+                        <div class="crud-form-group"><label>Posisi/Role (ID)</label><input type="text" id="exRoleID" value="${item ? item.role.id : ''}"></div>
+                        <div class="crud-form-group"><label>Durasi (EN)</label><input type="text" id="exDurEN" value="${item ? item.duration.en : ''}"></div>
+                        <div class="crud-form-group"><label>Durasi (ID)</label><input type="text" id="exDurID" value="${item ? item.duration.id : ''}"></div>
+                    </div>
+                    <div class="crud-form-group"><label>Deskripsi Umum (EN)</label><textarea id="exDescEN" rows="2">${item ? item.desc.en : ''}</textarea></div>
+                    <div class="crud-form-group"><label>Deskripsi Umum (ID)</label><textarea id="exDescID" rows="2">${item ? item.desc.id : ''}</textarea></div>
+                    <div class="crud-form-group"><label>Daftar Dampak/Pencapaian (Format: Teks EN | Teks ID) - Pisahkan per baris</label><textarea id="exImpacts" rows="4">${impactsText}</textarea></div>`;
+            }
+        }
+
+        document.getElementById('btnSaveForm').onclick = () => {
+            const type = adminDataType.value; let newItem = {};
+            if(type === 'skills') {
+                const lines = document.getElementById('skItems').value.split('\n').filter(l => l.trim() !== '');
+                newItem = {
+                    category: { en: document.getElementById('skCatEN').value, id: document.getElementById('skCatID').value },
+                    items: lines.map(line => { const parts = line.split('|'); return { name: parts[0]?.trim() || '', icon: parts[1]?.trim() || '' }; })
+                };
+            } 
+            else if (type === 'certificates') {
+                newItem = {
+                    title: { en: document.getElementById('ceTitleEN').value, id: document.getElementById('ceTitleID').value },
+                    desc: { en: document.getElementById('ceDescEN').value, id: document.getElementById('ceDescID').value },
+                    img: document.getElementById('ceImg').value
+                };
+            }
+            else if (type === 'experiences') {
+                const lines = document.getElementById('exImpacts').value.split('\n').filter(l => l.trim() !== '');
+                newItem = {
+                    type: { en: document.getElementById('exTypeEN').value, id: document.getElementById('exTypeID').value },
+                    title: { en: document.getElementById('exTitleEN').value, id: document.getElementById('exTitleID').value },
+                    role: { en: document.getElementById('exRoleEN').value, id: document.getElementById('exRoleID').value },
+                    duration: { en: document.getElementById('exDurEN').value, id: document.getElementById('exDurID').value },
+                    desc: { en: document.getElementById('exDescEN').value, id: document.getElementById('exDescID').value },
+                    impacts: lines.map(line => { const parts = line.split('|'); return { en: parts[0]?.trim() || '', id: parts[1]?.trim() || '' }; })
+                };
+            }
+            let arr = type === 'skills' ? portfolioSkills : type === 'experiences' ? portfolioExperiences : portfolioCertificates;
+            if(currentEditIndex === -1) arr.push(newItem); else arr[currentEditIndex] = newItem;
+            saveToLocalAndRender(); renderCrudList();
+        };
+
+        function saveToLocalAndRender() {
+            localStorage.setItem('port_skills', JSON.stringify(portfolioSkills));
+            localStorage.setItem('port_exps', JSON.stringify(portfolioExperiences));
+            localStorage.setItem('port_certs', JSON.stringify(portfolioCertificates));
+            renderAll();
+        }
+
+        document.getElementById('btnResetAdmin').onclick = () => {
+            if(confirm('Aksi ini akan menghapus semua editan Anda dan mengembalikan porto ke versi awal. Lanjut?')) {
+                localStorage.clear(); location.reload();
+            }
+        };
+
+        renderAll();
     });
-
-    // Tutup dengan tombol X
-    if (closeSettingsBtn && settingsDropdown) {
-        closeSettingsBtn.addEventListener('click', () => settingsDropdown.classList.remove('show'));
-    }
-
-    // Pilih tema
-    if (themeSelector) {
-        themeSelector.addEventListener('change', function() {
-            currentTheme = this.value;
-            localStorage.setItem('theme', currentTheme);
-            applyTheme(currentTheme);
-        });
-    }
-
-    // Pilih bahasa
-    if (langSelector) {
-        langSelector.addEventListener('change', function() {
-            currentLang = this.value;
-            localStorage.setItem('language', currentLang);
-            updateLanguage(currentLang);
-            if (settingsDropdown) settingsDropdown.classList.remove('show');
-        });
-    }
-
-    function applyTheme(theme) {
-        document.body.classList.remove('dark-mode', 'light-mode');
-
-        if (theme === 'dark') document.body.classList.add('dark-mode');
-        else if (theme === 'light') document.body.classList.add('light-mode');
-        else {
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            document.body.classList.toggle('dark-mode', prefersDark);
-            document.body.classList.toggle('light-mode', !prefersDark);
-        }
-
-        if (themeSelector) themeSelector.value = theme;
-    }
-
-    function updateLanguage(lang) {
-        const navLinks = document.querySelectorAll('nav a');
-        if (navLinks.length >= 3) {
-            navLinks[0].textContent = lang === 'id' ? 'Profil' : 'Profile';
-            navLinks[1].textContent = lang === 'id' ? 'Proyek' : 'Projects';
-            navLinks[2].textContent = lang === 'id' ? 'Rekrut Saya' : 'Hire Me';
-        }
-
-        const heroH1 = document.querySelector('.hero h1');
-        const heroH2 = document.querySelector('.hero h2');
-        const heroP = document.querySelector('.hero p');
-        const status = document.querySelector('.status');
-
-        if (heroH1) heroH1.textContent = lang === 'id' ? 'Halo, ini saya' : "Hello, it's me";
-        if (heroH2) heroH2.textContent = '< Ignatius Arya />';
-        if (heroP) heroP.textContent = lang === 'id' 
-            ? 'Arsitek Profesional Anda. Saya menciptakan desain yang tidak hanya terlihat bagus, tetapi juga berkinerja.' 
-            : "Your Professional Architect. I craft designs that don't just look good, they perform.";
-        if (status) status.textContent = lang === 'id' ? 'Tersedia untuk pekerjaan' : 'Available for work';
-
-        const sectionTitles = document.querySelectorAll('.section-title');
-        if (sectionTitles.length >= 3) {
-            sectionTitles[0].textContent = lang === 'id' ? 'Keterampilan' : 'Skills';
-            sectionTitles[1].textContent = lang === 'id' ? 'Pengalaman' : 'Experiences';
-            sectionTitles[2].textContent = lang === 'id' ? 'Sertifikat Elektronik' : 'E-Certificate';
-        }
-
-        const ctaH2 = document.querySelector('.cta-section h2');
-        const ctaP = document.querySelector('.cta-section p');
-        if (ctaH2) ctaH2.textContent = lang === 'id' ? 'Siap untuk Berkembang?' : 'Ready to Scale Up?';
-        if (ctaP) ctaP.textContent = lang === 'id' 
-            ? 'Baik itu obrolan cepat atau proyek besar berikutnya, mari kita terhubung dan menentukan tujuan Anda.' 
-            : "Whether it's a quick chat or the next big project, let's connect and define your goals.";
-
-        const footerP = document.querySelector('footer p');
-        if (footerP) footerP.textContent = lang === 'id' 
-            ? '© 2025 Ignatius Arya. Hak cipta dilindungi undang-undang.' 
-            : '© 2025 Ignatius Arya. All rights reserved.';
-
-        const certDescs = document.querySelectorAll('.certificate-desc');
-        if (certDescs.length >= 3) {
-            certDescs[0].textContent = 'Belajar Dasar AI';
-            certDescs[1].textContent = lang === 'id' ? 'Pemimpin Dokumentasi Kreatif di PORSI' : 'Creative Docu Leader in PORSI';
-            certDescs[2].textContent = 'Belajar Dasar Python';
-        }
-
-        if (langSelector) langSelector.value = lang;
-    }
-
-    // === Mobile Menu ===
-    const menuBtn = document.querySelector('.menu-btn');
-    const nav = document.querySelector('nav ul');
-    if (menuBtn && nav) {
-        menuBtn.addEventListener('click', () => {
-            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-        });
-    }
-
-    // === Certificate Modal ===
-    const modal = document.getElementById('certificateModal');
-    const modalClose = document.querySelector('.modal-close');
-    const modalImage = document.getElementById('modalImage');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalDesc = document.getElementById('modalDesc');
-
-    document.querySelectorAll('.certificate-card').forEach(card => {
-        card.addEventListener('click', () => {
-            if (!modal || !modalImage || !modalTitle || !modalDesc) return;
-            modalImage.src = card.querySelector('img').src;
-            modalTitle.textContent = card.querySelector('.certificate-title').textContent;
-            modalDesc.textContent = card.querySelector('.certificate-desc').textContent;
-            modal.style.display = 'flex';
-
-            modalImage.addEventListener('contextmenu', e => e.preventDefault());
-            modalImage.addEventListener('dragstart', e => e.preventDefault());
-        });
-    });
-
-    if (modalClose && modal) modalClose.addEventListener('click', () => modal.style.display = 'none');
-    if (modal) modal.addEventListener('click', e => { if (e.target === modal) modal.style.display = 'none'; });
-
-    // === Proteksi Gambar Global ===
-    document.addEventListener('contextmenu', e => { if (e.target.tagName === 'IMG') e.preventDefault(); });
-    document.addEventListener('dragstart', e => { if (e.target.tagName === 'IMG') e.preventDefault(); });
-});
-</script>
-
+    </script>
 </body>
 </html>
