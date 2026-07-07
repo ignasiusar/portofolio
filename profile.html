@@ -3,202 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ignatius Arya - Portfolio</title>
-    <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="profilee.css">
 </head>
-<body lang="en" class="light-mode">
+<body lang="en" class="spatial-theme">
 
-    <!-- Header / Navbar -->
-    <header>
-        <div class="logo">&lt; Ignatius Arya /&gt;</div>
-        <nav>
+    <div class="ambient-background">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+
+    <header class="glass-nav">
+        <div class="logo">IA.</div>
+        <nav id="mainNav">
             <ul>
-                <li><a href="#profile"><span lang="en">Profile</span><span lang="id">Profil</span></a></li>
-                <li><a href="#projects"><span lang="en">Experiences</span><span lang="id">Pengalaman</span></a></li>
+                <li><a href="#overview"><span lang="en">Overview</span><span lang="id">Ringkasan</span></a></li>
+                <li><a href="#experiences"><span lang="en">Experience</span><span lang="id">Pengalaman</span></a></li>
                 <li><a href="#education"><span lang="en">Education</span><span lang="id">Pendidikan</span></a></li>
-                <li><a href="#certificates"><span lang="en">Certificates</span><span lang="id">Sertifikat</span></a></li>
             </ul>
         </nav>
-        <div class="header-actions">
-            <button class="settings-btn" id="settingsBtn" aria-label="Open settings">⋯</button>
-            <button class="secret-admin-btn" id="secretAdminBtn" title="Developer Mode" style="opacity: 0; background: transparent; border: none; cursor: default; width: 20px; height: 20px;">•</button>
+        <div class="nav-actions">
+            <button class="glass-button icon-btn" id="langToggleBtn" aria-label="Switch language">
+                <span lang="en">ID</span><span lang="id">EN</span>
+            </button>
+            <button class="secret-admin-btn" id="secretAdminBtn" tabindex="-1" aria-hidden="true">•</button>
+            <button class="glass-button mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
         </div>
     </header>
 
-    <!-- Settings Dropdown -->
-    <div class="settings-dropdown" id="settingsDropdown">
-        <div class="settings-header">
-            <span><span lang="en">Settings</span><span lang="id">Pengaturan</span></span>
-            <button class="close-btn" id="closeSettings">&times;</button>
-        </div>
-        <div class="settings-content">
-            <div class="setting-group">
-                <label><span lang="en">Theme</span><span lang="id">Tema</span></label>
-                <select id="themeSelector" class="theme-select">
-                    <option value="light">Terang / Light</option>
-                    <option value="dark">Gelap / Dark</option>
-                    <option value="system">Sistem / Auto</option>
-                </select>
-            </div>
-            <div class="setting-group">
-                <label><span lang="en">Language</span><span lang="id">Bahasa</span></label>
-                <select id="langSelector" class="lang-select">
-                    <option value="en">English</option>
-                    <option value="id">Bahasa Indonesia</option>
-                </select>
-            </div>
-            <div class="settings-footer">
-                <span>Versi 04.01.CMS</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero" data-aos="fade-up">
-        <div class="hero-content">
-            <div class="status-badge">
-                <span class="status-dot"></span>
-                <span lang="en">Available for work</span><span lang="id">Tersedia untuk proyek</span>
-            </div>
-            <h1><span lang="en">Hello, it's me</span><span lang="id">Halo, ini saya</span></h1>
-            <h2 class="hero-name">&lt; Ignatius Arya /&gt;</h2>
-            <p>
-                <span lang="en">Software Engineer & AI/ML Enthusiast. I build scalable software solutions and integrate Machine Learning models, bridging the gap between development and robust operations.</span>
-                <span lang="id">Software Engineer & Penggiat AI/ML. Saya membangun solusi perangkat lunak yang skalabel dan mengintegrasikan model Machine Learning, memastikan sistem berjalan andal dari tahap pengembangan hingga operasional.</span>
-            </p>
-            <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">
-                    <span lang="en">Explore Work</span><span lang="id">Lihat Portofolio</span>
-                </a>
-                <a href="#contact" class="btn btn-secondary" style="margin-left: 10px;">
-                    <span lang="en">Contact Me</span><span lang="id">Hubungi Saya</span>
-                </a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <div class="image-overlay-glow"></div>
-            <img src="img/WhatsApp_Image_2025-10-29_at_8.02.19_PM-removebg-preview.png" alt="Ignatius Arya" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=500&auto=format&fit=crop'">
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="profile" class="container">
-        <h2 class="section-title" data-aos="fade-up"><span lang="en">Skills & Tools</span><span lang="id">Keahlian & Alat</span></h2>
-        <div class="skills-grid" id="skillsContainer"></div>
-    </section>
-
-    <!-- Experiences Section -->
-    <section id="projects" class="container">
-        <h2 class="section-title" data-aos="fade-up"><span lang="en">Experiences</span><span lang="id">Pengalaman</span></h2>
-        <div class="experiences-grid" id="experiencesContainer"></div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="container">
-        <h2 class="section-title" data-aos="fade-up"><span lang="en">Education</span><span lang="id">Pendidikan</span></h2>
-        <div class="experiences-grid" id="educationContainer"></div>
-    </section>
-
-    <!-- E-Certificate Section -->
-    <section id="certificates" class="container">
-        <h2 class="section-title" data-aos="fade-up"><span lang="en">E-Certificates</span><span lang="id">Sertifikat Elektronik</span></h2>
-        <div class="certificates-grid" id="certificatesContainer"></div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="cta-section" data-aos="fade-up">
-        <h2><span lang="en">Ready to Scale Up?</span><span lang="id">Siap Melangkah Lebih Jauh?</span></h2>
-        <p style="margin-bottom: 30px;">
-            <span lang="en">Whether it's a quick chat or the next big software project, let's connect and define your goals.</span>
-            <span lang="id">Baik untuk diskusi santai atau proyek besar berikutnya, mari terhubung dan wujudkan tujuan Anda.</span>
-        </p>
-        <div class="contact-links">
-            <a href="mailto:ignatius.arya@email.com" class="contact-card">
-                <div class="contact-icon">📧</div>
-                <div><div class="contact-label">Email</div><div class="contact-value">ignatius.arya@email.com</div></div>
-            </a>
-            <a href="https://github.com" target="_blank" class="contact-card">
-                <div class="contact-icon">💻</div>
-                <div><div class="contact-label">GitHub</div><div class="contact-value">github.com/ignatiusarya</div></div>
-            </a>
-            <a href="https://linkedin.com" target="_blank" class="contact-card">
-                <div class="contact-icon">🔗</div>
-                <div><div class="contact-label">LinkedIn</div><div class="contact-value">Ignatius Arya</div></div>
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer data-aos="fade-up">
-        <p><span lang="en">&copy; 2026 Ignatius Arya. All rights reserved.</span><span lang="id">&copy; 2026 Ignatius Arya. Hak cipta dilindungi undang-undang.</span></p>
-    </footer>
-
-    <!-- Smart Media Modal -->
-    <div class="modal" id="certificateModal">
-        <div class="modal-content" style="max-width: 800px;">
-            <button class="modal-close">&times;</button>
-            <div id="modalMediaContainer" class="modal-media-container"></div>
-            <div class="modal-title" id="modalTitle" style="margin-top: 16px;"></div>
-            <div class="modal-desc" id="modalDesc"></div>
-        </div>
-    </div>
-
-    <!-- SECRET CRUD ADMIN MODAL -->
-    <div class="admin-modal" id="adminModal">
-        <div class="admin-modal-content" style="max-width: 700px; max-height: 90vh; overflow-y: auto;">
-            <div class="admin-header">
-                <h3>🛠️ Portfolio Content Manager</h3>
-                <button class="admin-close" id="closeAdmin">&times;</button>
-            </div>
-            
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                <select id="adminDataType" class="theme-select" style="width: auto; padding: 8px 16px;">
-                    <option value="skills">Kategori Keahlian (Skills)</option>
-                    <option value="experiences">Daftar Pengalaman</option>
-                    <option value="educations">Riwayat Pendidikan</option>
-                    <option value="certificates">Daftar Sertifikat</option>
-                </select>
-                <button class="btn btn-primary" id="btnAddNew" style="padding: 8px 16px; font-size: 0.85rem;">+ Tambah Baru</button>
-            </div>
-
-            <div id="adminListView" class="crud-list"></div>
-
-            <div id="adminFormView" style="display: none; background: rgba(0,0,0,0.02); padding: 20px; border-radius: 8px; border: 1px solid var(--border-color);">
-                <h4 id="formTitle" style="margin-bottom: 16px;">Edit Item</h4>
-                <div id="formDynamicFields"></div>
-                <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px;">
-                    <button class="btn btn-secondary" id="btnCancelForm" style="padding: 8px 16px;">Batal</button>
-                    <button class="btn btn-primary" id="btnSaveForm" style="padding: 8px 16px;">Simpan Data</button>
+    <main class="bento-container" id="overview">
+        <section class="bento-grid hero-grid">
+            <div class="bento-card glass-panel col-span-3 row-span-2 hero-combo" data-aos="fade-up">
+                <div class="hero-combo-text">
+                    <div class="status-pill glass-button">
+                        <span class="pulse-dot" aria-hidden="true"></span>
+                        <span lang="en">Available for work</span><span lang="id">Tersedia untuk proyek</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span lang="en">Building Systems,<br>Crafting Futures.</span>
+                        <span lang="id">Membangun Sistem,<br>Merangkai Masa Depan.</span>
+                    </h1>
+                    <p class="hero-desc">
+                        <span lang="en">Software Engineer & AI/ML Enthusiast. Bridging the gap between intelligent algorithms and robust, scalable operations.</span>
+                        <span lang="id">Software Engineer & Penggiat AI/ML. Menjembatani algoritma cerdas dengan operasional sistem yang andal dan skalabel.</span>
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#experiences" class="glass-button primary-glow">
+                            <span lang="en">Explore Experience</span><span lang="id">Jelajahi Pengalaman</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-combo-media">
+                    <img src="img/WhatsApp_Image_2025-10-29_at_8.02.19_PM-removebg-preview.png" alt="Foto Ignatius Arya" class="profile-img" onerror="this.src='https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=400'">
                 </div>
             </div>
-            
-            <div style="margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 15px; text-align: right;">
-                <button class="btn" id="btnResetAdmin" style="color: #ef4444; background: transparent; border: 1px solid #ef4444; font-size: 0.8rem; padding: 6px 12px;">Reset Data Pabrik</button>
+
+            <div class="bento-card glass-panel row-span-2 flex-center contact-card" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="bento-card-title"><span lang="en">Contact</span><span lang="id">Kontak</span></h3>
+                <div class="contact-stack">
+                    <a href="mailto:ignatius.arya@email.com" class="glass-button icon-link" aria-label="Email">📧</a>
+                    <a href="https://github.com/ignatiusarya" target="_blank" rel="noopener" class="glass-button icon-link" aria-label="GitHub">💻</a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" class="glass-button icon-link" aria-label="LinkedIn">🔗</a>
+                </div>
+            </div>
+
+            <div id="skillsContainer" class="col-span-4 bento-grid sub-grid"></div>
+        </section>
+
+        <div class="section-divider" id="experiences">
+            <h2 class="spatial-title"><span lang="en">Experience Matrix</span><span lang="id">Matriks Pengalaman</span></h2>
+        </div>
+        <section class="bento-grid" id="experiencesContainer"></section>
+
+        <div class="section-divider" id="education">
+            <h2 class="spatial-title"><span lang="en">Education & Certificates</span><span lang="id">Pendidikan & Sertifikat</span></h2>
+        </div>
+        <section class="bento-grid two-cols">
+            <div id="educationContainer" class="bento-column"></div>
+            <div id="certificatesContainer" class="bento-column"></div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <p><span lang="en">© 2026 Ignatius Arya. Engineered with Spatial UI.</span><span lang="id">© 2026 Ignatius Arya. Dirancang dengan Spatial UI.</span></p>
+    </footer>
+
+    <div class="spatial-modal" id="certificateModal">
+        <div class="glass-panel modal-box">
+            <button class="glass-button modal-close" aria-label="Close">&times;</button>
+            <div id="modalMediaContainer" class="modal-media-wrapper"></div>
+            <div class="modal-info">
+                <h3 id="modalTitle" class="gradient-text"></h3>
+                <p id="modalDesc"></p>
             </div>
         </div>
     </div>
 
-    <!-- MAINTENANCE OVERLAY -->
-   <!-- MAINTENANCE OVERLAY -->
+    <div class="spatial-modal" id="adminModal">
+        <div class="glass-panel admin-box">
+            <div class="admin-header-flex">
+                <h3 class="gradient-text">Content Manager</h3>
+                <button class="glass-button modal-close" id="closeAdmin" aria-label="Close">&times;</button>
+            </div>
+
+            <div class="admin-toolbar">
+                <select id="adminDataType" class="glass-input">
+                    <option value="skills">Skills & Tools</option>
+                    <option value="experiences">Experiences</option>
+                    <option value="educations">Education</option>
+                    <option value="certificates">Certificates</option>
+                </select>
+                <button class="glass-button primary-glow" id="btnAddNew">+ Add New</button>
+            </div>
+
+            <div id="adminListView" class="admin-list-container"></div>
+
+            <div id="adminFormView" class="admin-form-container" style="display: none;">
+                <h4 id="formTitle" style="margin-bottom:14px;">Edit Data</h4>
+                <div id="formDynamicFields"></div>
+                <div class="admin-actions">
+                    <button class="glass-button" id="btnCancelForm">Batal</button>
+                    <button class="glass-button primary-glow" id="btnSaveForm">Simpan Data</button>
+                </div>
+            </div>
+
+            <div class="admin-footer-actions">
+                <button class="glass-button danger-glow" id="btnResetAdmin">Factory Reset</button>
+            </div>
+        </div>
+    </div>
+
     <div id="maintenanceOverlay" class="maintenance-overlay" style="display: none;">
         <div class="maintenance-content">
-            <!-- Tambahan Gambar/Icon 3D Disini -->
             <div class="maintenance-illustration">
                 <img src="https://cdn3d.iconscout.com/3d/premium/thumb/setting-4993635-4160410.png" alt="Maintenance Icon" onerror="this.src='https://cdn-icons-png.flaticon.com/512/4333/4333097.png'">
             </div>
-            
-            <h2>Under Maintenance</h2>
-            <p>The website is temporarily unavailable. We're polishing things up!</p>
-            <p>We'll be back <strong>as soon as possible</strong>.</p>
-            <div class="maintenance-footer" style="margin-top: 30px; font-size: 0.8rem; color: var(--text-muted);">
+            <h2 class="gradient-text">Under Maintenance</h2>
+            <p style="color: #94a3b8; max-width: 400px; margin: 10px auto;">We're currently upgrading our systems. Please check back later!</p>
+            <div class="maintenance-footer" style="margin-top: 30px; font-size: 0.8rem; color: #64748b;">
                 <span>Ignatius Arya • Software Engineer Portfolio</span>
             </div>
         </div>
@@ -207,81 +151,53 @@
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+        AOS.init({ duration: 700, easing: 'ease-out', once: true, offset: 20 });
 
         // === 0. MAINTENANCE MODE CONTROLLER ===
-        // Ubah jadi `true` saat di-deploy ke Vercel jika ingin digembok
-        const maintenanceMode = false; 
+        // Ubah `false` menjadi `true` untuk mengunci website
+        const maintenanceMode = true; 
         const maintenanceOverlay = document.getElementById('maintenanceOverlay');
-        
         if (maintenanceMode && maintenanceOverlay) {
             maintenanceOverlay.style.display = 'flex';
-            document.body.style.overflow = 'hidden'; // Kunci scroll layar
+            document.body.style.overflow = 'hidden'; 
         }
+
+        // === MOBILE MENU ===
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn'), mainNav = document.getElementById('mainNav');
+        if (mobileMenuBtn && mainNav) {
+            mobileMenuBtn.onclick = () => {
+                const isOpen = mainNav.classList.toggle('active');
+                mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+            };
+            document.querySelectorAll('#mainNav a').forEach(l => l.onclick = () => {
+                mainNav.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            });
+        }
+
+        // === LANGUAGE TOGGLE ===
+        const langToggleBtn = document.getElementById('langToggleBtn');
+        function updateLang(lang) { document.body.setAttribute('lang', lang); localStorage.setItem('lang', lang); }
+        if (langToggleBtn) langToggleBtn.onclick = () => updateLang(document.body.getAttribute('lang') === 'en' ? 'id' : 'en');
+        updateLang(localStorage.getItem('lang') || 'en');
 
         // === 1. CORE DATA MATRIX ===
         const defaultSkills = [
-            {
-                category: { en: "The Comfort Zone", id: "Zona Nyaman" },
-                items: [
-                    { name: "Visual Studio Code", icon: "https://cdn.icon-icons.com/icons2/3053/PNG/512/microsoft_visual_studio_code_alt_macos_bigsur_icon_189954.png" },
-                    { name: "Java", icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-java-5728473-4781237.png" },
-                    { name: "Python", icon: "https://tse2.mm.bing.net/th/id/OIP.ab-LadRHEfMbeAuDD-U3owHaHa?rs=1&pid=ImgDetMain" }
-                ]
-            },
-            {
-                category: { en: "The Next Skill Cap", id: "Target Keahlian Berikutnya" },
-                items: [
-                    { name: "Machine Learning", icon: "img/Ai Chip.png" },
-                    { name: "Data Science", icon: "img/SQL.png" }
-                ]
-            }
+            { category: { en: "Comfort Zone", id: "Zona Nyaman" }, items: [ { name: "VS Code", icon: "https://cdn.icon-icons.com/icons2/3053/PNG/512/microsoft_visual_studio_code_alt_macos_bigsur_icon_189954.png" }, { name: "Java", icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-java-5728473-4781237.png" }, { name: "Python", icon: "https://tse2.mm.bing.net/th/id/OIP.ab-LadRHEfMbeAuDD-U3owHaHa?rs=1&pid=ImgDetMain" } ] },
+            { category: { en: "Skill Cap", id: "Target Keahlian" }, items: [ { name: "Machine Learning", icon: "img/Ai Chip.png" }, { name: "Data Science", icon: "img/SQL.png" } ] }
         ];
 
         const defaultExperiences = [
-            {
-                type: { en: "Core Professional Dive", id: "Fokus Profesional" },
-                title: { en: "Yoga Solusi Intiprima", id: "Yoga Solusi Intiprima" },
-                role: { en: "IT Support and Development Team", id: "Tim IT Support dan Pengembangan" },
-                duration: { en: "3 Months", id: "3 Bulan" },
-                year: "2025", 
-                desc: { en: "Serving as a flexible technician and developer...", id: "Bertugas sebagai teknisi dan pengembang fleksibel..." },
-                impacts: [
-                    { en: "Improving IT reliability by providing mobile support.", id: "Meningkatkan keandalan IT dengan memberikan dukungan mobile." },
-                    { en: "Designing comprehensive ERDs for database structures.", id: "Merancang ERD komprehensif untuk struktur basis data." }
-                ]
-            },
-            {
-                type: { en: "Creative Storytelling", id: "Bercerita Kreatif" },
-                title: { en: "SMK Telekomunikasi Tunas Harapan", id: "SMK Telekomunikasi Tunas Harapan" },
-                role: { en: "Scriptwriter, Final Year Film", id: "Penulis Naskah, Film Akhir Tahun" },
-                duration: { en: "1 Year", id: "1 Tahun" },
-                year: "2024",
-                desc: { en: "A foundational experience in creative storytelling.", id: "Pengalaman mendasar dalam penceritaan kreatif." },
-                impacts: [
-                    { en: "Developed a compelling narrative for the video.", id: "Mengembangkan narasi yang menarik untuk video." }
-                ]
-            }
+            { type: { en: "Professional", id: "Profesional" }, title: { en: "Yoga Solusi Intiprima", id: "Yoga Solusi Intiprima" }, role: { en: "IT Support and Development", id: "IT Support & Pengembangan" }, duration: { en: "3 Months", id: "3 Bulan" }, year: "2025", desc: { en: "Serving as a flexible technician and developer.", id: "Bertugas sebagai teknisi dan pengembang fleksibel." }, impacts: [ { en: "Improving IT reliability via mobile support.", id: "Meningkatkan keandalan IT via dukungan mobile." }, { en: "Designing ERDs for database structures.", id: "Merancang ERD untuk struktur basis data." } ] },
+            { type: { en: "Creative", id: "Kreatif" }, title: { en: "SMK Tunas Harapan", id: "SMK Tunas Harapan" }, role: { en: "Scriptwriter", id: "Penulis Naskah" }, duration: { en: "1 Year", id: "1 Tahun" }, year: "2024", desc: { en: "A foundational experience in creative storytelling.", id: "Pengalaman dasar penceritaan kreatif." }, impacts: [ { en: "Developed a compelling narrative.", id: "Mengembangkan narasi yang menarik." } ] }
         ];
 
         const defaultEducations = [
-            {
-                degree: { en: "Bachelor of Informatics", id: "S1 Informatika" },
-                school: { en: "Sanata Dharma University", id: "Universitas Sanata Dharma" },
-                year: "2024 - Present",
-                desc: { 
-                    en: "Currently pursuing a degree with a strong interest in Software Engineering, Data Pipelines, and Artificial Intelligence.", 
-                    id: "Saat ini sedang menempuh pendidikan dengan minat kuat pada Rekayasa Perangkat Lunak, Data Pipeline, dan Kecerdasan Buatan." 
-                }
-            }
+            { degree: { en: "Bachelor of Informatics", id: "S1 Informatika" }, school: { en: "Sanata Dharma University", id: "Universitas Sanata Dharma" }, year: "2024 - Present", desc: { en: "Focusing on Software Engineering, Data Pipelines, and Artificial Intelligence.", id: "Berfokus pada Rekayasa Perangkat Lunak, Data Pipeline, dan Kecerdasan Buatan." } }
         ];
 
         const defaultCertificates = [
-            { 
-                title: { en: "Dicoding Certificate", id: "Sertifikat Dicoding" }, 
-                desc: { en: "Belajar Dasar AI", id: "Belajar Dasar AI" }, 
-                img: "img/Screenshot 2025-10-29 201858.png" 
-            }
+            { title: { en: "Dicoding Certificate", id: "Sertifikat Dicoding" }, desc: { en: "AI Basics", id: "Dasar AI" }, img: "img/sertifikat.png" }
         ];
 
         let portfolioSkills = JSON.parse(localStorage.getItem('port_skills')) || defaultSkills;
@@ -293,249 +209,155 @@
         function renderAll() {
             // Render Skills
             const skillCont = document.getElementById('skillsContainer');
-            if(skillCont) skillCont.innerHTML = portfolioSkills.map(card => `
-                <div class="skill-card" data-aos="fade-up">
-                    <h3><span lang="en">${card.category.en}</span><span lang="id">${card.category.id}</span></h3>
-                    <div class="skill-items-list">
-                        ${card.items.map(item => `<div class="skill-item"><div class="skill-icon"><img src="${item.icon}" alt="${item.name}"></div><span class="skill-name">${item.name}</span></div>`).join('')}
+            if (skillCont) skillCont.innerHTML = portfolioSkills.map((card, i) => `
+                <div class="bento-card glass-panel" data-aos="fade-up" data-aos-delay="${i*80}">
+                    <h3 class="bento-card-title"><span lang="en">${card.category.en}</span><span lang="id">${card.category.id}</span></h3>
+                    <div class="pill-wrap">
+                        ${card.items.map(item => `<div class="glass-pill"><img src="${item.icon}" alt="" onerror="this.style.display='none'"><span>${item.name}</span></div>`).join('')}
                     </div>
                 </div>
             `).join('');
 
-            // Sort Experiences by Year Descending
-            const sortedExperiences = [...portfolioExperiences].sort((a, b) => {
-                const yearA = parseInt((a.year || "0").substring(0, 4)) || 0;
-                const yearB = parseInt((b.year || "0").substring(0, 4)) || 0;
-                return yearB - yearA;
-            });
-
-            // Render Experiences
+            // Render Experiences (Terurut berdasar Tahun terawal-terbaru)
+            const sortedExp = [...portfolioExperiences].sort((a, b) => (parseInt(b.year)||0) - (parseInt(a.year)||0));
             const expCont = document.getElementById('experiencesContainer');
-            if(expCont) expCont.innerHTML = sortedExperiences.map((exp, idx) => `
-                <div class="experience-card-v2" data-aos="${idx % 2 === 0 ? 'fade-right' : 'fade-left'}">
-                    <div class="exp-badge"><span lang="en">${exp.type.en}</span><span lang="id">${exp.type.id}</span></div>
-                    <div class="experience-header">
+            if (expCont) expCont.innerHTML = sortedExp.map((exp, i) => `
+                <div class="bento-card glass-panel hover-3d col-span-2" data-aos="fade-up" data-aos-delay="${i*60}">
+                    <div class="bento-header">
                         <div>
-                            <h3 class="experience-title"><span lang="en">${exp.title.en}</span><span lang="id">${exp.title.id}</span></h3>
-                            <div class="experience-role"><span lang="en">${exp.role.en}</span><span lang="id">${exp.role.id}</span></div>
+                            <div class="bento-badge gradient-text"><span lang="en">${exp.type.en}</span><span lang="id">${exp.type.id}</span></div>
+                            <h3 class="bento-title"><span lang="en">${exp.title.en}</span><span lang="id">${exp.title.id}</span></h3>
+                            <div class="bento-subtitle"><span lang="en">${exp.role.en}</span><span lang="id">${exp.role.id}</span></div>
                         </div>
-                        <div class="experience-duration" style="display: flex; gap: 8px; flex-direction: column; align-items: flex-end;">
-                            <span style="font-weight: bold; color: var(--primary);">${exp.year || ''}</span>
+                        <div class="bento-meta">
+                            <span class="bento-year">${exp.year || ''}</span>
                             <span><span lang="en">${exp.duration.en}</span><span lang="id">${exp.duration.id}</span></span>
                         </div>
                     </div>
-                    <p class="experience-desc"><span lang="en">${exp.desc.en}</span><span lang="id">${exp.desc.id}</span></p>
-                    <div class="impact-track">
-                        <h4><span lang="en">My Impact Track</span><span lang="id">Jejak Dampak Saya</span></h4>
-                        <ul>${exp.impacts.map(imp => `<li><span lang="en">${imp.en}</span><span lang="id">${imp.id}</span></li>`).join('')}</ul>
-                    </div>
+                    <p class="bento-desc"><span lang="en">${exp.desc.en}</span><span lang="id">${exp.desc.id}</span></p>
+                    <ul class="bento-list">
+                        ${exp.impacts.map(imp => `<li><span lang="en">${imp.en}</span><span lang="id">${imp.id}</span></li>`).join('')}
+                    </ul>
                 </div>
             `).join('');
 
             // Render Education
             const eduCont = document.getElementById('educationContainer');
-            if(eduCont) eduCont.innerHTML = portfolioEducations.map((edu, idx) => `
-                <div class="experience-card-v2" data-aos="fade-up" style="padding: 24px;">
-                    <div class="experience-header" style="border-bottom: none; padding-bottom: 0; margin-bottom: 12px;">
+            if (eduCont) eduCont.innerHTML = portfolioEducations.map(edu => `
+                <div class="bento-card glass-panel hover-3d" data-aos="fade-up">
+                    <div class="bento-header" style="border:none; padding:0; margin-bottom:8px;">
                         <div>
-                            <h3 class="experience-title" style="font-size: 1.25rem;"><span lang="en">${edu.degree.en}</span><span lang="id">${edu.degree.id}</span></h3>
-                            <div class="experience-role"><span lang="en">${edu.school.en}</span><span lang="id">${edu.school.id}</span></div>
+                            <h3 class="bento-title"><span lang="en">${edu.degree.en}</span><span lang="id">${edu.degree.id}</span></h3>
+                            <div class="bento-subtitle"><span lang="en">${edu.school.en}</span><span lang="id">${edu.school.id}</span></div>
                         </div>
-                        <div class="experience-duration" style="font-weight: 700;">${edu.year}</div>
+                        <div class="bento-year">${edu.year}</div>
                     </div>
-                    <p class="experience-desc" style="margin-bottom: 0;"><span lang="en">${edu.desc.en}</span><span lang="id">${edu.desc.id}</span></p>
+                    <p class="bento-desc"><span lang="en">${edu.desc.en}</span><span lang="id">${edu.desc.id}</span></p>
                 </div>
             `).join('');
 
             // Render Certificates
             const certCont = document.getElementById('certificatesContainer');
-            if(certCont) certCont.innerHTML = portfolioCertificates.map((cert, index) => {
+            if (certCont) certCont.innerHTML = portfolioCertificates.map((cert, idx) => {
                 const isPdf = cert.img.toLowerCase().endsWith('.pdf');
                 const thumbSrc = isPdf ? 'https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg' : cert.img;
-                return `<div class="certificate-card" data-aos="fade-up" data-certificate="${index}"><div class="certificate-image"><img src="${thumbSrc}" style="${isPdf ? 'object-fit: contain; padding: 20px;' : ''}" onerror="this.src='https://images.unsplash.com/photo-1589330694653-ded6df03f754?q=80&w=400'"></div><div class="certificate-meta"><div class="certificate-title"><span lang="en">${cert.title.en}</span><span lang="id">${cert.title.id}</span></div><div class="certificate-desc"><span lang="en">${cert.desc.en}</span><span lang="id">${cert.desc.id}</span></div></div></div>`;
+                return `
+                <button class="bento-card glass-panel hover-3d cert-card" data-aos="fade-up" data-idx="${idx}" type="button">
+                    <div class="cert-thumb ${isPdf?'pdf-thumb':''}">
+                        <img src="${thumbSrc}" alt="" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2U1ZTdlYiIvPjwvc3ZnPg=='">
+                    </div>
+                    <div class="cert-info">
+                        <div class="cert-title"><span lang="en">${cert.title.en}</span><span lang="id">${cert.title.id}</span></div>
+                        <div class="cert-subtitle"><span lang="en">${cert.desc.en}</span><span lang="id">${cert.desc.id}</span></div>
+                    </div>
+                </button>`;
             }).join('');
 
-            // Bind Modals
-            const modal = document.getElementById('certificateModal');
-            const mediaContainer = document.getElementById('modalMediaContainer');
-            document.querySelectorAll('.certificate-card').forEach(card => {
+            // Bind Modals Media Pintar
+            const modal = document.getElementById('certificateModal'), mediaCont = document.getElementById('modalMediaContainer');
+            document.querySelectorAll('.cert-card').forEach(card => {
                 card.onclick = function() {
-                    const data = portfolioCertificates[this.getAttribute('data-certificate')];
-                    const url = data.img, isPdf = url.toLowerCase().endsWith('.pdf');
-                    mediaContainer.innerHTML = isPdf ? `<iframe src="${url}" class="modal-pdf" frameborder="0"></iframe>` : `<img src="${url}" class="modal-image" alt="Certificate">`;
+                    const item = portfolioCertificates[this.getAttribute('data-idx')];
+                    const url = item.img, isPdf = url.toLowerCase().endsWith('.pdf') || url.includes('drive.google.com/file/d/');
+                    mediaCont.innerHTML = isPdf ? `<iframe src="${url}" class="spatial-pdf" title="Certificate PDF"></iframe>` : `<img src="${url}" class="spatial-img" alt="">`;
                     const curLang = document.body.getAttribute('lang') || 'en';
-                    document.getElementById('modalTitle').textContent = data.title[curLang];
-                    document.getElementById('modalDesc').textContent = data.desc[curLang];
-                    modal.style.display = 'flex';
+                    document.getElementById('modalTitle').textContent = item.title[curLang];
+                    document.getElementById('modalDesc').textContent = item.desc[curLang];
+                    modal.classList.add('active');
                 };
             });
-            document.querySelector('.modal-close').onclick = () => modal.style.display = 'none';
-            modal.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+            document.querySelectorAll('.modal-close').forEach(b => b.onclick = () => document.querySelectorAll('.spatial-modal').forEach(m => m.classList.remove('active')));
+
+            if (window.AOS) AOS.refreshHard();
         }
 
-        // === 3. SETTINGS & LANGUAGE ===
-        const langSel = document.getElementById('langSelector'), themeSel = document.getElementById('themeSelector');
-        function updateLang(lang) { document.body.setAttribute('lang', lang); if(langSel) langSel.value = lang; localStorage.setItem('language', lang); }
-        function applyTheme(theme) {
-            document.body.classList.remove('dark-mode', 'light-mode');
-            if (theme === 'dark') document.body.classList.add('dark-mode'); else if (theme === 'light') document.body.classList.add('light-mode');
-            else { document.body.classList.add(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark-mode' : 'light-mode'); }
-            if(themeSel) themeSel.value = theme; localStorage.setItem('theme', theme);
+        // === 3. CRUD ADMIN SYSTEM ===
+        const adminModal = document.getElementById('adminModal'), adminType = document.getElementById('adminDataType'),
+              listView = document.getElementById('adminListView'), formView = document.getElementById('adminFormView'),
+              dynFields = document.getElementById('formDynamicFields');
+        let currentEditIdx = -1;
+
+        document.getElementById('secretAdminBtn').onclick = () => { adminModal.classList.add('active'); renderAdminList(); };
+        window.addEventListener('keydown', e => {
+            if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'a') { e.preventDefault(); adminModal.classList.add('active'); renderAdminList(); }
+        });
+        adminType.addEventListener('change', renderAdminList);
+
+        function currentArray() {
+            const t = adminType.value;
+            return t === 'skills' ? portfolioSkills : t === 'educations' ? portfolioEducations : t === 'experiences' ? portfolioExperiences : portfolioCertificates;
         }
-        langSel.addEventListener('change', (e) => updateLang(e.target.value)); themeSel.addEventListener('change', (e) => applyTheme(e.target.value));
-        updateLang(localStorage.getItem('language') || 'en'); applyTheme(localStorage.getItem('theme') || 'system');
-        const setBtn = document.getElementById('settingsBtn'), setDrop = document.getElementById('settingsDropdown');
-        setBtn.onclick = (e) => { e.stopPropagation(); setDrop.classList.toggle('show'); };
-        document.getElementById('closeSettings').onclick = () => setDrop.classList.remove('show');
-        document.onclick = (e) => { if (!e.target.closest('#settingsDropdown') && !e.target.closest('#settingsBtn')) setDrop.classList.remove('show'); };
 
-        // === 4. CRUD ADMIN SYSTEM ===
-        const adminModal = document.getElementById('adminModal'), adminDataType = document.getElementById('adminDataType'), listView = document.getElementById('adminListView'), formView = document.getElementById('adminFormView'), dynamicFields = document.getElementById('formDynamicFields');
-        let currentEditIndex = -1;
-
-        function openAdmin() { adminModal.style.display = 'flex'; renderCrudList(); }
-        window.addEventListener('keydown', (e) => { if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'a') { e.preventDefault(); openAdmin(); }});
-        document.getElementById('secretAdminBtn').onclick = openAdmin; document.getElementById('closeAdmin').onclick = () => adminModal.style.display = 'none';
-        adminDataType.addEventListener('change', renderCrudList);
-
-        function renderCrudList() {
+        function renderAdminList() {
             formView.style.display = 'none'; listView.style.display = 'flex';
-            const type = adminDataType.value;
-            let dataArr = type === 'skills' ? portfolioSkills : type === 'educations' ? portfolioEducations : type === 'experiences' ? portfolioExperiences : portfolioCertificates;
-            
-            listView.innerHTML = dataArr.map((item, idx) => {
-                let titleStr = '';
-                if(type === 'skills') titleStr = item.category.en;
-                if(type === 'experiences') titleStr = `(${item.year || 'N/A'}) ${item.title.en}`;
-                if(type === 'educations') titleStr = item.degree.en;
-                if(type === 'certificates') titleStr = item.title.en;
-                return `<div class="crud-item"><strong>${titleStr}</strong><div class="crud-actions"><button class="btn-edit" data-idx="${idx}">Edit</button><button class="btn-delete" data-idx="${idx}">Hapus</button></div></div>`;
-            }).join('') || '<p style="color:var(--text-muted); font-size:0.9rem;">Belum ada data.</p>';
+            const t = adminType.value, arr = currentArray();
+            listView.innerHTML = arr.map((item, idx) => {
+                let title = t === 'skills' ? item.category.en : t === 'experiences' ? `(${item.year}) ${item.title.en}` : t === 'educations' ? item.degree.en : item.title.en;
+                return `<div class="glass-panel admin-row"><span>${title}</span><div><button class="glass-button text-btn" data-idx="${idx}">Edit</button> <button class="glass-button text-btn danger" data-idx="${idx}">Del</button></div></div>`;
+            }).join('') || '<p style="color:var(--text-secondary);font-size:0.9rem;">Belum ada data.</p>';
         }
 
-        listView.addEventListener('click', (e) => {
-            if(e.target.classList.contains('btn-edit')) openCrudForm(parseInt(e.target.getAttribute('data-idx')));
-            if(e.target.classList.contains('btn-delete')) {
-                if(confirm('Yakin ingin menghapus item ini?')) {
-                    const type = adminDataType.value, idx = parseInt(e.target.getAttribute('data-idx'));
-                    if(type === 'skills') portfolioSkills.splice(idx, 1);
-                    if(type === 'educations') portfolioEducations.splice(idx, 1);
-                    if(type === 'experiences') portfolioExperiences.splice(idx, 1);
-                    if(type === 'certificates') portfolioCertificates.splice(idx, 1);
-                    saveToLocalAndRender(); renderCrudList();
-                }
+        listView.addEventListener('click', e => {
+            if (e.target.classList.contains('text-btn') && !e.target.classList.contains('danger')) openForm(parseInt(e.target.dataset.idx));
+            if (e.target.classList.contains('danger') && confirm('Yakin ingin menghapus data ini?')) {
+                currentArray().splice(parseInt(e.target.dataset.idx), 1);
+                saveDataLocally(); renderAdminList();
             }
         });
 
-        document.getElementById('btnAddNew').onclick = () => openCrudForm(-1);
-        document.getElementById('btnCancelForm').onclick = renderCrudList;
+        document.getElementById('btnAddNew').onclick = () => openForm(-1);
+        document.getElementById('btnCancelForm').onclick = renderAdminList;
 
-        function openCrudForm(index) {
-            currentEditIndex = index; const type = adminDataType.value;
+        function openForm(idx) {
+            currentEditIdx = idx; const t = adminType.value;
             listView.style.display = 'none'; formView.style.display = 'block';
-            document.getElementById('formTitle').textContent = index === -1 ? 'Tambah Data Baru' : 'Edit Data';
+            document.getElementById('formTitle').textContent = idx === -1 ? 'Tambah Data Baru' : 'Edit Data';
+            let item = idx !== -1 ? currentArray()[idx] : null;
 
-            let item = null;
-            if(index !== -1) {
-                let arr = type === 'skills' ? portfolioSkills : type === 'educations' ? portfolioEducations : type === 'experiences' ? portfolioExperiences : portfolioCertificates;
-                item = arr[index];
-            }
-
-            if(type === 'skills') {
-                const itemsText = item ? item.items.map(i => `${i.name} | ${i.icon}`).join('\n') : '';
-                dynamicFields.innerHTML = `
-                    <div class="crud-grid">
-                        <div class="crud-form-group"><label>Nama Kategori (EN)</label><input type="text" id="skCatEN" value="${item ? item.category.en : ''}"></div>
-                        <div class="crud-form-group"><label>Nama Kategori (ID)</label><input type="text" id="skCatID" value="${item ? item.category.id : ''}"></div>
-                    </div>
-                    <div class="crud-form-group"><label>Daftar Skill (Format: Nama | Link Gambar)</label><textarea id="skItems" rows="5">${itemsText}</textarea></div>`;
-            } 
-            else if (type === 'educations') {
-                dynamicFields.innerHTML = `
-                    <div class="crud-grid">
-                        <div class="crud-form-group"><label>Gelar/Jurusan (EN)</label><input type="text" id="edDegEN" value="${item ? item.degree.en : ''}"></div>
-                        <div class="crud-form-group"><label>Gelar/Jurusan (ID)</label><input type="text" id="edDegID" value="${item ? item.degree.id : ''}"></div>
-                        <div class="crud-form-group"><label>Nama Kampus/Sekolah (EN)</label><input type="text" id="edSchEN" value="${item ? item.school.en : ''}"></div>
-                        <div class="crud-form-group"><label>Nama Kampus/Sekolah (ID)</label><input type="text" id="edSchID" value="${item ? item.school.id : ''}"></div>
-                    </div>
-                    <div class="crud-form-group"><label>Tahun (Misal: 2024 - Present)</label><input type="text" id="edYear" value="${item ? item.year : ''}"></div>
-                    <div class="crud-form-group"><label>Keterangan (EN)</label><textarea id="edDescEN" rows="2">${item ? item.desc.en : ''}</textarea></div>
-                    <div class="crud-form-group"><label>Keterangan (ID)</label><textarea id="edDescID" rows="2">${item ? item.desc.id : ''}</textarea></div>`;
-            }
-            else if (type === 'certificates') {
-                dynamicFields.innerHTML = `
-                    <div class="crud-grid">
-                        <div class="crud-form-group"><label>Judul Sertifikat (EN)</label><input type="text" id="ceTitleEN" value="${item ? item.title.en : ''}"></div>
-                        <div class="crud-form-group"><label>Judul Sertifikat (ID)</label><input type="text" id="ceTitleID" value="${item ? item.title.id : ''}"></div>
-                        <div class="crud-form-group"><label>Deskripsi (EN)</label><input type="text" id="ceDescEN" value="${item ? item.desc.en : ''}"></div>
-                        <div class="crud-form-group"><label>Deskripsi (ID)</label><input type="text" id="ceDescID" value="${item ? item.desc.id : ''}"></div>
-                    </div>
-                    <div class="crud-form-group"><label>Path/URL Dokumen</label><input type="text" id="ceImg" value="${item ? item.img : ''}"></div>`;
-            }
-            else if (type === 'experiences') {
-                const impactsText = item ? item.impacts.map(i => `${i.en} | ${i.id}`).join('\n') : '';
-                dynamicFields.innerHTML = `
-                    <div class="crud-grid">
-                        <div class="crud-form-group"><label>Tipe Label (EN)</label><input type="text" id="exTypeEN" value="${item ? item.type.en : ''}"></div>
-                        <div class="crud-form-group"><label>Tipe Label (ID)</label><input type="text" id="exTypeID" value="${item ? item.type.id : ''}"></div>
-                        <div class="crud-form-group"><label>Tahun (Penting utk Sorting!)</label><input type="text" id="exYear" value="${item ? (item.year || '') : ''}" placeholder="2025"></div>
-                        <div class="crud-form-group"><label>Durasi (EN)</label><input type="text" id="exDurEN" value="${item ? item.duration.en : ''}"></div>
-                        <div class="crud-form-group"><label>Durasi (ID)</label><input type="text" id="exDurID" value="${item ? item.duration.id : ''}"></div>
-                    </div>
-                    <div class="crud-grid">
-                        <div class="crud-form-group"><label>Judul Tempat/Proyek (EN)</label><input type="text" id="exTitleEN" value="${item ? item.title.en : ''}"></div>
-                        <div class="crud-form-group"><label>Judul Tempat/Proyek (ID)</label><input type="text" id="exTitleID" value="${item ? item.title.id : ''}"></div>
-                        <div class="crud-form-group"><label>Posisi/Role (EN)</label><input type="text" id="exRoleEN" value="${item ? item.role.en : ''}"></div>
-                        <div class="crud-form-group"><label>Posisi/Role (ID)</label><input type="text" id="exRoleID" value="${item ? item.role.id : ''}"></div>
-                    </div>
-                    <div class="crud-form-group"><label>Deskripsi Umum (EN)</label><textarea id="exDescEN" rows="2">${item ? item.desc.en : ''}</textarea></div>
-                    <div class="crud-form-group"><label>Deskripsi Umum (ID)</label><textarea id="exDescID" rows="2">${item ? item.desc.id : ''}</textarea></div>
-                    <div class="crud-form-group"><label>Daftar Pencapaian (EN | ID)</label><textarea id="exImpacts" rows="4">${impactsText}</textarea></div>`;
+            if (t === 'skills') {
+                dynFields.innerHTML = `<div class="grid-2"><div class="input-wrap"><label>Kategori EN</label><input id="skEN" value="${item?item.category.en:''}" class="glass-input"></div><div class="input-wrap"><label>Kategori ID</label><input id="skID" value="${item?item.category.id:''}" class="glass-input"></div></div><div class="input-wrap"><label>Daftar Skills (Format: Nama | Link Icon)</label><textarea id="skItems" rows="4" class="glass-input">${item?item.items.map(i=>`${i.name} | ${i.icon}`).join('\n'):''}</textarea></div>`;
+            } else if (t === 'educations') {
+                dynFields.innerHTML = `<div class="grid-2"><div class="input-wrap"><label>Gelar EN</label><input id="edDegEN" value="${item?item.degree.en:''}" class="glass-input"></div><div class="input-wrap"><label>Gelar ID</label><input id="edDegID" value="${item?item.degree.id:''}" class="glass-input"></div><div class="input-wrap"><label>Kampus EN</label><input id="edSchEN" value="${item?item.school.en:''}" class="glass-input"></div><div class="input-wrap"><label>Kampus ID</label><input id="edSchID" value="${item?item.school.id:''}" class="glass-input"></div></div><div class="input-wrap"><label>Tahun (Cth: 2024 - Present)</label><input id="edYear" value="${item?item.year:''}" class="glass-input"></div><div class="input-wrap"><label>Keterangan EN</label><textarea id="edDescEN" class="glass-input">${item?item.desc.en:''}</textarea></div><div class="input-wrap"><label>Keterangan ID</label><textarea id="edDescID" class="glass-input">${item?item.desc.id:''}</textarea></div>`;
+            } else if (t === 'certificates') {
+                dynFields.innerHTML = `<div class="grid-2"><div class="input-wrap"><label>Judul EN</label><input id="ceTitleEN" value="${item?item.title.en:''}" class="glass-input"></div><div class="input-wrap"><label>Judul ID</label><input id="ceTitleID" value="${item?item.title.id:''}" class="glass-input"></div><div class="input-wrap"><label>Deskripsi EN</label><input id="ceDescEN" value="${item?item.desc.en:''}" class="glass-input"></div><div class="input-wrap"><label>Deskripsi ID</label><input id="ceDescID" value="${item?item.desc.id:''}" class="glass-input"></div></div><div class="input-wrap"><label>Link Dokumen (PDF/IMG)</label><input id="ceImg" value="${item?item.img:''}" class="glass-input"></div>`;
+            } else {
+                dynFields.innerHTML = `<div class="grid-2"><div class="input-wrap"><label>Tipe EN</label><input id="exTypeEN" value="${item?item.type.en:''}" class="glass-input"></div><div class="input-wrap"><label>Tipe ID</label><input id="exTypeID" value="${item?item.type.id:''}" class="glass-input"></div><div class="input-wrap"><label>Tahun (Penting utk Sorting)</label><input id="exYear" value="${item?item.year:''}" class="glass-input"></div><div class="input-wrap"><label>Durasi EN</label><input id="exDurEN" value="${item?item.duration.en:''}" class="glass-input"></div><div class="input-wrap"><label>Durasi ID</label><input id="exDurID" value="${item?item.duration.id:''}" class="glass-input"></div><div class="input-wrap"><label>Judul Pekerjaan EN</label><input id="exTitleEN" value="${item?item.title.en:''}" class="glass-input"></div><div class="input-wrap"><label>Judul Pekerjaan ID</label><input id="exTitleID" value="${item?item.title.id:''}" class="glass-input"></div><div class="input-wrap"><label>Posisi EN</label><input id="exRoleEN" value="${item?item.role.en:''}" class="glass-input"></div><div class="input-wrap"><label>Posisi ID</label><input id="exRoleID" value="${item?item.role.id:''}" class="glass-input"></div></div><div class="input-wrap"><label>Keterangan EN</label><textarea id="exDescEN" class="glass-input">${item?item.desc.en:''}</textarea></div><div class="input-wrap"><label>Keterangan ID</label><textarea id="exDescID" class="glass-input">${item?item.desc.id:''}</textarea></div><div class="input-wrap"><label>List Pencapaian (EN | ID)</label><textarea id="exImpacts" rows="3" class="glass-input">${item?item.impacts.map(i=>`${i.en} | ${i.id}`).join('\n'):''}</textarea></div>`;
             }
         }
 
         document.getElementById('btnSaveForm').onclick = () => {
-            const type = adminDataType.value; let newItem = {};
-            if(type === 'skills') {
-                const lines = document.getElementById('skItems').value.split('\n').filter(l => l.trim() !== '');
-                newItem = {
-                    category: { en: document.getElementById('skCatEN').value, id: document.getElementById('skCatID').value },
-                    items: lines.map(line => { const parts = line.split('|'); return { name: parts[0]?.trim() || '', icon: parts[1]?.trim() || '' }; })
-                };
-            } 
-            else if (type === 'educations') {
-                newItem = {
-                    degree: { en: document.getElementById('edDegEN').value, id: document.getElementById('edDegID').value },
-                    school: { en: document.getElementById('edSchEN').value, id: document.getElementById('edSchID').value },
-                    year: document.getElementById('edYear').value,
-                    desc: { en: document.getElementById('edDescEN').value, id: document.getElementById('edDescID').value }
-                };
-            }
-            else if (type === 'certificates') {
-                newItem = {
-                    title: { en: document.getElementById('ceTitleEN').value, id: document.getElementById('ceTitleID').value },
-                    desc: { en: document.getElementById('ceDescEN').value, id: document.getElementById('ceDescID').value },
-                    img: document.getElementById('ceImg').value
-                };
-            }
-            else if (type === 'experiences') {
-                const lines = document.getElementById('exImpacts').value.split('\n').filter(l => l.trim() !== '');
-                newItem = {
-                    type: { en: document.getElementById('exTypeEN').value, id: document.getElementById('exTypeID').value },
-                    year: document.getElementById('exYear').value,
-                    title: { en: document.getElementById('exTitleEN').value, id: document.getElementById('exTitleID').value },
-                    role: { en: document.getElementById('exRoleEN').value, id: document.getElementById('exRoleID').value },
-                    duration: { en: document.getElementById('exDurEN').value, id: document.getElementById('exDurID').value },
-                    desc: { en: document.getElementById('exDescEN').value, id: document.getElementById('exDescID').value },
-                    impacts: lines.map(line => { const parts = line.split('|'); return { en: parts[0]?.trim() || '', id: parts[1]?.trim() || '' }; })
-                };
-            }
-            let arr = type === 'skills' ? portfolioSkills : type === 'educations' ? portfolioEducations : type === 'experiences' ? portfolioExperiences : portfolioCertificates;
-            if(currentEditIndex === -1) arr.push(newItem); else arr[currentEditIndex] = newItem;
-            saveToLocalAndRender(); renderCrudList();
+            const t = adminType.value; let obj = {};
+            if (t === 'skills') obj = { category: { en: skEN.value, id: skID.value }, items: skItems.value.split('\n').filter(l=>l.trim()).map(l=>{const p=l.split('|'); return {name:p[0]?.trim(), icon:p[1]?.trim()};}) };
+            else if (t === 'educations') obj = { degree: { en: edDegEN.value, id: edDegID.value }, school: { en: edSchEN.value, id: edSchID.value }, year: edYear.value, desc: { en: edDescEN.value, id: edDescID.value } };
+            else if (t === 'certificates') obj = { title: { en: ceTitleEN.value, id: ceTitleID.value }, desc: { en: ceDescEN.value, id: ceDescID.value }, img: ceImg.value };
+            else obj = { type: { en: exTypeEN.value, id: exTypeID.value }, year: exYear.value, title: { en: exTitleEN.value, id: exTitleID.value }, role: { en: exRoleEN.value, id: exRoleID.value }, duration: { en: exDurEN.value, id: exDurID.value }, desc: { en: exDescEN.value, id: exDescID.value }, impacts: exImpacts.value.split('\n').filter(l=>l.trim()).map(l=>{const p=l.split('|'); return {en:p[0]?.trim(), id:p[1]?.trim()};}) };
+
+            const arr = currentArray();
+            if (currentEditIdx === -1) arr.push(obj); else arr[currentEditIdx] = obj;
+            saveDataLocally(); renderAdminList();
         };
 
-        function saveToLocalAndRender() {
+        function saveDataLocally() {
             localStorage.setItem('port_skills', JSON.stringify(portfolioSkills));
             localStorage.setItem('port_exps', JSON.stringify(portfolioExperiences));
             localStorage.setItem('port_edus', JSON.stringify(portfolioEducations));
@@ -544,7 +366,7 @@
         }
 
         document.getElementById('btnResetAdmin').onclick = () => {
-            if(confirm('Aksi ini akan menghapus semua editan Anda dan mengembalikan porto ke versi awal. Lanjut?')) {
+            if (confirm('Aksi ini akan menghapus semua editan lokal dan mengembalikan data ke versi awal pabrik. Lanjut?')) {
                 localStorage.clear(); location.reload();
             }
         };
