@@ -1,378 +1,581 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ignatius Arya - Portfolio</title>
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="profilee.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ignatius Aryajulio Prananta – Portfolio</title>
+<meta name="description" content="Informatics student, Laravel developer, coding and robotics instructor, and Google Cloud Arcade 2026 facilitator.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f5fb; --surface:#ffffff; --ink:#15203b; --muted:#56607f; --line:#d5dbec;
+  --accent:#2547f5; --accent-ink:#ffffff; --pop:#ffc933; --coral:#ff6b57;
+  --r-card:18px; --r-btn:12px;
+  --display:'Bricolage Grotesque','Figtree',system-ui,sans-serif;
+  --body:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+:root[data-theme="dark"]{
+  --bg:#0f1527; --surface:#172038; --ink:#eaeefc; --muted:#9aa5c9; --line:#2b365a;
+  --accent:#8aa0ff; --accent-ink:#0f1527;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{
+  margin:0;font-family:var(--body);font-size:1.05rem;line-height:1.6;color:var(--ink);background:var(--bg);
+  background-image:radial-gradient(var(--line) 1px,transparent 1px);background-size:28px 28px;
+}
+body[lang="en"] span[lang="id"], body[lang="id"] span[lang="en"]{display:none}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0}
+p{margin:0}
+ul{margin:0;padding:0}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+section{padding:84px 0 0}
+.sec-head{margin-bottom:28px;max-width:60ch}
+.sec-head h2{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;letter-spacing:-.02em}
+.sec-head p{color:var(--muted);margin-top:8px}
+
+/* progress + header */
+#progress{position:fixed;inset:0 auto auto 0;height:4px;width:0;background:var(--accent);z-index:60}
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:16px;padding:12px 0;flex-wrap:wrap}
+.logo{font-family:var(--display);font-weight:800;font-size:1.25rem;text-decoration:none;margin-right:auto}
+.logo span{color:var(--accent)}
+nav ul{display:flex;gap:4px;list-style:none}
+nav a{display:block;padding:6px 12px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+nav a.on{background:var(--ink);color:var(--bg)}
+.tools{display:flex;gap:8px}
+.icon-btn{border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:var(--r-btn);height:40px;min-width:40px;padding:0 12px;font:600 .9rem var(--body);cursor:pointer}
+.icon-btn:hover{border-color:var(--ink)}
+@media (max-width:720px){
+  nav{order:3;width:100%;overflow-x:auto}
+  nav ul{width:max-content}
+}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:var(--r-btn);font:700 1rem var(--body);text-decoration:none;cursor:pointer;border:2px solid var(--ink);transition:transform .12s,box-shadow .12s}
+.btn.primary{background:var(--accent);color:var(--accent-ink);box-shadow:4px 4px 0 var(--ink)}
+.btn.primary:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn.primary:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.btn.ghost{background:var(--surface);color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+
+/* hero */
+.hero{padding-top:56px}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:32px;align-items:center}
+.status{display:inline-flex;align-items:center;gap:10px;background:var(--surface);border:1.5px solid var(--line);border-radius:999px;padding:6px 14px;font-weight:600;font-size:.9rem}
+.dot{width:10px;height:10px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 0 rgba(34,197,94,.6);animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 9px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+.hero h1{font-size:clamp(2.6rem,7vw,4.8rem);font-weight:800;letter-spacing:-.035em;margin:20px 0 18px}
+.hero h1 mark{background:linear-gradient(transparent 62%,var(--pop) 62%);color:inherit;padding:0 .06em}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:52ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:26px;color:var(--muted);font-size:.95rem}
+
+/* robot */
+.robot-wrap{display:flex;flex-direction:column;align-items:center;gap:12px}
+.bubble{position:relative;background:var(--surface);border:2px solid var(--ink);border-radius:16px;padding:12px 16px;font-weight:600;font-size:.98rem;text-align:center;min-height:3.6em;display:flex;align-items:center;max-width:300px;box-shadow:4px 4px 0 var(--ink)}
+.bubble::after{content:"";position:absolute;left:50%;bottom:-11px;width:18px;height:18px;background:var(--surface);border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:translateX(-50%) rotate(45deg)}
+.robot{background:none;border:0;padding:0;cursor:pointer;width:min(260px,70vw)}
+.robot svg{width:100%;height:auto;overflow:visible}
+.robot .stroke{stroke:var(--ink);stroke-width:4;stroke-linejoin:round;stroke-linecap:round}
+.robot .head,.robot .ear{fill:var(--surface)}
+.robot .body{fill:var(--accent)}
+.robot .sclera{fill:#fff}
+.robot .pupil{fill:#15203b;transition:transform .08s linear}
+.robot .bulb{fill:var(--pop);animation:blink 2.4s infinite}
+@keyframes blink{50%{fill:var(--coral)}}
+.robot.hop{animation:hop .45s}
+@keyframes hop{30%{transform:translateY(-16px) rotate(-3deg)}60%{transform:translateY(0) rotate(2deg)}}
+.hint{font-size:.85rem;color:var(--muted)}
+@media (max-width:820px){.hero-grid{grid-template-columns:1fr}.robot-wrap{order:-1}}
+
+/* hero load sequence (the one scripted entrance) */
+.in{opacity:0;transform:translateY(14px);animation:rise .6s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* projects */
+.projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:26px}
+.proj{display:flex;flex-direction:column;gap:14px;text-align:left;background:var(--surface);color:var(--ink);border:2px solid var(--ink);border-radius:var(--r-card);padding:24px;box-shadow:6px 6px 0 var(--ink);cursor:pointer;font:inherit;transition:transform .14s,box-shadow .14s}
+.proj:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--ink)}
+.proj:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink)}
+.proj-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-weight:600;font-size:.9rem}
+.studs{display:flex;gap:6px}
+.studs i{width:14px;height:14px;border-radius:50%;background:var(--pop);border:2px solid var(--ink)}
+.studs i:nth-child(2){background:var(--coral)}
+.studs i:nth-child(3){background:var(--accent)}
+.proj h3{font-size:1.5rem;font-weight:800}
+.proj p{color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--bg);border:1.5px solid var(--line);border-radius:999px;padding:3px 12px;font-size:.88rem;font-weight:600}
+.more{margin-top:auto;font-weight:700;color:var(--accent)}
+.proj-note{margin-top:22px;color:var(--muted)}
+
+/* timeline */
+.filters{display:flex;gap:8px;margin-bottom:26px}
+.fbtn{border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 16px;font:600 .95rem var(--body);cursor:pointer}
+.fbtn[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.timeline{position:relative;display:flex;flex-direction:column;gap:14px;padding-left:34px}
+.timeline::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:3px;background:var(--line);border-radius:3px}
+.tl{position:relative;background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r-card)}
+.tl::before{content:"";position:absolute;left:-33px;top:26px;width:15px;height:15px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.tl[data-kind="org"]::before{border-color:var(--coral)}
+.tl[open]{border-color:var(--ink)}
+.tl summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:18px 22px}
+.tl summary::-webkit-details-marker{display:none}
+.tl h3{font-size:1.2rem;font-weight:800}
+.tl .role{color:var(--muted);font-weight:500}
+.tl .date{font-weight:700;font-size:.92rem;text-align:right;white-space:nowrap}
+.tl .date small{display:block;color:var(--muted);font-weight:500}
+.tl ul{padding:0 22px 20px 42px;color:var(--muted)}
+.tl li{margin-top:8px}
+.tl li b{color:var(--ink)}
+@media (max-width:560px){.tl summary{grid-template-columns:1fr}.tl .date{text-align:left}}
+
+/* toolbox / education */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
+.panel{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r-card);padding:24px}
+.panel h3{font-size:1.2rem;font-weight:800;margin-bottom:14px}
+.tool-group+.tool-group{margin-top:18px}
+.tool-group h4{margin:0 0 8px;font-size:.95rem;color:var(--muted);font-weight:600}
+.edu+.edu{margin-top:18px;padding-top:18px;border-top:1.5px dashed var(--line)}
+.edu b{font-size:1.05rem}
+.edu span{display:block;color:var(--muted)}
+.certs{display:grid;gap:12px;margin-top:6px}
+.cert{display:flex;justify-content:space-between;gap:14px;align-items:center;text-align:left;width:100%;background:var(--bg);border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;font:inherit;color:inherit}
+button.cert{cursor:pointer}
+button.cert:hover{border-color:var(--ink)}
+.cert b{display:block}
+.cert small{color:var(--muted)}
+.tag{font-size:.82rem;font-weight:700;color:var(--accent);white-space:nowrap}
+
+/* contact */
+.contact{background:var(--ink);color:var(--bg);border-radius:28px;padding:clamp(28px,6vw,56px);display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.contact h2{font-size:clamp(1.9rem,4.5vw,3rem);font-weight:800;letter-spacing:-.025em}
+.contact p{margin-top:12px;opacity:.8;max-width:46ch}
+.contact-links{display:flex;flex-direction:column;gap:12px}
+.contact .btn{border-color:var(--bg);justify-content:space-between}
+.contact .btn.ghost{background:transparent;color:var(--bg)}
+.contact .btn.ghost:hover{background:var(--bg);color:var(--ink)}
+.contact .btn.primary{background:var(--pop);color:#15203b;box-shadow:4px 4px 0 var(--bg)}
+@media (max-width:820px){.contact{grid-template-columns:1fr}}
+footer{padding:40px 0 48px;color:var(--muted);font-size:.92rem;text-align:center}
+
+/* dialog */
+dialog{border:2px solid var(--ink);border-radius:var(--r-card);background:var(--surface);color:var(--ink);padding:0;width:min(640px,calc(100% - 32px));max-height:88vh;box-shadow:8px 8px 0 var(--ink)}
+dialog::backdrop{background:rgba(10,14,28,.6);backdrop-filter:blur(4px)}
+.dlg-body{padding:28px;overflow:auto;max-height:88vh}
+.dlg-close{position:absolute;top:14px;right:14px}
+.dlg-body h3{font-size:1.7rem;font-weight:800;padding-right:44px}
+.dlg-sub{color:var(--muted);margin:6px 0 16px;font-weight:600}
+.dlg-body ul{padding-left:20px;margin:16px 0}
+.dlg-body li{margin-top:10px}
+.dlg-body img{width:100%;height:auto;border-radius:12px;border:1.5px solid var(--line);margin-top:14px}
+.dlg-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .in{opacity:1;transform:none}
+}
+</style>
 </head>
-<body lang="en" class="spatial-theme">
+<body lang="en">
+<div id="progress" aria-hidden="true"></div>
 
-    <div class="ambient-background">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
+<header>
+  <div class="wrap bar">
+    <a href="#home" class="logo">Arya<span>.</span></a>
+    <nav aria-label="Main">
+      <ul id="nav">
+        <li><a href="#projects"><span lang="en">Projects</span><span lang="id">Proyek</span></a></li>
+        <li><a href="#experience"><span lang="en">Experience</span><span lang="id">Pengalaman</span></a></li>
+        <li><a href="#toolbox"><span lang="en">Toolbox</span><span lang="id">Keahlian</span></a></li>
+        <li><a href="#education"><span lang="en">Education</span><span lang="id">Pendidikan</span></a></li>
+        <li><a href="#contact"><span lang="en">Contact</span><span lang="id">Kontak</span></a></li>
+      </ul>
+    </nav>
+    <div class="tools">
+      <button class="icon-btn" id="langBtn" aria-label="Switch language"><span lang="en">ID</span><span lang="id">EN</span></button>
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode">◐</button>
     </div>
+  </div>
+</header>
 
-    <header class="glass-nav">
-        <div class="logo">IA.</div>
-        <nav id="mainNav">
-            <ul>
-                <li><a href="#overview"><span lang="en">Overview</span><span lang="id">Ringkasan</span></a></li>
-                <li><a href="#experiences"><span lang="en">Experience</span><span lang="id">Pengalaman</span></a></li>
-                <li><a href="#education"><span lang="en">Education</span><span lang="id">Pendidikan</span></a></li>
-            </ul>
-        </nav>
-        <div class="nav-actions">
-            <button class="glass-button icon-btn" id="langToggleBtn" aria-label="Switch language">
-                <span lang="en">ID</span><span lang="id">EN</span>
-            </button>
-            <button class="secret-admin-btn" id="secretAdminBtn" tabindex="-1" aria-hidden="true">•</button>
-            <button class="glass-button mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+<main id="home">
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <div class="status in" style="animation-delay:.05s"><span class="dot"></span>
+          <span lang="en">Open for internships and projects</span><span lang="id">Terbuka untuk magang dan proyek</span></div>
+        <h1 class="in" style="animation-delay:.15s">
+          <span lang="en">I build <mark>systems</mark> and teach <mark>logic</mark>.</span>
+          <span lang="id">Aku membangun <mark>sistem</mark> dan mengajar <mark>logika</mark>.</span>
+        </h1>
+        <p class="lead in" style="animation-delay:.25s">
+          <span lang="en">Informatics student at Sanata Dharma University. I analyze and develop web systems with Laravel, teach coding and robotics, and mentor cloud learners.</span>
+          <span lang="id">Mahasiswa Informatika Universitas Sanata Dharma. Aku menganalisis dan mengembangkan sistem web dengan Laravel, mengajar coding dan robotika, serta membimbing pelajar cloud.</span>
+        </p>
+        <div class="hero-actions in" style="animation-delay:.35s">
+          <a class="btn primary" href="Ignatius_Aryajulio_CV.pdf" download><span lang="en">Download CV</span><span lang="id">Unduh CV</span></a>
+          <a class="btn ghost" href="#projects"><span lang="en">See projects</span><span lang="id">Lihat proyek</span></a>
         </div>
-    </header>
-
-    <main class="bento-container" id="overview">
-        <section class="bento-grid hero-grid">
-            <div class="bento-card glass-panel col-span-3 row-span-2 hero-combo" data-aos="fade-up">
-                <div class="hero-combo-text">
-                    <div class="status-pill glass-button">
-                        <span class="pulse-dot" aria-hidden="true"></span>
-                        <span lang="en">Available for work</span><span lang="id">Tersedia untuk proyek</span>
-                    </div>
-                    <h1 class="hero-title">
-                        <span lang="en">Building Systems,<br>Crafting Futures.</span>
-                        <span lang="id">Membangun Sistem,<br>Merangkai Masa Depan.</span>
-                    </h1>
-                    <p class="hero-desc">
-                        <span lang="en">Software Engineer & AI/ML Enthusiast. Bridging the gap between intelligent algorithms and robust, scalable operations.</span>
-                        <span lang="id">Software Engineer & Penggiat AI/ML. Menjembatani algoritma cerdas dengan operasional sistem yang andal dan skalabel.</span>
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#experiences" class="glass-button primary-glow">
-                            <span lang="en">Explore Experience</span><span lang="id">Jelajahi Pengalaman</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-combo-media">
-                    <img src="img/WhatsApp_Image_2025-10-29_at_8.02.19_PM-removebg-preview.png" alt="Foto Ignatius Arya" class="profile-img" onerror="this.src='https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=400'">
-                </div>
-            </div>
-
-            <div class="bento-card glass-panel row-span-2 flex-center contact-card" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="bento-card-title"><span lang="en">Contact</span><span lang="id">Kontak</span></h3>
-                <div class="contact-stack">
-                    <a href="mailto:ignatius.arya@email.com" class="glass-button icon-link" aria-label="Email">📧</a>
-                    <a href="https://github.com/ignatiusarya" target="_blank" rel="noopener" class="glass-button icon-link" aria-label="GitHub">💻</a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener" class="glass-button icon-link" aria-label="LinkedIn">🔗</a>
-                </div>
-            </div>
-
-            <div id="skillsContainer" class="col-span-4 bento-grid sub-grid"></div>
-        </section>
-
-        <div class="section-divider" id="experiences">
-            <h2 class="spatial-title"><span lang="en">Experience Matrix</span><span lang="id">Matriks Pengalaman</span></h2>
+        <div class="hero-meta in" style="animation-delay:.45s">
+          <span>Yogyakarta, Indonesia</span>
+          <span><span lang="en">Google Cloud Arcade 2026 facilitator</span><span lang="id">Fasilitator Google Cloud Arcade 2026</span></span>
         </div>
-        <section class="bento-grid" id="experiencesContainer"></section>
+      </div>
 
-        <div class="section-divider" id="education">
-            <h2 class="spatial-title"><span lang="en">Education & Certificates</span><span lang="id">Pendidikan & Sertifikat</span></h2>
-        </div>
-        <section class="bento-grid two-cols">
-            <div id="educationContainer" class="bento-column"></div>
-            <div id="certificatesContainer" class="bento-column"></div>
-        </section>
-    </main>
-
-    <footer class="glass-footer">
-        <p><span lang="en">© 2026 Ignatius Arya. Engineered with Spatial UI.</span><span lang="id">© 2026 Ignatius Arya. Dirancang dengan Spatial UI.</span></p>
-    </footer>
-
-    <div class="spatial-modal" id="certificateModal">
-        <div class="glass-panel modal-box">
-            <button class="glass-button modal-close" aria-label="Close">&times;</button>
-            <div id="modalMediaContainer" class="modal-media-wrapper"></div>
-            <div class="modal-info">
-                <h3 id="modalTitle" class="gradient-text"></h3>
-                <p id="modalDesc"></p>
-            </div>
-        </div>
+      <div class="robot-wrap in" style="animation-delay:.5s">
+        <div class="bubble" id="bubble" role="status" aria-live="polite"></div>
+        <button class="robot" id="robot" aria-label="Poke the robot to learn something about me">
+          <svg viewBox="0 0 200 220" aria-hidden="true">
+            <line class="stroke" x1="100" y1="42" x2="100" y2="20" fill="none"/>
+            <circle class="stroke bulb" cx="100" cy="14" r="8"/>
+            <rect class="stroke ear" x="14" y="72" width="18" height="42" rx="7"/>
+            <rect class="stroke ear" x="168" y="72" width="18" height="42" rx="7"/>
+            <rect class="stroke head" x="30" y="42" width="140" height="104" rx="28"/>
+            <circle class="stroke sclera" cx="72" cy="88" r="19"/>
+            <circle class="stroke sclera" cx="128" cy="88" r="19"/>
+            <circle class="pupil" id="pupilL" cx="72" cy="88" r="8"/>
+            <circle class="pupil" id="pupilR" cx="128" cy="88" r="8"/>
+            <path class="stroke" id="mouth" d="M78 122 Q100 138 122 122" fill="none"/>
+            <rect class="stroke body" x="55" y="154" width="90" height="54" rx="16"/>
+            <circle class="stroke" cx="100" cy="181" r="9" fill="#ffc933"/>
+          </svg>
+        </button>
+        <span class="hint"><span lang="en">Poke the robot. It knows a few things about me.</span><span lang="id">Colek robotnya. Dia tahu beberapa hal tentangku.</span></span>
+      </div>
     </div>
+  </div>
 
-    <div class="spatial-modal" id="adminModal">
-        <div class="glass-panel admin-box">
-            <div class="admin-header-flex">
-                <h3 class="gradient-text">Content Manager</h3>
-                <button class="glass-button modal-close" id="closeAdmin" aria-label="Close">&times;</button>
-            </div>
-
-            <div class="admin-toolbar">
-                <select id="adminDataType" class="glass-input">
-                    <option value="skills">Skills & Tools</option>
-                    <option value="experiences">Experiences</option>
-                    <option value="educations">Education</option>
-                    <option value="certificates">Certificates</option>
-                </select>
-                <button class="glass-button primary-glow" id="btnAddNew">+ Add New</button>
-            </div>
-
-            <div id="adminListView" class="admin-list-container"></div>
-
-            <div id="adminFormView" class="admin-form-container" style="display: none;">
-                <h4 id="formTitle" style="margin-bottom:14px;">Edit Data</h4>
-                <div id="formDynamicFields"></div>
-                <div class="admin-actions">
-                    <button class="glass-button" id="btnCancelForm">Batal</button>
-                    <button class="glass-button primary-glow" id="btnSaveForm">Simpan Data</button>
-                </div>
-            </div>
-
-            <div class="admin-footer-actions">
-                <button class="glass-button danger-glow" id="btnResetAdmin">Factory Reset</button>
-            </div>
-        </div>
+  <section id="projects"><div class="wrap">
+    <div class="sec-head">
+      <h2><span lang="en">Projects</span><span lang="id">Proyek</span></h2>
+      <p><span lang="en">Select a card to see what I did and which tools I used.</span><span lang="id">Pilih kartu untuk melihat apa yang kukerjakan dan tools yang dipakai.</span></p>
     </div>
+    <div class="projects" id="projectList"></div>
+  </div></section>
 
-    <div id="maintenanceOverlay" class="maintenance-overlay" style="display: none;">
-        <div class="maintenance-content">
-            <div class="maintenance-illustration">
-                <img src="https://cdn3d.iconscout.com/3d/premium/thumb/setting-4993635-4160410.png" alt="Maintenance Icon" onerror="this.src='https://cdn-icons-png.flaticon.com/512/4333/4333097.png'">
-            </div>
-            <h2 class="gradient-text">Under Maintenance</h2>
-            <p style="color: #94a3b8; max-width: 400px; margin: 10px auto;">We're currently upgrading our systems. Please check back later!</p>
-            <div class="maintenance-footer" style="margin-top: 30px; font-size: 0.8rem; color: #64748b;">
-                <span>Ignatius Arya • Software Engineer Portfolio</span>
-            </div>
-        </div>
+  <section id="experience"><div class="wrap">
+    <div class="sec-head">
+      <h2><span lang="en">Experience</span><span lang="id">Pengalaman</span></h2>
+      <p><span lang="en">Newest first. Open an entry for the details.</span><span lang="id">Terbaru di atas. Buka satu entri untuk detailnya.</span></p>
     </div>
+    <div class="filters" id="filters">
+      <button class="fbtn" data-f="all" aria-pressed="true"><span lang="en">All</span><span lang="id">Semua</span></button>
+      <button class="fbtn" data-f="work" aria-pressed="false"><span lang="en">Work</span><span lang="id">Kerja</span></button>
+      <button class="fbtn" data-f="org" aria-pressed="false"><span lang="en">Organizations</span><span lang="id">Organisasi</span></button>
+    </div>
+    <div class="timeline" id="timeline"></div>
+  </div></section>
 
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        AOS.init({ duration: 700, easing: 'ease-out', once: true, offset: 20 });
+  <section id="toolbox"><div class="wrap">
+    <div class="sec-head">
+      <h2><span lang="en">Toolbox</span><span lang="id">Keahlian</span></h2>
+    </div>
+    <div class="panel" id="toolboxPanel"></div>
+  </div></section>
 
-        // === 0. MAINTENANCE MODE CONTROLLER ===
-        // Ubah `false` menjadi `true` untuk mengunci website
-        const maintenanceMode = false; 
-        const maintenanceOverlay = document.getElementById('maintenanceOverlay');
-        if (maintenanceMode && maintenanceOverlay) {
-            maintenanceOverlay.style.display = 'flex';
-            document.body.style.overflow = 'hidden'; 
-        }
+  <section id="education"><div class="wrap">
+    <div class="sec-head">
+      <h2><span lang="en">Education and certificates</span><span lang="id">Pendidikan dan sertifikat</span></h2>
+    </div>
+    <div class="two">
+      <div class="panel" id="eduPanel"></div>
+      <div class="panel"><h3><span lang="en">Certificates</span><span lang="id">Sertifikat</span></h3><div class="certs" id="certList"></div></div>
+    </div>
+  </div></section>
 
-        // === MOBILE MENU ===
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn'), mainNav = document.getElementById('mainNav');
-        if (mobileMenuBtn && mainNav) {
-            mobileMenuBtn.onclick = () => {
-                const isOpen = mainNav.classList.toggle('active');
-                mobileMenuBtn.setAttribute('aria-expanded', isOpen);
-            };
-            document.querySelectorAll('#mainNav a').forEach(l => l.onclick = () => {
-                mainNav.classList.remove('active');
-                mobileMenuBtn.setAttribute('aria-expanded', 'false');
-            });
-        }
+  <section id="contact"><div class="wrap">
+    <div class="contact">
+      <div>
+        <h2><span lang="en">Have a project or an internship in mind?</span><span lang="id">Punya proyek atau lowongan magang?</span></h2>
+        <p><span lang="en">Send me a message. I usually reply within a couple of days.</span><span lang="id">Kirim pesan saja. Biasanya kubalas dalam beberapa hari.</span></p>
+      </div>
+      <div class="contact-links">
+        <a class="btn primary" href="mailto:ignatiusaryajulio@gmail.com">Email</a>
+        <button class="btn ghost" id="copyBtn" type="button"><span id="copyLabel"><span lang="en">Copy email address</span><span lang="id">Salin alamat email</span></span></button>
+        <a class="btn ghost" href="https://www.linkedin.com/in/ignatiusaryajulioprananta" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="https://github.com/ignatiusarya" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </div></section>
+</main>
 
-        // === LANGUAGE TOGGLE ===
-        const langToggleBtn = document.getElementById('langToggleBtn');
-        function updateLang(lang) { document.body.setAttribute('lang', lang); localStorage.setItem('lang', lang); }
-        if (langToggleBtn) langToggleBtn.onclick = () => updateLang(document.body.getAttribute('lang') === 'en' ? 'id' : 'en');
-        updateLang(localStorage.getItem('lang') || 'en');
+<footer><div class="wrap">© 2026 Ignatius Aryajulio Prananta</div></footer>
 
-        // === 1. CORE DATA MATRIX ===
-        const defaultSkills = [
-            { category: { en: "Comfort Zone", id: "Zona Nyaman" }, items: [ { name: "VS Code", icon: "https://cdn.icon-icons.com/icons2/3053/PNG/512/microsoft_visual_studio_code_alt_macos_bigsur_icon_189954.png" }, { name: "Java", icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-java-5728473-4781237.png" }, { name: "Python", icon: "https://tse2.mm.bing.net/th/id/OIP.ab-LadRHEfMbeAuDD-U3owHaHa?rs=1&pid=ImgDetMain" } ] },
-            { category: { en: "Skill Cap", id: "Target Keahlian" }, items: [ { name: "Machine Learning", icon: "img/Ai Chip.png" }, { name: "Data Science", icon: "img/SQL.png" } ] }
-        ];
+<dialog id="dlg"><div class="dlg-body" id="dlgBody"></div>
+  <button class="icon-btn dlg-close" id="dlgClose" aria-label="Close">✕</button>
+</dialog>
 
-        const defaultExperiences = [
-            { type: { en: "Professional", id: "Profesional" }, title: { en: "Yoga Solusi Intiprima", id: "Yoga Solusi Intiprima" }, role: { en: "IT Support and Development", id: "IT Support & Pengembangan" }, duration: { en: "3 Months", id: "3 Bulan" }, year: "2025", desc: { en: "Serving as a flexible technician and developer.", id: "Bertugas sebagai teknisi dan pengembang fleksibel." }, impacts: [ { en: "Improving IT reliability via mobile support.", id: "Meningkatkan keandalan IT via dukungan mobile." }, { en: "Designing ERDs for database structures.", id: "Merancang ERD untuk struktur basis data." } ] },
-            { type: { en: "Creative", id: "Kreatif" }, title: { en: "SMK Tunas Harapan", id: "SMK Tunas Harapan" }, role: { en: "Scriptwriter", id: "Penulis Naskah" }, duration: { en: "1 Year", id: "1 Tahun" }, year: "2024", desc: { en: "A foundational experience in creative storytelling.", id: "Pengalaman dasar penceritaan kreatif." }, impacts: [ { en: "Developed a compelling narrative.", id: "Mengembangkan narasi yang menarik." } ] }
-        ];
+<script>
+/* ============================================================
+   CONTENT – edit this block to update the site.
+   Every text has { en, id }. Commit + push to publish.
+   ============================================================ */
+const PROJECTS = [
+  {
+    title: 'SAKTI',
+    full: { en: 'Kanisius Integrated Admission System', id: 'Sistem Penerimaan Terpadu Kanisius' },
+    role: { en: 'Systems Analyst & Developer', id: 'System Analyst & Developer' },
+    year: '2026',
+    stack: ['PHP', 'Laravel', 'SQL'],
+    summary: {
+      en: 'A web application that replaces the paper-based student admission process with online forms and status tracking.',
+      id: 'Aplikasi web yang menggantikan proses penerimaan siswa berbasis kertas dengan formulir online dan pelacakan status.'
+    },
+    points: [
+      { en: '<b>System analysis:</b> evaluated the paper process and mapped data flows with the PIECES framework to find where operational errors happen.',
+        id: '<b>Analisis sistem:</b> mengevaluasi proses berbasis kertas dan memetakan alur data dengan kerangka PIECES untuk menemukan sumber kesalahan operasional.' },
+      { en: '<b>E-forms with validation:</b> designed dynamic web forms with strict input validation to keep data accurate and prevent submission errors.',
+        id: '<b>E-form dengan validasi:</b> merancang formulir web dinamis dengan validasi input ketat agar data akurat dan kesalahan pengisian tercegah.' },
+      { en: '<b>Verification:</b> wrote use cases and core workflows, then verified the Smart Upload and Status Tracker modules so data is stored cleanly.',
+        id: '<b>Verifikasi:</b> menyusun use case dan alur kerja inti, lalu memverifikasi modul Smart Upload dan Status Tracker agar data tersimpan rapi.' }
+    ],
+    links: [
+      // Add when ready: { label: { en: 'Live demo', id: 'Demo langsung' }, url: 'https://...' },
+      // Add when ready: { label: { en: 'Source code', id: 'Kode sumber' }, url: 'https://github.com/...' }
+    ]
+  },
+  {
+    title: { en: 'This portfolio', id: 'Portofolio ini' },
+    role: { en: 'Designer & Developer', id: 'Desainer & Developer' },
+    year: '2026',
+    stack: ['HTML', 'CSS', 'JavaScript'],
+    summary: {
+      en: 'A static, bilingual site with dark mode and an interactive robot. No backend, so nothing to hack and nothing to maintain.',
+      id: 'Situs statis dwibahasa dengan dark mode dan robot interaktif. Tanpa backend, jadi aman dan minim perawatan.'
+    },
+    points: [
+      { en: 'Content lives in one data block, so updating it means editing text and pushing to GitHub.',
+        id: 'Konten ada di satu blok data, jadi memperbarui cukup edit teks lalu push ke GitHub.' },
+      { en: 'Keyboard accessible, responsive down to phones, and respects the reduced-motion setting.',
+        id: 'Bisa dioperasikan dengan keyboard, responsif sampai ke HP, dan menghormati pengaturan reduced-motion.' }
+    ],
+    links: []
+  }
+  // To add a project, copy one object above, fill it in, and add a comma between objects.
+];
 
-        const defaultEducations = [
-            { degree: { en: "Bachelor of Informatics", id: "S1 Informatika" }, school: { en: "Sanata Dharma University", id: "Universitas Sanata Dharma" }, year: "2024 - Present", desc: { en: "Focusing on Software Engineering, Data Pipelines, and Artificial Intelligence.", id: "Berfokus pada Rekayasa Perangkat Lunak, Data Pipeline, dan Kecerdasan Buatan." } }
-        ];
+const EXPERIENCE = [
+  { kind: 'work', org: 'Codero', place: 'Yogyakarta',
+    role: { en: 'Part-time Coding & Robotics Instructor', id: 'Instruktur Coding & Robotika Paruh Waktu' },
+    date: { en: 'Jul 2026 – Present', id: 'Jul 2026 – Sekarang' }, open: true,
+    points: [
+      { en: '<b>Programming lessons:</b> teach Scratch, Pictoblox and Python to older students, turning complex concepts into engaging material.',
+        id: '<b>Pelajaran pemrograman:</b> mengajar Scratch, Pictoblox, dan Python untuk siswa yang lebih besar dengan materi yang menarik.' },
+      { en: '<b>Early childhood STEM:</b> teach robotics and logic to ages 3–5 with Matatalab (Talebot Pro), Lego, UKit and Jimu robots.',
+        id: '<b>STEM anak usia dini:</b> mengajar robotika dan logika untuk usia 3–5 tahun dengan Matatalab (Talebot Pro), Lego, UKit, dan robot Jimu.' },
+      { en: '<b>Mentoring and assessment:</b> guide students of different ages through hands-on projects and give personal feedback.',
+        id: '<b>Mentoring dan penilaian:</b> membimbing siswa berbagai usia dalam proyek langsung dan memberi umpan balik personal.' },
+      { en: '<b>Classroom management:</b> keep sessions collaborative and fix technical problems in real time.',
+        id: '<b>Manajemen kelas:</b> menjaga sesi tetap kolaboratif dan mengatasi kendala teknis secara langsung.' }
+    ] },
+  { kind: 'work', org: 'Google Cloud Arcade 2026', place: 'Remote · Google Cloud & Dicoding',
+    role: { en: 'Community Facilitator', id: 'Fasilitator Komunitas' },
+    date: { en: 'Jul – Sep 2026', id: 'Jul – Sep 2026' },
+    points: [
+      { en: '<b>Cohort management:</b> selected to lead a national cohort of 100+ learners through onboarding and the whole program.',
+        id: '<b>Manajemen kohort:</b> terpilih memimpin kohort nasional 100+ peserta, dari onboarding sampai program selesai.' },
+      { en: '<b>Technical mentorship:</b> gave daily help with Google Cloud labs, AI/ML and Data Engineering pathways.',
+        id: '<b>Mentoring teknis:</b> memberi bantuan harian untuk lab Google Cloud, jalur AI/ML, dan Data Engineering.' },
+      { en: '<b>Progress tracking:</b> kept completion rates high with active mentoring, feedback loops and peer motivation.',
+        id: '<b>Pemantauan progres:</b> menjaga tingkat penyelesaian tetap tinggi lewat mentoring aktif, umpan balik, dan motivasi antar peserta.' }
+    ] },
+  { kind: 'org', org: 'Informatics Sports and Arts Week 2025', place: 'Sanata Dharma University',
+    role: { en: 'Head of Publication, Design & Documentation', id: 'Ketua Divisi Publikasi, Desain & Dokumentasi' },
+    date: { en: 'Jan – Apr 2025', id: 'Jan – Apr 2025' },
+    points: [
+      { en: '<b>Workflow and deadlines:</b> coordinated daily tasks so all promotional content went out accurately and on schedule.',
+        id: '<b>Alur kerja dan tenggat:</b> mengoordinasi tugas harian agar semua konten promosi terbit akurat dan tepat waktu.' },
+      { en: '<b>Quality control:</b> reviewed every design and copy against event guidelines.',
+        id: '<b>Kontrol kualitas:</b> meninjau setiap desain dan teks sesuai pedoman acara.' },
+      { en: '<b>Coordination:</b> was the bridge between divisions, syncing design needs with the event timeline.',
+        id: '<b>Koordinasi:</b> menjadi penghubung antar divisi untuk menyelaraskan kebutuhan desain dengan jadwal acara.' }
+    ] },
+  { kind: 'org', org: 'Informatics Student Association', place: 'Sanata Dharma University',
+    role: { en: 'Staff, Media, Communication & Information Division', id: 'Staf Divisi Media, Komunikasi & Informasi' },
+    date: { en: 'Dec 2024 – Dec 2025', id: 'Des 2024 – Des 2025' },
+    points: [
+      { en: '<b>Information production:</b> fact-checked and designed data-driven visuals such as infographics and official reports.',
+        id: '<b>Produksi informasi:</b> memeriksa fakta dan mendesain visual berbasis data seperti infografis dan laporan resmi.' },
+      { en: '<b>Trend research:</b> tracked social media trends and local news to keep updates relevant to students.',
+        id: '<b>Riset tren:</b> memantau tren media sosial dan berita lokal agar informasi tetap relevan bagi mahasiswa.' }
+    ] },
+  { kind: 'work', org: 'CV. Yoga Solusi Intiprima', place: 'Bekasi',
+    role: { en: 'IT Support Intern', id: 'Magang IT Support' },
+    date: { en: 'Apr – Jun 2023', id: 'Apr – Jun 2023' },
+    points: [
+      { en: '<b>Maintenance:</b> ran routine checks across 3 work units so computers and networks met daily standards.',
+        id: '<b>Perawatan:</b> melakukan pengecekan rutin di 3 unit kerja agar komputer dan jaringan memenuhi standar harian.' },
+      { en: '<b>Troubleshooting:</b> diagnosed hardware and software issues and researched fixes independently to keep downtime low.',
+        id: '<b>Troubleshooting:</b> mendiagnosis masalah perangkat keras dan lunak serta mencari solusi mandiri agar downtime minim.' },
+      { en: '<b>Administration:</b> kept a detailed digital inventory of company tech assets.',
+        id: '<b>Administrasi:</b> menjaga inventaris digital aset teknologi perusahaan secara rinci.' }
+    ] }
+];
 
-        const defaultCertificates = [
-            { title: { en: "Dicoding Certificate", id: "Sertifikat Dicoding" }, desc: { en: "AI Basics", id: "Dasar AI" }, img: "img/sertifikat.png" }
-        ];
+const TOOLBOX = [
+  { name: { en: 'Languages', id: 'Bahasa pemrograman' }, items: ['Python', 'Java', 'PHP', 'SQL'] },
+  { name: { en: 'Web & tools', id: 'Web & tools' }, items: ['Laravel', 'VS Code', 'HTML/CSS/JS'] },
+  { name: { en: 'Cloud & data', id: 'Cloud & data' }, items: ['Google Cloud Platform', 'AI/ML fundamentals', 'Data Engineering'] },
+  { name: { en: 'Systems analysis', id: 'Analisis sistem' }, items: ['PIECES framework', 'Use cases', 'ERD'] },
+  { name: { en: 'Teaching tools', id: 'Alat mengajar' }, items: ['Scratch', 'Pictoblox', 'Matatalab', 'Lego', 'UKit', 'Jimu'] }
+];
 
-        let portfolioSkills = JSON.parse(localStorage.getItem('port_skills')) || defaultSkills;
-        let portfolioExperiences = JSON.parse(localStorage.getItem('port_exps')) || defaultExperiences;
-        let portfolioEducations = JSON.parse(localStorage.getItem('port_edus')) || defaultEducations;
-        let portfolioCertificates = JSON.parse(localStorage.getItem('port_certs')) || defaultCertificates;
+const EDUCATION = [
+  { degree: { en: 'Bachelor of Informatics', id: 'S1 Informatika' }, school: 'Sanata Dharma University, Yogyakarta', date: 'Aug 2024 – ' , now: true },
+  { degree: { en: 'Software Engineering Major', id: 'Jurusan Rekayasa Perangkat Lunak' }, school: 'SMK Telekomunikasi Tunas Harapan, Salatiga', date: 'Jul 2021 – May 2024',
+    note: { en: 'Graduated with a GPA of 86.45 / 100.', id: 'Lulus dengan nilai rata-rata 86,45 / 100.' } }
+];
 
-        // === 2. RENDER PORTFOLIO ===
-        function renderAll() {
-            // Render Skills
-            const skillCont = document.getElementById('skillsContainer');
-            if (skillCont) skillCont.innerHTML = portfolioSkills.map((card, i) => `
-                <div class="bento-card glass-panel" data-aos="fade-up" data-aos-delay="${i*80}">
-                    <h3 class="bento-card-title"><span lang="en">${card.category.en}</span><span lang="id">${card.category.id}</span></h3>
-                    <div class="pill-wrap">
-                        ${card.items.map(item => `<div class="glass-pill"><img src="${item.icon}" alt="" onerror="this.style.display='none'"><span>${item.name}</span></div>`).join('')}
-                    </div>
-                </div>
-            `).join('');
+const CERTS = [
+  { title: { en: 'Junior Computer Operator', id: 'Operator Komputer Madya' }, sub: { en: 'National Professional Certification (BNSP)', id: 'Sertifikasi Profesi Nasional (BNSP)' } },
+  { title: { en: 'English proficiency', id: 'Kemampuan bahasa Inggris' }, sub: { en: 'TOEIC', id: 'TOEIC' } },
+  { title: { en: 'AI Basics', id: 'Dasar AI' }, sub: { en: 'Dicoding', id: 'Dicoding' }, img: 'img/sertifikat.png' }
+];
 
-            // Render Experiences (Terurut berdasar Tahun terawal-terbaru)
-            const sortedExp = [...portfolioExperiences].sort((a, b) => (parseInt(b.year)||0) - (parseInt(a.year)||0));
-            const expCont = document.getElementById('experiencesContainer');
-            if (expCont) expCont.innerHTML = sortedExp.map((exp, i) => `
-                <div class="bento-card glass-panel hover-3d col-span-2" data-aos="fade-up" data-aos-delay="${i*60}">
-                    <div class="bento-header">
-                        <div>
-                            <div class="bento-badge gradient-text"><span lang="en">${exp.type.en}</span><span lang="id">${exp.type.id}</span></div>
-                            <h3 class="bento-title"><span lang="en">${exp.title.en}</span><span lang="id">${exp.title.id}</span></h3>
-                            <div class="bento-subtitle"><span lang="en">${exp.role.en}</span><span lang="id">${exp.role.id}</span></div>
-                        </div>
-                        <div class="bento-meta">
-                            <span class="bento-year">${exp.year || ''}</span>
-                            <span><span lang="en">${exp.duration.en}</span><span lang="id">${exp.duration.id}</span></span>
-                        </div>
-                    </div>
-                    <p class="bento-desc"><span lang="en">${exp.desc.en}</span><span lang="id">${exp.desc.id}</span></p>
-                    <ul class="bento-list">
-                        ${exp.impacts.map(imp => `<li><span lang="en">${imp.en}</span><span lang="id">${imp.id}</span></li>`).join('')}
-                    </ul>
-                </div>
-            `).join('');
+const FACTS = [
+  { en: 'Hi! I am Arya\'s robot. Poke me again.', id: 'Hai! Aku robotnya Arya. Colek lagi dong.' },
+  { en: 'Arya led a cohort of 100+ learners in Google Cloud Arcade 2026.', id: 'Arya memimpin 100+ peserta di Google Cloud Arcade 2026.' },
+  { en: 'He teaches robotics to kids aged 3–5. Lego is part of the job.', id: 'Dia mengajar robotika untuk anak usia 3–5 tahun. Main Lego itu bagian dari kerjaannya.' },
+  { en: 'SAKTI is his Laravel admission system for schools.', id: 'SAKTI adalah sistem penerimaan sekolah buatannya dengan Laravel.' },
+  { en: 'He is a licensed Junior Computer Operator (BNSP).', id: 'Dia punya sertifikasi Operator Komputer Madya (BNSP).' },
+  { en: 'Beep boop. Try the dark mode button up there.', id: 'Bip bup. Coba tombol dark mode di atas.' }
+];
 
-            // Render Education
-            const eduCont = document.getElementById('educationContainer');
-            if (eduCont) eduCont.innerHTML = portfolioEducations.map(edu => `
-                <div class="bento-card glass-panel hover-3d" data-aos="fade-up">
-                    <div class="bento-header" style="border:none; padding:0; margin-bottom:8px;">
-                        <div>
-                            <h3 class="bento-title"><span lang="en">${edu.degree.en}</span><span lang="id">${edu.degree.id}</span></h3>
-                            <div class="bento-subtitle"><span lang="en">${edu.school.en}</span><span lang="id">${edu.school.id}</span></div>
-                        </div>
-                        <div class="bento-year">${edu.year}</div>
-                    </div>
-                    <p class="bento-desc"><span lang="en">${edu.desc.en}</span><span lang="id">${edu.desc.id}</span></p>
-                </div>
-            `).join('');
+/* ============================================================
+   CODE
+   ============================================================ */
+const $ = (s, r = document) => r.querySelector(s);
+const L = o => typeof o === 'string' ? o : `<span lang="en">${o.en}</span><span lang="id">${o.id}</span>`;
+const body = document.body, root = document.documentElement;
+const store = {
+  get(k){ try { return localStorage.getItem(k); } catch { return null; } },
+  set(k,v){ try { localStorage.setItem(k,v); } catch {} }
+};
+const curLang = () => body.getAttribute('lang');
 
-            // Render Certificates
-            const certCont = document.getElementById('certificatesContainer');
-            if (certCont) certCont.innerHTML = portfolioCertificates.map((cert, idx) => {
-                const isPdf = cert.img.toLowerCase().endsWith('.pdf');
-                const thumbSrc = isPdf ? 'https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg' : cert.img;
-                return `
-                <button class="bento-card glass-panel hover-3d cert-card" data-aos="fade-up" data-idx="${idx}" type="button">
-                    <div class="cert-thumb ${isPdf?'pdf-thumb':''}">
-                        <img src="${thumbSrc}" alt="" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2U1ZTdlYiIvPjwvc3ZnPg=='">
-                    </div>
-                    <div class="cert-info">
-                        <div class="cert-title"><span lang="en">${cert.title.en}</span><span lang="id">${cert.title.id}</span></div>
-                        <div class="cert-subtitle"><span lang="en">${cert.desc.en}</span><span lang="id">${cert.desc.id}</span></div>
-                    </div>
-                </button>`;
-            }).join('');
+/* language + theme */
+function setLang(l){ body.setAttribute('lang', l); root.setAttribute('lang', l); store.set('lang', l); showFact(true); }
+const savedLang = store.get('lang') || ((navigator.language || 'en').toLowerCase().startsWith('id') ? 'id' : 'en');
+function setTheme(t){ root.setAttribute('data-theme', t); store.set('theme', t); }
+setTheme(store.get('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+$('#langBtn').onclick = () => setLang(curLang() === 'en' ? 'id' : 'en');
+$('#themeBtn').onclick = () => setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
 
-            // Bind Modals Media Pintar
-            const modal = document.getElementById('certificateModal'), mediaCont = document.getElementById('modalMediaContainer');
-            document.querySelectorAll('.cert-card').forEach(card => {
-                card.onclick = function() {
-                    const item = portfolioCertificates[this.getAttribute('data-idx')];
-                    const url = item.img, isPdf = url.toLowerCase().endsWith('.pdf') || url.includes('drive.google.com/file/d/');
-                    mediaCont.innerHTML = isPdf ? `<iframe src="${url}" class="spatial-pdf" title="Certificate PDF"></iframe>` : `<img src="${url}" class="spatial-img" alt="">`;
-                    const curLang = document.body.getAttribute('lang') || 'en';
-                    document.getElementById('modalTitle').textContent = item.title[curLang];
-                    document.getElementById('modalDesc').textContent = item.desc[curLang];
-                    modal.classList.add('active');
-                };
-            });
-            document.querySelectorAll('.modal-close').forEach(b => b.onclick = () => document.querySelectorAll('.spatial-modal').forEach(m => m.classList.remove('active')));
+/* render */
+$('#projectList').innerHTML = PROJECTS.map((p, i) => `
+  <button class="proj" data-i="${i}" type="button">
+    <div class="proj-top"><div class="studs"><i></i><i></i><i></i></div><span>${p.year}</span></div>
+    <h3>${L(p.title)}</h3>
+    <p>${L(p.summary)}</p>
+    <div class="chips">${p.stack.map(s => `<span class="chip">${s}</span>`).join('')}</div>
+    <span class="more">${L({ en: 'See details', id: 'Lihat detail' })}</span>
+  </button>`).join('');
 
-            if (window.AOS) AOS.refreshHard();
-        }
+$('#timeline').innerHTML = EXPERIENCE.map(e => `
+  <details class="tl" data-kind="${e.kind}" ${e.open ? 'open' : ''}>
+    <summary>
+      <div><h3>${e.org}</h3><div class="role">${L(e.role)} · ${e.place}</div></div>
+      <div class="date">${L(e.date)}</div>
+    </summary>
+    <ul>${e.points.map(p => `<li>${L(p)}</li>`).join('')}</ul>
+  </details>`).join('');
 
-        // === 3. CRUD ADMIN SYSTEM ===
-        const adminModal = document.getElementById('adminModal'), adminType = document.getElementById('adminDataType'),
-              listView = document.getElementById('adminListView'), formView = document.getElementById('adminFormView'),
-              dynFields = document.getElementById('formDynamicFields');
-        let currentEditIdx = -1;
+$('#toolboxPanel').innerHTML = TOOLBOX.map(g => `
+  <div class="tool-group"><h4>${L(g.name)}</h4><div class="chips">${g.items.map(i => `<span class="chip">${i}</span>`).join('')}</div></div>`).join('');
 
-        document.getElementById('secretAdminBtn').onclick = () => { adminModal.classList.add('active'); renderAdminList(); };
-        window.addEventListener('keydown', e => {
-            if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'a') { e.preventDefault(); adminModal.classList.add('active'); renderAdminList(); }
-        });
-        adminType.addEventListener('change', renderAdminList);
+$('#eduPanel').innerHTML = `<h3>${L({ en: 'Education', id: 'Pendidikan' })}</h3>` + EDUCATION.map(e => `
+  <div class="edu"><b>${L(e.degree)}</b><span>${e.school}</span>
+  <span>${e.date}${e.now ? L({ en: 'Present', id: 'Sekarang' }) : ''}</span>
+  ${e.note ? `<span>${L(e.note)}</span>` : ''}</div>`).join('');
 
-        function currentArray() {
-            const t = adminType.value;
-            return t === 'skills' ? portfolioSkills : t === 'educations' ? portfolioEducations : t === 'experiences' ? portfolioExperiences : portfolioCertificates;
-        }
+$('#certList').innerHTML = CERTS.map((c, i) => c.img
+  ? `<button class="cert" data-c="${i}" type="button"><div><b>${L(c.title)}</b><small>${L(c.sub)}</small></div><span class="tag">${L({ en: 'View', id: 'Lihat' })}</span></button>`
+  : `<div class="cert"><div><b>${L(c.title)}</b><small>${L(c.sub)}</small></div></div>`).join('');
 
-        function renderAdminList() {
-            formView.style.display = 'none'; listView.style.display = 'flex';
-            const t = adminType.value, arr = currentArray();
-            listView.innerHTML = arr.map((item, idx) => {
-                let title = t === 'skills' ? item.category.en : t === 'experiences' ? `(${item.year}) ${item.title.en}` : t === 'educations' ? item.degree.en : item.title.en;
-                return `<div class="glass-panel admin-row"><span>${title}</span><div><button class="glass-button text-btn" data-idx="${idx}">Edit</button> <button class="glass-button text-btn danger" data-idx="${idx}">Del</button></div></div>`;
-            }).join('') || '<p style="color:var(--text-secondary);font-size:0.9rem;">Belum ada data.</p>';
-        }
+/* dialog */
+const dlg = $('#dlg'), dlgBody = $('#dlgBody');
+function openDlg(html){ dlgBody.innerHTML = html; dlg.showModal(); }
+$('#dlgClose').onclick = () => dlg.close();
+dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
 
-        listView.addEventListener('click', e => {
-            if (e.target.classList.contains('text-btn') && !e.target.classList.contains('danger')) openForm(parseInt(e.target.dataset.idx));
-            if (e.target.classList.contains('danger') && confirm('Yakin ingin menghapus data ini?')) {
-                currentArray().splice(parseInt(e.target.dataset.idx), 1);
-                saveDataLocally(); renderAdminList();
-            }
-        });
+$('#projectList').addEventListener('click', e => {
+  const card = e.target.closest('.proj'); if (!card) return;
+  const p = PROJECTS[card.dataset.i];
+  openDlg(`
+    <h3>${L(p.title)}</h3>
+    <div class="dlg-sub">${p.full ? L(p.full) + ' · ' : ''}${L(p.role)} · ${p.year}</div>
+    <div class="chips">${p.stack.map(s => `<span class="chip">${s}</span>`).join('')}</div>
+    <ul>${p.points.map(x => `<li>${L(x)}</li>`).join('')}</ul>
+    ${p.links.length ? `<div class="dlg-links">${p.links.map(l => `<a class="btn ghost" href="${l.url}" target="_blank" rel="noopener">${L(l.label)}</a>`).join('')}</div>` : ''}`);
+});
+$('#certList').addEventListener('click', e => {
+  const b = e.target.closest('[data-c]'); if (!b) return;
+  const c = CERTS[b.dataset.c];
+  openDlg(`<h3>${L(c.title)}</h3><div class="dlg-sub">${L(c.sub)}</div><img src="${c.img}" alt="">`);
+});
 
-        document.getElementById('btnAddNew').onclick = () => openForm(-1);
-        document.getElementById('btnCancelForm').onclick = renderAdminList;
+/* experience filter */
+$('#filters').addEventListener('click', e => {
+  const b = e.target.closest('.fbtn'); if (!b) return;
+  document.querySelectorAll('.fbtn').forEach(x => x.setAttribute('aria-pressed', x === b));
+  document.querySelectorAll('.tl').forEach(t => { t.hidden = b.dataset.f !== 'all' && t.dataset.kind !== b.dataset.f; });
+});
 
-        function openForm(idx) {
-            currentEditIdx = idx; const t = adminType.value;
-            listView.style.display = 'none'; formView.style.display = 'block';
-            document.getElementById('formTitle').textContent = idx === -1 ? 'Tambah Data Baru' : 'Edit Data';
-            let item = idx !== -1 ? currentArray()[idx] : null;
+/* robot */
+const robot = $('#robot'), bubble = $('#bubble'), mouth = $('#mouth'), pL = $('#pupilL'), pR = $('#pupilR');
+let fi = 0;
+function showFact(keep){
+  if (!keep) fi = (fi + 1) % FACTS.length;
+  bubble.textContent = FACTS[fi][curLang()];
+}
+robot.addEventListener('click', () => {
+  showFact();
+  mouth.setAttribute('d', 'M74 118 Q100 148 126 118');
+  setTimeout(() => mouth.setAttribute('d', 'M78 122 Q100 138 122 122'), 900);
+  robot.classList.remove('hop'); void robot.offsetWidth; robot.classList.add('hop');
+});
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+addEventListener('pointermove', e => {
+  if (reduce) return;
+  const r = robot.getBoundingClientRect();
+  const dx = e.clientX - (r.left + r.width / 2), dy = e.clientY - (r.top + r.height * .4);
+  const d = Math.hypot(dx, dy) || 1, k = Math.min(1, d / 160) * 7;
+  const t = `translate(${(dx / d * k).toFixed(1)}px, ${(dy / d * k).toFixed(1)}px)`;
+  pL.style.transform = t; pR.style.transform = t;
+});
 
-            if (t === 'skills') {
-                dynFields.innerHTML = `<div class="grid-2"><div class="input-wrap"><label>Kategori EN</label><input id="skEN" value="${item?item.category.en:''}" class="glass-input"></div><div class="input-wrap"><label>Kategori ID</label><input id="skID" value="${item?item.category.id:''}" class="glass-input"></div></div><div class="input-wrap"><label>Daftar Skills (Format: Nama | Link Icon)</label><textarea id="skItems" rows="4" class="glass-input">${item?item.items.map(i=>`${i.name} | ${i.icon}`).join('\n'):''}</textarea></div>`;
-            } else if (t === 'educations') {
-                dynFields.innerHTML = `<div class="grid-2"><div class="input-wrap"><label>Gelar EN</label><input id="edDegEN" value="${item?item.degree.en:''}" class="glass-input"></div><div class="input-wrap"><label>Gelar ID</label><input id="edDegID" value="${item?item.degree.id:''}" class="glass-input"></div><div class="input-wrap"><label>Kampus EN</label><input id="edSchEN" value="${item?item.school.en:''}" class="glass-input"></div><div class="input-wrap"><label>Kampus ID</label><input id="edSchID" value="${item?item.school.id:''}" class="glass-input"></div></div><div class="input-wrap"><label>Tahun (Cth: 2024 - Present)</label><input id="edYear" value="${item?item.year:''}" class="glass-input"></div><div class="input-wrap"><label>Keterangan EN</label><textarea id="edDescEN" class="glass-input">${item?item.desc.en:''}</textarea></div><div class="input-wrap"><label>Keterangan ID</label><textarea id="edDescID" class="glass-input">${item?item.desc.id:''}</textarea></div>`;
-            } else if (t === 'certificates') {
-                dynFields.innerHTML = `<div class="grid-2"><div class="input-wrap"><label>Judul EN</label><input id="ceTitleEN" value="${item?item.title.en:''}" class="glass-input"></div><div class="input-wrap"><label>Judul ID</label><input id="ceTitleID" value="${item?item.title.id:''}" class="glass-input"></div><div class="input-wrap"><label>Deskripsi EN</label><input id="ceDescEN" value="${item?item.desc.en:''}" class="glass-input"></div><div class="input-wrap"><label>Deskripsi ID</label><input id="ceDescID" value="${item?item.desc.id:''}" class="glass-input"></div></div><div class="input-wrap"><label>Link Dokumen (PDF/IMG)</label><input id="ceImg" value="${item?item.img:''}" class="glass-input"></div>`;
-            } else {
-                dynFields.innerHTML = `<div class="grid-2"><div class="input-wrap"><label>Tipe EN</label><input id="exTypeEN" value="${item?item.type.en:''}" class="glass-input"></div><div class="input-wrap"><label>Tipe ID</label><input id="exTypeID" value="${item?item.type.id:''}" class="glass-input"></div><div class="input-wrap"><label>Tahun (Penting utk Sorting)</label><input id="exYear" value="${item?item.year:''}" class="glass-input"></div><div class="input-wrap"><label>Durasi EN</label><input id="exDurEN" value="${item?item.duration.en:''}" class="glass-input"></div><div class="input-wrap"><label>Durasi ID</label><input id="exDurID" value="${item?item.duration.id:''}" class="glass-input"></div><div class="input-wrap"><label>Judul Pekerjaan EN</label><input id="exTitleEN" value="${item?item.title.en:''}" class="glass-input"></div><div class="input-wrap"><label>Judul Pekerjaan ID</label><input id="exTitleID" value="${item?item.title.id:''}" class="glass-input"></div><div class="input-wrap"><label>Posisi EN</label><input id="exRoleEN" value="${item?item.role.en:''}" class="glass-input"></div><div class="input-wrap"><label>Posisi ID</label><input id="exRoleID" value="${item?item.role.id:''}" class="glass-input"></div></div><div class="input-wrap"><label>Keterangan EN</label><textarea id="exDescEN" class="glass-input">${item?item.desc.en:''}</textarea></div><div class="input-wrap"><label>Keterangan ID</label><textarea id="exDescID" class="glass-input">${item?item.desc.id:''}</textarea></div><div class="input-wrap"><label>List Pencapaian (EN | ID)</label><textarea id="exImpacts" rows="3" class="glass-input">${item?item.impacts.map(i=>`${i.en} | ${i.id}`).join('\n'):''}</textarea></div>`;
-            }
-        }
+/* copy email */
+$('#copyBtn').onclick = async () => {
+  const label = $('#copyLabel'), old = label.innerHTML;
+  try { await navigator.clipboard.writeText('ignatiusaryajulio@gmail.com'); label.innerHTML = L({ en: 'Copied!', id: 'Tersalin!' }); }
+  catch { label.innerHTML = 'ignatiusaryajulio@gmail.com'; }
+  setTimeout(() => label.innerHTML = old, 1800);
+};
 
-        document.getElementById('btnSaveForm').onclick = () => {
-            const t = adminType.value; let obj = {};
-            if (t === 'skills') obj = { category: { en: skEN.value, id: skID.value }, items: skItems.value.split('\n').filter(l=>l.trim()).map(l=>{const p=l.split('|'); return {name:p[0]?.trim(), icon:p[1]?.trim()};}) };
-            else if (t === 'educations') obj = { degree: { en: edDegEN.value, id: edDegID.value }, school: { en: edSchEN.value, id: edSchID.value }, year: edYear.value, desc: { en: edDescEN.value, id: edDescID.value } };
-            else if (t === 'certificates') obj = { title: { en: ceTitleEN.value, id: ceTitleID.value }, desc: { en: ceDescEN.value, id: ceDescID.value }, img: ceImg.value };
-            else obj = { type: { en: exTypeEN.value, id: exTypeID.value }, year: exYear.value, title: { en: exTitleEN.value, id: exTitleID.value }, role: { en: exRoleEN.value, id: exRoleID.value }, duration: { en: exDurEN.value, id: exDurID.value }, desc: { en: exDescEN.value, id: exDescID.value }, impacts: exImpacts.value.split('\n').filter(l=>l.trim()).map(l=>{const p=l.split('|'); return {en:p[0]?.trim(), id:p[1]?.trim()};}) };
+/* scroll progress + active nav */
+const prog = $('#progress');
+addEventListener('scroll', () => {
+  const h = root.scrollHeight - innerHeight;
+  prog.style.width = (h > 0 ? scrollY / h * 100 : 0) + '%';
+}, { passive: true });
+const links = [...document.querySelectorAll('#nav a')];
+const io = new IntersectionObserver(es => es.forEach(en => {
+  if (en.isIntersecting) links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + en.target.id));
+}), { rootMargin: '-45% 0px -50% 0px' });
+document.querySelectorAll('main section').forEach(s => io.observe(s));
 
-            const arr = currentArray();
-            if (currentEditIdx === -1) arr.push(obj); else arr[currentEditIdx] = obj;
-            saveDataLocally(); renderAdminList();
-        };
-
-        function saveDataLocally() {
-            localStorage.setItem('port_skills', JSON.stringify(portfolioSkills));
-            localStorage.setItem('port_exps', JSON.stringify(portfolioExperiences));
-            localStorage.setItem('port_edus', JSON.stringify(portfolioEducations));
-            localStorage.setItem('port_certs', JSON.stringify(portfolioCertificates));
-            renderAll();
-        }
-
-        document.getElementById('btnResetAdmin').onclick = () => {
-            if (confirm('Aksi ini akan menghapus semua editan lokal dan mengembalikan data ke versi awal pabrik. Lanjut?')) {
-                localStorage.clear(); location.reload();
-            }
-        };
-
-        renderAll();
-    });
-    </script>
+/* init */
+setLang(savedLang);
+fi = 0; showFact(true);
+</script>
 </body>
 </html>
