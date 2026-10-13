@@ -104,6 +104,23 @@
           }
         }
       ]
+    },
+    {
+      "title": {
+        "en": "Retrieval Augmented Generation Chatbot Career",
+        "id": "Karir Chatbot RAG"
+      },
+      "role": {
+        "en": "Developer",
+        "id": "Pengembang"
+      },
+      "year": "2026 -  On Going",
+      "stack": [
+        "Python",
+        "LLM",
+        "React",
+        "Node.Js"
+      ]
     }
   ],
   "experience": [
