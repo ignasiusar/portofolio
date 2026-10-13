@@ -58,7 +58,17 @@
             "id": "menyusun use case dan alur kerja inti, lalu memverifikasi modul Smart Upload dan Status Tracker agar data tersimpan rapi."
           }
         }
-      ]
+      ],
+      "links": [
+        {
+          "label": {
+            "en": "Kanisius Admisnistration System ",
+            "id": "Sistem Administrasi Kanisius Terintegrasi"
+          },
+          "url": "https://github.com/Nuelll20/SPMB_Project.git"
+        }
+      ],
+      "file": "files/IMG_20260618_124931 (1).jpg"
     },
     {
       "title": {
