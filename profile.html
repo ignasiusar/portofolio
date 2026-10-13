@@ -504,7 +504,7 @@ async function init(){
   } catch (err) {
     console.error(err);
     $('#projects .wrap').insertAdjacentHTML('afterbegin',
-      `<div class="load-error"><b>content.json gagal dimuat.</b><br>Kalau kamu buka file langsung (file://), jalankan lewat Live Server di VS Code atau deploy ke GitHub Pages / Netlify.</div>`);
+      `<div class="load-error"><b>content.json gagal dimuat.</b><br>Ada kesalahan.. Mohon Tunggu</div>`);
   }
   [renderProjects, renderExperience, renderToolbox, renderEducation, renderCerts, renderContact].forEach(safe);
   const saved = store.get('lang') || ((navigator.language || 'en').toLowerCase().startsWith('id') ? 'id' : 'en');
