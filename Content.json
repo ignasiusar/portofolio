@@ -1,0 +1,483 @@
+{
+  "profile": {
+    "email": "ignatiusaryajulio@gmail.com",
+    "cv": "files/ignatius-arya-resume.pdf"
+  },
+  "projects": [
+    {
+      "title": {
+        "en": "SAKTI",
+        "id": "SAKTI"
+      },
+      "full": {
+        "en": "Kanisius Integrated Admission System",
+        "id": "Sistem Penerimaan Terpadu Kanisius"
+      },
+      "role": {
+        "en": "Systems Analyst & Developer",
+        "id": "System Analyst & Developer"
+      },
+      "year": "2026",
+      "stack": [
+        "PHP",
+        "Laravel",
+        "SQL"
+      ],
+      "summary": {
+        "en": "A web application that replaces the paper-based student admission process with online forms and status tracking.",
+        "id": "Aplikasi web yang menggantikan proses penerimaan siswa berbasis kertas dengan formulir online dan pelacakan status."
+      },
+      "points": [
+        {
+          "head": {
+            "en": "System analysis",
+            "id": "Analisis sistem"
+          },
+          "text": {
+            "en": "evaluated the paper process and mapped data flows with the PIECES framework to find where operational errors happen.",
+            "id": "mengevaluasi proses berbasis kertas dan memetakan alur data dengan kerangka PIECES untuk menemukan sumber kesalahan operasional."
+          }
+        },
+        {
+          "head": {
+            "en": "E-forms with validation",
+            "id": "E-form dengan validasi"
+          },
+          "text": {
+            "en": "designed dynamic web forms with strict input validation to keep data accurate and prevent submission errors.",
+            "id": "merancang formulir web dinamis dengan validasi input ketat agar data akurat dan kesalahan pengisian tercegah."
+          }
+        },
+        {
+          "head": {
+            "en": "Verification",
+            "id": "Verifikasi"
+          },
+          "text": {
+            "en": "wrote use cases and core workflows, then verified the Smart Upload and Status Tracker modules so data is stored cleanly.",
+            "id": "menyusun use case dan alur kerja inti, lalu memverifikasi modul Smart Upload dan Status Tracker agar data tersimpan rapi."
+          }
+        }
+      ],
+      "links": [],
+      "file": null
+    },
+    {
+      "title": {
+        "en": "This portfolio",
+        "id": "Portofolio ini"
+      },
+      "role": {
+        "en": "Designer & Developer",
+        "id": "Desainer & Developer"
+      },
+      "year": "2026",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "JSON"
+      ],
+      "summary": {
+        "en": "A static, bilingual site with dark mode and an interactive robot. Content lives in one JSON file, so updating takes minutes.",
+        "id": "Situs statis dwibahasa dengan dark mode dan robot interaktif. Konten ada di satu file JSON, jadi update cuma butuh beberapa menit."
+      },
+      "points": [
+        {
+          "text": {
+            "en": "Content lives in content.json, so updating means editing text and pushing to GitHub.",
+            "id": "Konten ada di content.json, jadi memperbarui cukup edit teks lalu push ke GitHub."
+          }
+        },
+        {
+          "text": {
+            "en": "Keyboard accessible, responsive down to phones, and respects the reduced-motion setting.",
+            "id": "Bisa dioperasikan dengan keyboard, responsif sampai ke HP, dan menghormati pengaturan reduced-motion."
+          }
+        }
+      ],
+      "links": [],
+      "file": null
+    }
+  ],
+  "experience": [
+    {
+      "kind": "work",
+      "org": "Codero",
+      "place": "Yogyakarta",
+      "role": {
+        "en": "Part-time Coding & Robotics Instructor",
+        "id": "Instruktur Coding & Robotika Paruh Waktu"
+      },
+      "date": {
+        "en": "Jul 2026 – Present",
+        "id": "Jul 2026 – Sekarang"
+      },
+      "open": true,
+      "file": null,
+      "points": [
+        {
+          "head": {
+            "en": "Programming lessons",
+            "id": "Pelajaran pemrograman"
+          },
+          "text": {
+            "en": "teach Scratch, Pictoblox and Python to older students, turning complex concepts into engaging material.",
+            "id": "mengajar Scratch, Pictoblox, dan Python untuk siswa yang lebih besar dengan materi yang menarik."
+          }
+        },
+        {
+          "head": {
+            "en": "Early childhood STEM",
+            "id": "STEM anak usia dini"
+          },
+          "text": {
+            "en": "teach robotics and logic to ages 3–5 with Matatalab (Talebot Pro), Lego, UKit and Jimu robots.",
+            "id": "mengajar robotika dan logika untuk usia 3–5 tahun dengan Matatalab (Talebot Pro), Lego, UKit, dan robot Jimu."
+          }
+        },
+        {
+          "head": {
+            "en": "Mentoring and assessment",
+            "id": "Mentoring dan penilaian"
+          },
+          "text": {
+            "en": "guide students of different ages through hands-on projects and give personal feedback.",
+            "id": "membimbing siswa berbagai usia dalam proyek langsung dan memberi umpan balik personal."
+          }
+        },
+        {
+          "head": {
+            "en": "Classroom management",
+            "id": "Manajemen kelas"
+          },
+          "text": {
+            "en": "keep sessions collaborative and fix technical problems in real time.",
+            "id": "menjaga sesi tetap kolaboratif dan mengatasi kendala teknis secara langsung."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "work",
+      "org": "Google Cloud Arcade 2026",
+      "place": "Remote · Google Cloud & Dicoding",
+      "role": {
+        "en": "Community Facilitator",
+        "id": "Fasilitator Komunitas"
+      },
+      "date": {
+        "en": "Jul – Sep 2026",
+        "id": "Jul – Sep 2026"
+      },
+      "file": null,
+      "points": [
+        {
+          "head": {
+            "en": "Cohort management",
+            "id": "Manajemen kohort"
+          },
+          "text": {
+            "en": "selected to lead a national cohort of 100+ learners through onboarding and the whole program.",
+            "id": "terpilih memimpin kohort nasional 100+ peserta, dari onboarding sampai program selesai."
+          }
+        },
+        {
+          "head": {
+            "en": "Technical mentorship",
+            "id": "Mentoring teknis"
+          },
+          "text": {
+            "en": "gave daily help with Google Cloud labs, AI/ML and Data Engineering pathways.",
+            "id": "memberi bantuan harian untuk lab Google Cloud, jalur AI/ML, dan Data Engineering."
+          }
+        },
+        {
+          "head": {
+            "en": "Progress tracking",
+            "id": "Pemantauan progres"
+          },
+          "text": {
+            "en": "kept completion rates high with active mentoring, feedback loops and peer motivation.",
+            "id": "menjaga tingkat penyelesaian tetap tinggi lewat mentoring aktif, umpan balik, dan motivasi antar peserta."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "org",
+      "org": "Informatics Sports and Arts Week 2025",
+      "place": "Sanata Dharma University",
+      "role": {
+        "en": "Head of Publication, Design & Documentation",
+        "id": "Ketua Divisi Publikasi, Desain & Dokumentasi"
+      },
+      "date": {
+        "en": "Jan – Apr 2025",
+        "id": "Jan – Apr 2025"
+      },
+      "file": null,
+      "points": [
+        {
+          "head": {
+            "en": "Workflow and deadlines",
+            "id": "Alur kerja dan tenggat"
+          },
+          "text": {
+            "en": "coordinated daily tasks so all promotional content went out accurately and on schedule.",
+            "id": "mengoordinasi tugas harian agar semua konten promosi terbit akurat dan tepat waktu."
+          }
+        },
+        {
+          "head": {
+            "en": "Quality control",
+            "id": "Kontrol kualitas"
+          },
+          "text": {
+            "en": "reviewed every design and copy against event guidelines.",
+            "id": "meninjau setiap desain dan teks sesuai pedoman acara."
+          }
+        },
+        {
+          "head": {
+            "en": "Coordination",
+            "id": "Koordinasi"
+          },
+          "text": {
+            "en": "was the bridge between divisions, syncing design needs with the event timeline.",
+            "id": "menjadi penghubung antar divisi untuk menyelaraskan kebutuhan desain dengan jadwal acara."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "org",
+      "org": "Informatics Student Association",
+      "place": "Sanata Dharma University",
+      "role": {
+        "en": "Staff, Media, Communication & Information Division",
+        "id": "Staf Divisi Media, Komunikasi & Informasi"
+      },
+      "date": {
+        "en": "Dec 2024 – Dec 2025",
+        "id": "Des 2024 – Des 2025"
+      },
+      "file": null,
+      "points": [
+        {
+          "head": {
+            "en": "Information production",
+            "id": "Produksi informasi"
+          },
+          "text": {
+            "en": "fact-checked and designed data-driven visuals such as infographics and official reports.",
+            "id": "memeriksa fakta dan mendesain visual berbasis data seperti infografis dan laporan resmi."
+          }
+        },
+        {
+          "head": {
+            "en": "Trend research",
+            "id": "Riset tren"
+          },
+          "text": {
+            "en": "tracked social media trends and local news to keep updates relevant to students.",
+            "id": "memantau tren media sosial dan berita lokal agar informasi tetap relevan bagi mahasiswa."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "work",
+      "org": "CV. Yoga Solusi Intiprima",
+      "place": "Bekasi",
+      "role": {
+        "en": "IT Support Intern",
+        "id": "Magang IT Support"
+      },
+      "date": {
+        "en": "Apr – Jun 2023",
+        "id": "Apr – Jun 2023"
+      },
+      "file": null,
+      "points": [
+        {
+          "head": {
+            "en": "Maintenance",
+            "id": "Perawatan"
+          },
+          "text": {
+            "en": "ran routine checks across 3 work units so computers and networks met daily standards.",
+            "id": "melakukan pengecekan rutin di 3 unit kerja agar komputer dan jaringan memenuhi standar harian."
+          }
+        },
+        {
+          "head": {
+            "en": "Troubleshooting",
+            "id": "Troubleshooting"
+          },
+          "text": {
+            "en": "diagnosed hardware and software issues and researched fixes independently to keep downtime low.",
+            "id": "mendiagnosis masalah perangkat keras dan lunak serta mencari solusi mandiri agar downtime minim."
+          }
+        },
+        {
+          "head": {
+            "en": "Administration",
+            "id": "Administrasi"
+          },
+          "text": {
+            "en": "kept a detailed digital inventory of company tech assets.",
+            "id": "menjaga inventaris digital aset teknologi perusahaan secara rinci."
+          }
+        }
+      ]
+    }
+  ],
+  "toolbox": [
+    {
+      "name": {
+        "en": "Languages",
+        "id": "Bahasa pemrograman"
+      },
+      "items": [
+        "Python",
+        "Java",
+        "PHP",
+        "SQL"
+      ]
+    },
+    {
+      "name": {
+        "en": "Web & tools",
+        "id": "Web & tools"
+      },
+      "items": [
+        "Laravel",
+        "VS Code",
+        "HTML/CSS/JS"
+      ]
+    },
+    {
+      "name": {
+        "en": "Cloud & data",
+        "id": "Cloud & data"
+      },
+      "items": [
+        "Google Cloud Platform",
+        "AI/ML fundamentals",
+        "Data Engineering"
+      ]
+    },
+    {
+      "name": {
+        "en": "Systems analysis",
+        "id": "Analisis sistem"
+      },
+      "items": [
+        "PIECES framework",
+        "Use cases",
+        "ERD"
+      ]
+    },
+    {
+      "name": {
+        "en": "Teaching tools",
+        "id": "Alat mengajar"
+      },
+      "items": [
+        "Scratch",
+        "Pictoblox",
+        "Matatalab",
+        "Lego",
+        "UKit",
+        "Jimu"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": {
+        "en": "Bachelor of Informatics",
+        "id": "S1 Informatika"
+      },
+      "school": "Sanata Dharma University, Yogyakarta",
+      "date": "Aug 2024 – ",
+      "now": true,
+      "file": null
+    },
+    {
+      "degree": {
+        "en": "Software Engineering Major",
+        "id": "Jurusan Rekayasa Perangkat Lunak"
+      },
+      "school": "SMK Telekomunikasi Tunas Harapan, Salatiga",
+      "date": "Jul 2021 – May 2024",
+      "note": {
+        "en": "Graduated with a GPA of 86.45 / 100.",
+        "id": "Lulus dengan nilai rata-rata 86,45 / 100."
+      },
+      "file": null
+    }
+  ],
+  "certs": [
+    {
+      "title": {
+        "en": "Junior Computer Operator",
+        "id": "Operator Komputer Madya"
+      },
+      "sub": {
+        "en": "National Professional Certification (BNSP)",
+        "id": "Sertifikasi Profesi Nasional (BNSP)"
+      },
+      "file": null
+    },
+    {
+      "title": {
+        "en": "English proficiency",
+        "id": "Kemampuan bahasa Inggris"
+      },
+      "sub": {
+        "en": "TOEIC",
+        "id": "TOEIC"
+      },
+      "file": null
+    },
+    {
+      "title": {
+        "en": "AI Basics",
+        "id": "Dasar AI"
+      },
+      "sub": {
+        "en": "Dicoding",
+        "id": "Dicoding"
+      },
+      "file": "files/sertifikat-ai-basics.png"
+    }
+  ],
+  "facts": [
+    {
+      "en": "Hi! I am Arya's robot. Poke me again.",
+      "id": "Hai! Aku robotnya Arya. Colek lagi dong."
+    },
+    {
+      "en": "Arya led a cohort of 100+ learners in Google Cloud Arcade 2026.",
+      "id": "Arya memimpin 100+ peserta di Google Cloud Arcade 2026."
+    },
+    {
+      "en": "He teaches robotics to kids aged 3–5. Lego is part of the job.",
+      "id": "Dia mengajar robotika untuk anak usia 3–5 tahun. Main Lego itu bagian dari kerjaannya."
+    },
+    {
+      "en": "SAKTI is his Laravel admission system for schools.",
+      "id": "SAKTI adalah sistem penerimaan sekolah buatannya dengan Laravel."
+    },
+    {
+      "en": "He is a licensed Junior Computer Operator (BNSP).",
+      "id": "Dia punya sertifikasi Operator Komputer Madya (BNSP)."
+    },
+    {
+      "en": "Beep boop. Try the dark mode button up there.",
+      "id": "Bip bup. Coba tombol dark mode di atas."
+    }
+  ]
+}

@@ -1,0 +1,291 @@
+# Pages CMS config (https://pagescms.org). Put this file in the repo root as .pages.yml
+media:
+  input: files
+  output: files
+  extensions: [pdf, png, jpg, jpeg, webp]
+content:
+  - name: portfolio
+    label: "Isi Portofolio"
+    type: file
+    path: content.json
+    format: json
+    fields:
+      - name: profile
+        label: "Profil"
+        type: object
+        fields:
+          - name: email
+            label: "Email"
+            type: string
+          - name: cv
+            label: "CV (PDF)"
+            type: file
+            options:
+              extensions: [pdf, png, jpg, jpeg, webp]
+      - name: projects
+        label: "Proyek"
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: "Judul proyek"
+            type: object
+            fields:
+              - name: en
+                label: "English"
+                type: string
+              - name: id
+                label: "Indonesia"
+                type: string
+          - name: full
+            label: "Nama lengkap (opsional)"
+            type: object
+            fields:
+              - name: en
+                label: "English"
+                type: string
+              - name: id
+                label: "Indonesia"
+                type: string
+          - name: role
+            label: "Peran"
+            type: object
+            fields:
+              - name: en
+                label: "English"
+                type: string
+              - name: id
+                label: "Indonesia"
+                type: string
+          - name: year
+            label: "Tahun"
+            type: string
+          - name: stack
+            label: "Tech stack"
+            type: string
+            list: true
+          - name: summary
+            label: "Ringkasan"
+            type: object
+            fields:
+              - name: en
+                label: "English"
+                type: text
+              - name: id
+                label: "Indonesia"
+                type: text
+          - name: points
+            label: "Poin / deskripsi"
+            type: object
+            list: true
+            fields:
+              - name: head
+                label: "Judul tebal (opsional)"
+                type: object
+                fields:
+                  - name: en
+                    label: "English"
+                    type: string
+                  - name: id
+                    label: "Indonesia"
+                    type: string
+              - name: text
+                label: "Isi"
+                type: object
+                fields:
+                  - name: en
+                    label: "English"
+                    type: text
+                  - name: id
+                    label: "Indonesia"
+                    type: text
+          - name: links
+            label: "Link (demo / source code)"
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: "Label tombol"
+                type: object
+                fields:
+                  - name: en
+                    label: "English"
+                    type: string
+                  - name: id
+                    label: "Indonesia"
+                    type: string
+              - name: url
+                label: "URL"
+                type: string
+          - name: file
+            label: "Bukti (PDF / gambar)"
+            type: file
+            options:
+              extensions: [pdf, png, jpg, jpeg, webp]
+      - name: experience
+        label: "Pengalaman"
+        type: object
+        list: true
+        fields:
+          - name: kind
+            label: "Jenis"
+            type: select
+            options: { values: [{ value: work, label: Kerja }, { value: org, label: Organisasi }] }
+          - name: org
+            label: "Nama instansi / organisasi"
+            type: string
+          - name: place
+            label: "Tempat"
+            type: string
+          - name: role
+            label: "Posisi"
+            type: object
+            fields:
+              - name: en
+                label: "English"
+                type: string
+              - name: id
+                label: "Indonesia"
+                type: string
+          - name: date
+            label: "Tanggal"
+            type: object
+            fields:
+              - name: en
+                label: "English"
+                type: string
+              - name: id
+                label: "Indonesia"
+                type: string
+          - name: open
+            label: "Terbuka otomatis?"
+            type: boolean
+          - name: points
+            label: "Poin / deskripsi"
+            type: object
+            list: true
+            fields:
+              - name: head
+                label: "Judul tebal (opsional)"
+                type: object
+                fields:
+                  - name: en
+                    label: "English"
+                    type: string
+                  - name: id
+                    label: "Indonesia"
+                    type: string
+              - name: text
+                label: "Isi"
+                type: object
+                fields:
+                  - name: en
+                    label: "English"
+                    type: text
+                  - name: id
+                    label: "Indonesia"
+                    type: text
+          - name: file
+            label: "Bukti (PDF / gambar)"
+            type: file
+            options:
+              extensions: [pdf, png, jpg, jpeg, webp]
+      - name: toolbox
+        label: "Keahlian (Toolbox)"
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: "Nama grup"
+            type: object
+            fields:
+              - name: en
+                label: "English"
+                type: string
+              - name: id
+                label: "Indonesia"
+                type: string
+          - name: items
+            label: "Item"
+            type: string
+            list: true
+      - name: education
+        label: "Pendidikan"
+        type: object
+        list: true
+        fields:
+          - name: degree
+            label: "Gelar / jurusan"
+            type: object
+            fields:
+              - name: en
+                label: "English"
+                type: string
+              - name: id
+                label: "Indonesia"
+                type: string
+          - name: school
+            label: "Sekolah / kampus"
+            type: string
+          - name: date
+            label: "Tanggal"
+            type: string
+          - name: now
+            label: "Masih berjalan?"
+            type: boolean
+          - name: note
+            label: "Catatan (opsional)"
+            type: object
+            fields:
+              - name: en
+                label: "English"
+                type: string
+              - name: id
+                label: "Indonesia"
+                type: string
+          - name: file
+            label: "Bukti (PDF / gambar)"
+            type: file
+            options:
+              extensions: [pdf, png, jpg, jpeg, webp]
+      - name: certs
+        label: "Sertifikat"
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: "Nama sertifikat"
+            type: object
+            fields:
+              - name: en
+                label: "English"
+                type: string
+              - name: id
+                label: "Indonesia"
+                type: string
+          - name: sub
+            label: "Penerbit"
+            type: object
+            fields:
+              - name: en
+                label: "English"
+                type: string
+              - name: id
+                label: "Indonesia"
+                type: string
+          - name: file
+            label: "Bukti (PDF / gambar)"
+            type: file
+            options:
+              extensions: [pdf, png, jpg, jpeg, webp]
+      - name: facts
+        label: "Fakta robot"
+        type: object
+        list: true
+        fields:
+          - name: en
+            label: "English"
+            type: string
+          - name: id
+            label: "Indonesia"
+            type: string
