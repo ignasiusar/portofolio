@@ -1,7 +1,7 @@
 {
   "profile": {
     "email": "ignatiusaryajulio@gmail.com",
-    "cv": "files/ignatius-arya-resume.pdf"
+    "cv": "files/Ignatius-Arya-Resume.pdf"
   },
   "projects": [
     {
@@ -58,9 +58,7 @@
             "id": "menyusun use case dan alur kerja inti, lalu memverifikasi modul Smart Upload dan Status Tracker agar data tersimpan rapi."
           }
         }
-      ],
-      "links": [],
-      "file": null
+      ]
     },
     {
       "title": {
@@ -95,9 +93,7 @@
             "id": "Bisa dioperasikan dengan keyboard, responsif sampai ke HP, dan menghormati pengaturan reduced-motion."
           }
         }
-      ],
-      "links": [],
-      "file": null
+      ]
     }
   ],
   "experience": [
@@ -114,7 +110,6 @@
         "id": "Jul 2026 – Sekarang"
       },
       "open": true,
-      "file": null,
       "points": [
         {
           "head": {
@@ -170,7 +165,7 @@
         "en": "Jul – Sep 2026",
         "id": "Jul – Sep 2026"
       },
-      "file": null,
+      "open": false,
       "points": [
         {
           "head": {
@@ -216,7 +211,7 @@
         "en": "Jan – Apr 2025",
         "id": "Jan – Apr 2025"
       },
-      "file": null,
+      "open": false,
       "points": [
         {
           "head": {
@@ -262,7 +257,7 @@
         "en": "Dec 2024 – Dec 2025",
         "id": "Des 2024 – Des 2025"
       },
-      "file": null,
+      "open": false,
       "points": [
         {
           "head": {
@@ -298,7 +293,7 @@
         "en": "Apr – Jun 2023",
         "id": "Apr – Jun 2023"
       },
-      "file": null,
+      "open": false,
       "points": [
         {
           "head": {
@@ -402,8 +397,7 @@
       },
       "school": "Sanata Dharma University, Yogyakarta",
       "date": "Aug 2024 – ",
-      "now": true,
-      "file": null
+      "now": true
     },
     {
       "degree": {
@@ -412,11 +406,11 @@
       },
       "school": "SMK Telekomunikasi Tunas Harapan, Salatiga",
       "date": "Jul 2021 – May 2024",
+      "now": false,
       "note": {
         "en": "Graduated with a GPA of 86.45 / 100.",
         "id": "Lulus dengan nilai rata-rata 86,45 / 100."
-      },
-      "file": null
+      }
     }
   ],
   "certs": [
@@ -428,8 +422,7 @@
       "sub": {
         "en": "National Professional Certification (BNSP)",
         "id": "Sertifikasi Profesi Nasional (BNSP)"
-      },
-      "file": null
+      }
     },
     {
       "title": {
@@ -439,8 +432,7 @@
       "sub": {
         "en": "TOEIC",
         "id": "TOEIC"
-      },
-      "file": null
+      }
     },
     {
       "title": {
