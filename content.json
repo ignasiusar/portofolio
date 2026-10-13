@@ -110,6 +110,10 @@
         "en": "Retrieval Augmented Generation Chatbot Career",
         "id": "Karir Chatbot RAG"
       },
+      "full": {
+        "en": "AI Career Assistant & RAG",
+        "id": "Sistem Asisten Karir AI & RAG"
+      },
       "role": {
         "en": "Developer",
         "id": "Pengembang"
@@ -120,6 +124,51 @@
         "LLM",
         "React",
         "Node.Js"
+      ],
+      "summary": {
+        "en": "An intelligent, production-ready career advisory platform powered by a Retrieval-Augmented Generation (RAG) pipeline, combining semantic vector search with persistent session management.",
+        "id": "Platform penasihat karir cerdas yang siap produksi berbasis Retrieval-Augmented Generation (RAG), menggabungkan pencarian vektor semantik dengan manajemen sesi persisten."
+      },
+      "points": [
+        {
+          "head": {
+            "en": "Vector Search & Retrieval Integration",
+            "id": "Integrasi Pencarian Vektor & RAG"
+          },
+          "text": {
+            "en": "Integrated ChromaDB for high-performance semantic retrieval of localized job market data, mapping user queries to relevant career opportunities with contextual precision.",
+            "id": "Mengintegrasikan ChromaDB untuk pengambilan data pasar kerja secara semantik dengan performa tinggi, memetakan kueri pengguna ke peluang karir yang relevan secara kontekstual."
+          }
+        },
+        {
+          "head": {
+            "en": "Hybrid Persistence Architecture",
+            "id": "Arsitektur Persistensi Hibrida"
+          },
+          "text": {
+            "en": "ngineered a robust backend using FastAPI and Google Gemini 3.6 Flash, featuring a dynamic database abstraction layer supporting both SQLite (local development) and MySQL (production-ready) via environment configuration.",
+            "id": "Merancang backend yang andal menggunakan FastAPI dan Google Gemini 3.6 Flash, dilengkapi lapisan abstraksi database dinamis yang mendukung SQLite (pengembangan lokal) dan MySQL (siap produksi) melalui konfigurasi lingkungan"
+          }
+        },
+        {
+          "head": {
+            "en": "Stateful Session & Prompt Engineering",
+            "id": "Manajemen Sesi Stateful & Prompt Engineering"
+          },
+          "text": {
+            "en": "Implemented multi-user session tracking and secure chat history storage, orchestrating context-aware prompt injection to maintain conversational continuity and contextual accuracy.",
+            "id": "Menerapkan pelacakan sesi multi-pengguna dan penyimpanan riwayat obrolan yang aman, serta mengoordinasikan injeksi prompt berbasis konteks untuk menjaga kontinuitas percakapan dan akurasi."
+          }
+        }
+      ],
+      "links": [
+        {
+          "label": {
+            "en": "RAG System",
+            "id": "Sistem RAG"
+          },
+          "url": "https://github.com/ignasiusar/RAG_26"
+        }
       ]
     }
   ],
@@ -224,7 +273,8 @@
             "id": "menjaga tingkat penyelesaian tetap tinggi lewat mentoring aktif, umpan balik, dan motivasi antar peserta."
           }
         }
-      ]
+      ],
+      "file": "files/Screenshot From 2026-10-14 01-29-18.png"
     },
     {
       "kind": "org",
