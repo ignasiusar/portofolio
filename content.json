@@ -357,7 +357,8 @@
             "id": "memantau tren media sosial dan berita lokal agar informasi tetap relevan bagi mahasiswa."
           }
         }
-      ]
+      ],
+      "file": "files/IMG_3638(2).JPG"
     },
     {
       "kind": "work",
@@ -427,7 +428,10 @@
       "items": [
         "Laravel",
         "VS Code",
-        "HTML/CSS/JS"
+        "HTML/CSS/JS",
+        "LLM",
+        "Hugging Face",
+        "ChromaDB"
       ]
     },
     {
