@@ -2,7 +2,7 @@
 media:
   input: files
   output: files
-  extensions: [pdf, png, jpg, jpeg, webp]
+  extensions: [pdf, png, jpg, jpeg, webp,JPG]
 content:
   - name: portfolio
     label: "Isi Portofolio"
@@ -21,7 +21,7 @@ content:
             label: "CV (PDF)"
             type: file
             options:
-              extensions: [pdf, png, jpg, jpeg, webp]
+              extensions: [pdf, png, jpg, jpeg, webp,JPG]
       - name: projects
         label: "Proyek"
         type: object
@@ -189,7 +189,7 @@ content:
             label: "Bukti (PDF / gambar)"
             type: file
             options:
-              extensions: [pdf, png, jpg, jpeg, webp]
+              extensions: [pdf, png, jpg, jpeg, webp,JPG]
       - name: toolbox
         label: "Keahlian (Toolbox)"
         type: object
